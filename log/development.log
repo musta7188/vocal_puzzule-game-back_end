@@ -1,0 +1,104 @@
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (1.3ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreatePlayers (20200322141905)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "players" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "score" integer DEFAULT 0, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mprimary::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20200322141905"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateCards (20200322142916)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "cards" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "word" varchar, "image1" varchar, "image2" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mprimary::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20200322142916"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateGames (20200322143026)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE "games" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "player_id" integer NOT NULL, "card_id" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, CONSTRAINT "fk_rails_39e1446fa9"
+FOREIGN KEY ("player_id")
+  REFERENCES "players" ("id")
+, CONSTRAINT "fk_rails_5a5b41dea0"
+FOREIGN KEY ("card_id")
+  REFERENCES "cards" ("id")
+)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_games_on_player_id" ON "games" ("player_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_games_on_card_id" ON "games" ("card_id")[0m
+  [1m[36mprimary::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20200322143026"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2020-03-22 14:45:16.200314"], ["updated_at", "2020-03-22 14:45:16.200314"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPlayer Create (0.3ms)[0m  [1m[32mINSERT INTO "players" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Mustafa"], ["created_at", "2020-03-22 14:45:21.886860"], ["updated_at", "2020-03-22 14:45:21.886860"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPlayer Create (0.2ms)[0m  [1m[32mINSERT INTO "players" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Alex"], ["created_at", "2020-03-22 14:45:21.889996"], ["updated_at", "2020-03-22 14:45:21.889996"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCard Create (0.3ms)[0m  [1m[32mINSERT INTO "cards" ("word", "image1", "image2", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["word", "Hourglass"], ["image1", "https://images-na.ssl-images-amazon.com/images/I/812L5zyAmpL._AC_SX522_.jpg"], ["image2", "https://media.tiffany.com/is/image/Tiffany/EcomItemL2/all-purpose-white-wine-glass-25486439_870853_ED_M.jpg?&op_usm=2.0,1.0,6.0&$cropN=0.1,0.1,0.8,0.8&defaultImage=NoImageAvailableInternal&"], ["created_at", "2020-03-22 14:45:21.908821"], ["updated_at", "2020-03-22 14:45:21.908821"]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCard Create (0.3ms)[0m  [1m[32mINSERT INTO "cards" ("word", "image1", "image2", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["word", "Basketball"], ["image1", "https://www.fruitgravycompany.com/wp-content/uploads/2018/12/basket.jpg"], ["image2", "https://www.teenmissions.org/wp-content/uploads/2016/05/1407858226.png"], ["created_at", "2020-03-22 14:45:21.911943"], ["updated_at", "2020-03-22 14:45:21.911943"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mGame Create (0.3ms)[0m  [1m[32mINSERT INTO "games" ("player_id", "card_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["player_id", 1], ["card_id", 1], ["created_at", "2020-03-22 14:45:21.926112"], ["updated_at", "2020-03-22 14:45:21.926112"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mGame Create (0.4ms)[0m  [1m[32mINSERT INTO "games" ("player_id", "card_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["player_id", 1], ["card_id", 2], ["created_at", "2020-03-22 14:45:21.929464"], ["updated_at", "2020-03-22 14:45:21.929464"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mGame Create (0.4ms)[0m  [1m[32mINSERT INTO "games" ("player_id", "card_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["player_id", 2], ["card_id", 1], ["created_at", "2020-03-22 14:45:21.933090"], ["updated_at", "2020-03-22 14:45:21.933090"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mGame Create (0.5ms)[0m  [1m[32mINSERT INTO "games" ("player_id", "card_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["player_id", 2], ["card_id", 2], ["created_at", "2020-03-22 14:45:21.937278"], ["updated_at", "2020-03-22 14:45:21.937278"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPlayer Create (0.3ms)[0m  [1m[32mINSERT INTO "players" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Mustafa"], ["created_at", "2020-03-22 14:47:07.433207"], ["updated_at", "2020-03-22 14:47:07.433207"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPlayer Create (0.2ms)[0m  [1m[32mINSERT INTO "players" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Alex"], ["created_at", "2020-03-22 14:47:07.436566"], ["updated_at", "2020-03-22 14:47:07.436566"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCard Create (0.2ms)[0m  [1m[32mINSERT INTO "cards" ("word", "image1", "image2", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["word", "Hourglass"], ["image1", "https://images-na.ssl-images-amazon.com/images/I/812L5zyAmpL._AC_SX522_.jpg"], ["image2", "https://media.tiffany.com/is/image/Tiffany/EcomItemL2/all-purpose-white-wine-glass-25486439_870853_ED_M.jpg?&op_usm=2.0,1.0,6.0&$cropN=0.1,0.1,0.8,0.8&defaultImage=NoImageAvailableInternal&"], ["created_at", "2020-03-22 14:47:07.444532"], ["updated_at", "2020-03-22 14:47:07.444532"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCard Create (0.2ms)[0m  [1m[32mINSERT INTO "cards" ("word", "image1", "image2", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["word", "Basketball"], ["image1", "https://www.fruitgravycompany.com/wp-content/uploads/2018/12/basket.jpg"], ["image2", "https://www.teenmissions.org/wp-content/uploads/2016/05/1407858226.png"], ["created_at", "2020-03-22 14:47:07.447706"], ["updated_at", "2020-03-22 14:47:07.447706"]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mGame Create (0.3ms)[0m  [1m[32mINSERT INTO "games" ("player_id", "card_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["player_id", 3], ["card_id", 3], ["created_at", "2020-03-22 14:47:07.455278"], ["updated_at", "2020-03-22 14:47:07.455278"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mGame Create (0.2ms)[0m  [1m[32mINSERT INTO "games" ("player_id", "card_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["player_id", 3], ["card_id", 4], ["created_at", "2020-03-22 14:47:07.458385"], ["updated_at", "2020-03-22 14:47:07.458385"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mGame Create (0.3ms)[0m  [1m[32mINSERT INTO "games" ("player_id", "card_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["player_id", 4], ["card_id", 3], ["created_at", "2020-03-22 14:47:07.461188"], ["updated_at", "2020-03-22 14:47:07.461188"]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mGame Create (0.3ms)[0m  [1m[32mINSERT INTO "games" ("player_id", "card_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["player_id", 4], ["card_id", 4], ["created_at", "2020-03-22 14:47:07.465939"], ["updated_at", "2020-03-22 14:47:07.465939"]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT "players".* FROM "players" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mPlayer Load (0.4ms)[0m  [1m[34mSELECT "players".* FROM "players" ORDER BY "players"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mPlayer Load (0.2ms)[0m  [1m[34mSELECT "players".* FROM "players" ORDER BY "players"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mPlayer Load (0.3ms)[0m  [1m[34mSELECT "players".* FROM "players" ORDER BY "players"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mCard Load (0.1ms)[0m  [1m[34mSELECT "cards".* FROM "cards" INNER JOIN "games" ON "cards"."id" = "games"."card_id" WHERE "games"."player_id" = ? LIMIT ?[0m  [["player_id", 1], ["LIMIT", 11]]
+  [1m[36mPlayer Load (0.3ms)[0m  [1m[34mSELECT "players".* FROM "players" ORDER BY "players"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mCard Load (0.6ms)[0m  [1m[34mSELECT "cards".* FROM "cards" INNER JOIN "games" ON "cards"."id" = "games"."card_id" WHERE "games"."player_id" = ? ORDER BY "cards"."id" ASC LIMIT ?[0m  [["player_id", 1], ["LIMIT", 1]]
+  [1m[36mPlayer Load (0.3ms)[0m  [1m[34mSELECT "players".* FROM "players" ORDER BY "players"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mCard Load (0.3ms)[0m  [1m[34mSELECT "cards".* FROM "cards" INNER JOIN "games" ON "cards"."id" = "games"."card_id" WHERE "games"."player_id" = ? ORDER BY "cards"."id" ASC LIMIT ?[0m  [["player_id", 1], ["LIMIT", 1]]
+  [1m[36mPlayer Load (0.2ms)[0m  [1m[34mSELECT "players".* FROM "players" ORDER BY "players"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mCard Load (0.2ms)[0m  [1m[34mSELECT "cards".* FROM "cards" INNER JOIN "games" ON "cards"."id" = "games"."card_id" WHERE "games"."player_id" = ? ORDER BY "cards"."id" ASC LIMIT ?[0m  [["player_id", 1], ["LIMIT", 1]]
+  [1m[36mGame Load (0.3ms)[0m  [1m[34mSELECT "games".* FROM "games" ORDER BY "games"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mGame Load (0.3ms)[0m  [1m[34mSELECT "games".* FROM "games" ORDER BY "games"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mPlayer Load (0.2ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mGame Load (0.3ms)[0m  [1m[34mSELECT "games".* FROM "games" ORDER BY "games"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mCard Load (0.3ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
