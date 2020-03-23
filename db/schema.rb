@@ -32,6 +32,8 @@ ActiveRecord::Schema.define(version: 2020_03_22_143026) do
   create_table "players", force: :cascade do |t|
     t.string "name"
     t.integer "score", default: 0
+    t.string "password_diget"
+    t.string "password_confirmation"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

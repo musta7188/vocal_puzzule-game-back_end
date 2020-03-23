@@ -15,7 +15,4 @@ card1 = Card.create(image1: "https://images-na.ssl-images-amazon.com/images/I/81
 card2 = Card.create(image1: "https://www.fruitgravycompany.com/wp-content/uploads/2018/12/basket.jpg", image2:"https://www.teenmissions.org/wp-content/uploads/2016/05/1407858226.png", word: "Basketball")
 
 
-Game.create(player: player1, card: card1)
-Game.create(player: player1, card: card2)
-Game.create(player: player2, card: card1)
-Game.create(player: player2, card: card2)
+
