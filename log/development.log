@@ -952,3 +952,748 @@ Processing by CardsController#index as */*
 Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.1ms | Allocations: 1007)
 
 
+Started GET "/sessions" for ::1 at 2020-03-24 12:11:38 +0000
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [GET] "/sessions"):
+  
+actionpack (6.0.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.2.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.2.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.2.2) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.2.2) lib/rails/engine.rb:526:in `call'
+puma (4.3.3) lib/puma/configuration.rb:228:in `call'
+puma (4.3.3) lib/puma/server.rb:682:in `handle_request'
+puma (4.3.3) lib/puma/server.rb:472:in `process_client'
+puma (4.3.3) lib/puma/server.rb:328:in `block in run'
+puma (4.3.3) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/likes" for ::1 at 2020-03-24 12:11:52 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/likes"):
+  
+actionpack (6.0.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.2.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.2.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.2.2) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.2.2) lib/rails/engine.rb:526:in `call'
+puma (4.3.3) lib/puma/configuration.rb:228:in `call'
+puma (4.3.3) lib/puma/server.rb:682:in `handle_request'
+puma (4.3.3) lib/puma/server.rb:472:in `process_client'
+puma (4.3.3) lib/puma/server.rb:328:in `block in run'
+puma (4.3.3) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/login" for ::1 at 2020-03-24 12:12:00 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/login"):
+  
+actionpack (6.0.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.2.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.2.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.2.2) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.2.2) lib/rails/engine.rb:526:in `call'
+puma (4.3.3) lib/puma/configuration.rb:228:in `call'
+puma (4.3.3) lib/puma/server.rb:682:in `handle_request'
+puma (4.3.3) lib/puma/server.rb:472:in `process_client'
+puma (4.3.3) lib/puma/server.rb:328:in `block in run'
+puma (4.3.3) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/login" for ::1 at 2020-03-24 12:52:06 +0000
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  
+ActionController::RoutingError (No route matches [GET] "/login"):
+  
+actionpack (6.0.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.2.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.2.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.2.2) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.2.2) lib/rails/engine.rb:526:in `call'
+puma (4.3.3) lib/puma/configuration.rb:228:in `call'
+puma (4.3.3) lib/puma/server.rb:682:in `handle_request'
+puma (4.3.3) lib/puma/server.rb:472:in `process_client'
+puma (4.3.3) lib/puma/server.rb:328:in `block in run'
+puma (4.3.3) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/" for ::1 at 2020-03-24 12:53:14 +0000
+Started GET "/" for ::1 at 2020-03-24 12:54:29 +0000
+Started GET "/" for ::1 at 2020-03-24 13:20:52 +0000
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/musta88/.rvm/gems/ruby-2.6.1/gems/railties-6.0.2.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/musta88/.rvm/gems/ruby-2.6.1/gems/railties-6.0.2.2/lib/rails/templates/rails/welcome/index.html.erb (Duration: 5.7ms | Allocations: 315)
+Completed 200 OK in 12ms (Views: 8.2ms | ActiveRecord: 0.0ms | Allocations: 1596)
+
+
+Started GET "/favicon.ico" for ::1 at 2020-03-24 13:20:53 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+actionpack (6.0.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.2.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.2.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.2.2) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.2.2) lib/rails/engine.rb:526:in `call'
+puma (4.3.3) lib/puma/configuration.rb:228:in `call'
+puma (4.3.3) lib/puma/server.rb:682:in `handle_request'
+puma (4.3.3) lib/puma/server.rb:472:in `process_client'
+puma (4.3.3) lib/puma/server.rb:328:in `block in run'
+puma (4.3.3) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/login" for ::1 at 2020-03-24 13:20:58 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/login"):
+  
+actionpack (6.0.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.2.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.2.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.2.2) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.2.2) lib/rails/engine.rb:526:in `call'
+puma (4.3.3) lib/puma/configuration.rb:228:in `call'
+puma (4.3.3) lib/puma/server.rb:682:in `handle_request'
+puma (4.3.3) lib/puma/server.rb:472:in `process_client'
+puma (4.3.3) lib/puma/server.rb:328:in `block in run'
+puma (4.3.3) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/sessions/login" for ::1 at 2020-03-24 13:27:31 +0000
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  
+ActionController::RoutingError (No route matches [GET] "/sessions/login"):
+  
+actionpack (6.0.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.2.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.2.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.2.2) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.2.2) lib/rails/engine.rb:526:in `call'
+puma (4.3.3) lib/puma/configuration.rb:228:in `call'
+puma (4.3.3) lib/puma/server.rb:682:in `handle_request'
+puma (4.3.3) lib/puma/server.rb:472:in `process_client'
+puma (4.3.3) lib/puma/server.rb:328:in `block in run'
+puma (4.3.3) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started POST "/players" for ::1 at 2020-03-24 13:44:40 +0000
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by PlayersController#create as JSON
+  Parameters: {"name"=>"", "password"=>"[FILTERED]", "player"=>{"name"=>""}}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/players_controller.rb:16:in `create'
+  [1m[36mPlayer Create (2.6ms)[0m  [1m[32mINSERT INTO "players" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", ""], ["created_at", "2020-03-24 13:44:40.573300"], ["updated_at", "2020-03-24 13:44:40.573300"]]
+  ↳ app/controllers/players_controller.rb:16:in `create'
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/players_controller.rb:16:in `create'
+Completed 200 OK in 12ms (Views: 0.3ms | ActiveRecord: 4.1ms | Allocations: 6877)
+
+
+Started POST "/players" for ::1 at 2020-03-24 13:44:42 +0000
+Started POST "/login" for ::1 at 2020-03-24 13:44:42 +0000
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by PlayersController#create as JSON
+  Parameters: {"name"=>"", "password"=>"[FILTERED]", "player"=>{"name"=>""}}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/players_controller.rb:16:in `create'
+  [1m[36mPlayer Create (0.5ms)[0m  [1m[32mINSERT INTO "players" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", ""], ["created_at", "2020-03-24 13:44:42.055268"], ["updated_at", "2020-03-24 13:44:42.055268"]]
+  ↳ app/controllers/players_controller.rb:16:in `create'
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/players_controller.rb:16:in `create'
+Processing by SessionsController#create as JSON
+Completed 200 OK in 6ms (Views: 0.3ms | ActiveRecord: 1.1ms | Allocations: 2947)
+
+
+  Parameters: {"name"=>"", "password"=>"[FILTERED]", "session"=>{"name"=>"", "password"=>"[FILTERED]"}}
+  [1m[36mPlayer Load (0.2ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."name" = ? LIMIT ?[0m  [["name", ""], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:7:in `create'
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.2ms | Allocations: 2848)
+
+
+  
+NoMethodError (undefined method `authenticate' for #<Player:0x00007fbb6bfcfcc8>):
+  
+app/controllers/sessions_controller.rb:8:in `create'
+Started POST "/players" for ::1 at 2020-03-24 13:48:11 +0000
+Processing by PlayersController#create as JSON
+  Parameters: {"name"=>"", "password"=>"[FILTERED]", "player"=>{"name"=>""}}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/players_controller.rb:16:in `create'
+  [1m[36mPlayer Create (0.3ms)[0m  [1m[32mINSERT INTO "players" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", ""], ["created_at", "2020-03-24 13:48:11.855712"], ["updated_at", "2020-03-24 13:48:11.855712"]]
+  ↳ app/controllers/players_controller.rb:16:in `create'
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/players_controller.rb:16:in `create'
+Completed 200 OK in 4ms (Views: 0.2ms | ActiveRecord: 1.2ms | Allocations: 2272)
+
+
+Started POST "/players" for ::1 at 2020-03-24 14:10:51 +0000
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PlayersController#create as JSON
+  Parameters: {"name"=>"", "password"=>"[FILTERED]", "player"=>{"name"=>""}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/players_controller.rb:16:in `create'
+  [1m[36mPlayer Create (0.4ms)[0m  [1m[32mINSERT INTO "players" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", ""], ["created_at", "2020-03-24 14:10:51.688982"], ["updated_at", "2020-03-24 14:10:51.688982"]]
+  ↳ app/controllers/players_controller.rb:16:in `create'
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/players_controller.rb:16:in `create'
+Completed 200 OK in 9ms (Views: 0.4ms | ActiveRecord: 1.6ms | Allocations: 6868)
+
+
+Started GET "/players" for ::1 at 2020-03-24 15:30:17 +0000
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PlayersController#index as HTML
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT "players".* FROM "players"[0m
+  ↳ app/controllers/players_controller.rb:5:in `index'
+Completed 200 OK in 13ms (Views: 8.7ms | ActiveRecord: 0.7ms | Allocations: 8130)
+
+
+Started GET "/players" for ::1 at 2020-03-24 15:30:40 +0000
+Processing by PlayersController#index as HTML
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT "players".* FROM "players"[0m
+  ↳ app/controllers/players_controller.rb:5:in `index'
+Completed 200 OK in 2ms (Views: 2.0ms | ActiveRecord: 0.1ms | Allocations: 1629)
+
+
+Started GET "/players" for ::1 at 2020-03-24 15:30:47 +0000
+Processing by PlayersController#index as HTML
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT "players".* FROM "players"[0m
+  ↳ app/controllers/players_controller.rb:5:in `index'
+Completed 200 OK in 2ms (Views: 1.9ms | ActiveRecord: 0.1ms | Allocations: 1629)
+
+
+Started GET "/players" for ::1 at 2020-03-24 15:30:48 +0000
+Processing by PlayersController#index as HTML
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT "players".* FROM "players"[0m
+  ↳ app/controllers/players_controller.rb:5:in `index'
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.1ms | Allocations: 1612)
+
+
+Started POST "/players" for ::1 at 2020-03-24 15:35:21 +0000
+Processing by PlayersController#create as JSON
+  Parameters: {"name"=>"Moustafa Mohamed", "password"=>"[FILTERED]", "player"=>{"name"=>"Moustafa Mohamed"}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/players_controller.rb:16:in `create'
+  [1m[36mPlayer Create (0.5ms)[0m  [1m[32mINSERT INTO "players" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Moustafa Mohamed"], ["created_at", "2020-03-24 15:35:21.009126"], ["updated_at", "2020-03-24 15:35:21.009126"]]
+  ↳ app/controllers/players_controller.rb:16:in `create'
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/players_controller.rb:16:in `create'
+Completed 200 OK in 5ms (Views: 0.3ms | ActiveRecord: 1.3ms | Allocations: 2563)
+
+
+Started POST "/players" for ::1 at 2020-03-24 15:35:26 +0000
+Started POST "/login" for ::1 at 2020-03-24 15:35:26 +0000
+Processing by PlayersController#create as JSON
+  Parameters: {"name"=>"Moustafa Mohamed", "password"=>"[FILTERED]", "player"=>{"name"=>"Moustafa Mohamed"}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/players_controller.rb:16:in `create'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mPlayer Create (0.3ms)[0m  [1m[32mINSERT INTO "players" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Moustafa Mohamed"], ["created_at", "2020-03-24 15:35:26.751202"], ["updated_at", "2020-03-24 15:35:26.751202"]]
+  ↳ app/controllers/players_controller.rb:16:in `create'
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/players_controller.rb:16:in `create'
+Completed 200 OK in 7ms (Views: 0.3ms | ActiveRecord: 1.1ms | Allocations: 3379)
+
+
+Processing by SessionsController#create as JSON
+  Parameters: {"name"=>"Moustafa Mohamed", "password"=>"[FILTERED]", "session"=>{"name"=>"Moustafa Mohamed", "password"=>"[FILTERED]"}}
+  [1m[36mPlayer Load (0.2ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."name" = ? LIMIT ?[0m  [["name", "Moustafa Mohamed"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:7:in `create'
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.2ms | Allocations: 2745)
+
+
+  
+NoMethodError (undefined method `authenticate' for #<Player:0x00007fe80aa20ab8>):
+  
+app/controllers/sessions_controller.rb:8:in `create'
+Started POST "/players" for ::1 at 2020-03-24 15:35:27 +0000
+Started POST "/login" for ::1 at 2020-03-24 15:35:27 +0000
+Processing by PlayersController#create as JSON
+  Parameters: {"name"=>"Moustafa Mohamed", "password"=>"[FILTERED]", "player"=>{"name"=>"Moustafa Mohamed"}}
+Processing by SessionsController#create as JSON
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  Parameters: {"name"=>"Moustafa Mohamed", "password"=>"[FILTERED]", "session"=>{"name"=>"Moustafa Mohamed", "password"=>"[FILTERED]"}}
+  ↳ app/controllers/players_controller.rb:16:in `create'
+  [1m[36mPlayer Load (0.2ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."name" = ? LIMIT ?[0m  [["name", "Moustafa Mohamed"], ["LIMIT", 1]]
+  [1m[36mPlayer Create (0.4ms)[0m  [1m[32mINSERT INTO "players" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Moustafa Mohamed"], ["created_at", "2020-03-24 15:35:27.513767"], ["updated_at", "2020-03-24 15:35:27.513767"]]
+  ↳ app/controllers/sessions_controller.rb:7:in `create'
+  ↳ app/controllers/players_controller.rb:16:in `create'
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.2ms | Allocations: 2866)
+
+
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  
+NoMethodError (undefined method `authenticate' for #<Player:0x00007fe80e129938>):
+  
+app/controllers/sessions_controller.rb:8:in `create'
+  ↳ app/controllers/players_controller.rb:16:in `create'
+Completed 200 OK in 39ms (Views: 0.2ms | ActiveRecord: 1.2ms | Allocations: 30370)
+
+
+Started GET "/players" for ::1 at 2020-03-24 15:35:30 +0000
+Processing by PlayersController#index as HTML
+  [1m[36mPlayer Load (0.3ms)[0m  [1m[34mSELECT "players".* FROM "players"[0m
+  ↳ app/controllers/players_controller.rb:5:in `index'
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.3ms | Allocations: 2066)
+
+
+Started POST "/players" for ::1 at 2020-03-24 15:36:32 +0000
+Processing by PlayersController#create as JSON
+  Parameters: {"name"=>"Armela ", "password"=>"[FILTERED]", "player"=>{"name"=>"Armela "}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/players_controller.rb:16:in `create'
+  [1m[36mPlayer Create (0.5ms)[0m  [1m[32mINSERT INTO "players" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Armela "], ["created_at", "2020-03-24 15:36:32.971009"], ["updated_at", "2020-03-24 15:36:32.971009"]]
+  ↳ app/controllers/players_controller.rb:16:in `create'
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/players_controller.rb:16:in `create'
+Completed 200 OK in 5ms (Views: 0.3ms | ActiveRecord: 1.1ms | Allocations: 2256)
+
+
+Started POST "/players" for ::1 at 2020-03-24 15:43:16 +0000
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by PlayersController#create as JSON
+  Parameters: {"name"=>"MustafaM", "password"=>"[FILTERED]", "player"=>{"name"=>"MustafaM"}}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/players_controller.rb:16:in `create'
+  [1m[36mPlayer Create (0.4ms)[0m  [1m[32mINSERT INTO "players" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "MustafaM"], ["created_at", "2020-03-24 15:43:16.728301"], ["updated_at", "2020-03-24 15:43:16.728301"]]
+  ↳ app/controllers/players_controller.rb:16:in `create'
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/players_controller.rb:16:in `create'
+Completed 200 OK in 7ms (Views: 0.2ms | ActiveRecord: 1.0ms | Allocations: 6193)
+
+
+Started GET "/players" for ::1 at 2020-03-24 15:43:22 +0000
+Processing by PlayersController#index as HTML
+  [1m[36mPlayer Load (0.2ms)[0m  [1m[34mSELECT "players".* FROM "players"[0m
+  ↳ app/controllers/players_controller.rb:5:in `index'
+Completed 200 OK in 3ms (Views: 2.9ms | ActiveRecord: 0.2ms | Allocations: 2373)
+
+
+Started POST "/players" for ::1 at 2020-03-24 15:43:52 +0000
+Started POST "/login" for ::1 at 2020-03-24 15:43:52 +0000
+Processing by PlayersController#create as JSON
+  Parameters: {"name"=>"MustaM", "password"=>"[FILTERED]", "player"=>{"name"=>"MustaM"}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/players_controller.rb:16:in `create'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mPlayer Create (0.5ms)[0m  [1m[32mINSERT INTO "players" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "MustaM"], ["created_at", "2020-03-24 15:43:52.119396"], ["updated_at", "2020-03-24 15:43:52.119396"]]
+  ↳ app/controllers/players_controller.rb:16:in `create'
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/players_controller.rb:16:in `create'
+Completed 200 OK in 6ms (Views: 0.2ms | ActiveRecord: 1.2ms | Allocations: 3365)
+
+
+Processing by SessionsController#create as JSON
+  Parameters: {"name"=>"MustaM", "password"=>"[FILTERED]", "session"=>{"name"=>"MustaM", "password"=>"[FILTERED]"}}
+  [1m[36mPlayer Load (0.2ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."name" = ? LIMIT ?[0m  [["name", "MustaM"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:5:in `create'
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 0.2ms | Allocations: 2415)
+
+
+  
+NoMethodError (undefined method `authenticate' for #<Player:0x00007fe80e13aeb8>):
+  
+app/controllers/sessions_controller.rb:6:in `create'
+Started POST "/players" for ::1 at 2020-03-24 15:46:54 +0000
+Processing by PlayersController#create as JSON
+  Parameters: {"name"=>"MustaM", "password"=>"[FILTERED]", "player"=>{"name"=>"MustaM"}}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/players_controller.rb:16:in `create'
+  [1m[36mPlayer Create (0.3ms)[0m  [1m[32mINSERT INTO "players" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "MustaM"], ["created_at", "2020-03-24 15:46:54.205399"], ["updated_at", "2020-03-24 15:46:54.205399"]]
+  ↳ app/controllers/players_controller.rb:16:in `create'
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/players_controller.rb:16:in `create'
+Completed 200 OK in 4ms (Views: 0.3ms | ActiveRecord: 1.1ms | Allocations: 2253)
+
+
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateGames (20200322143026)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.7ms)[0m  [1m[35mDROP TABLE "games"[0m
+  [1m[36mprimary::SchemaMigration Destroy (0.2ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = ?[0m  [["version", "20200322143026"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateCards (20200322142916)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[35mDROP TABLE "cards"[0m
+  [1m[36mprimary::SchemaMigration Destroy (0.1ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = ?[0m  [["version", "20200322142916"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (3.9ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreatePlayers (20200322141905)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE "players"[0m
+  [1m[36mprimary::SchemaMigration Destroy (0.1ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = ?[0m  [["version", "20200322141905"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreatePlayers (20200322141905)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE TABLE "players" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mprimary::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20200322141905"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateCards (20200322142916)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE "cards" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "word" varchar, "image1" varchar, "image2" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mprimary::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20200322142916"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateGames (20200322143026)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE "games" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "player_id" integer NOT NULL, "card_id" integer NOT NULL, "score" integer DEFAULT 0, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, CONSTRAINT "fk_rails_39e1446fa9"
+FOREIGN KEY ("player_id")
+  REFERENCES "players" ("id")
+, CONSTRAINT "fk_rails_5a5b41dea0"
+FOREIGN KEY ("card_id")
+  REFERENCES "cards" ("id")
+)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_games_on_player_id" ON "games" ("player_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_games_on_card_id" ON "games" ("card_id")[0m
+  [1m[36mprimary::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20200322143026"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateGameCards (20200324181932)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE "game_cards" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "card_id" integer NOT NULL, "game_id" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, CONSTRAINT "fk_rails_1c011f3fa6"
+FOREIGN KEY ("card_id")
+  REFERENCES "cards" ("id")
+, CONSTRAINT "fk_rails_aacd038e12"
+FOREIGN KEY ("game_id")
+  REFERENCES "games" ("id")
+)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_game_cards_on_card_id" ON "game_cards" ("card_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_game_cards_on_game_id" ON "game_cards" ("game_id")[0m
+  [1m[36mprimary::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20200324181932"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPlayer Create (0.3ms)[0m  [1m[32mINSERT INTO "players" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Mustafa"], ["created_at", "2020-03-24 18:27:06.755992"], ["updated_at", "2020-03-24 18:27:06.755992"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPlayer Create (0.2ms)[0m  [1m[32mINSERT INTO "players" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Alex"], ["created_at", "2020-03-24 18:27:06.759439"], ["updated_at", "2020-03-24 18:27:06.759439"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCard Create (0.3ms)[0m  [1m[32mINSERT INTO "cards" ("word", "image1", "image2", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["word", "Hourglass"], ["image1", "https://images-na.ssl-images-amazon.com/images/I/812L5zyAmpL._AC_SX522_.jpg"], ["image2", "https://media.tiffany.com/is/image/Tiffany/EcomItemL2/all-purpose-white-wine-glass-25486439_870853_ED_M.jpg?&op_usm=2.0,1.0,6.0&$cropN=0.1,0.1,0.8,0.8&defaultImage=NoImageAvailableInternal&"], ["created_at", "2020-03-24 18:27:06.770875"], ["updated_at", "2020-03-24 18:27:06.770875"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCard Create (0.2ms)[0m  [1m[32mINSERT INTO "cards" ("word", "image1", "image2", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["word", "Basketball"], ["image1", "https://www.fruitgravycompany.com/wp-content/uploads/2018/12/basket.jpg"], ["image2", "https://www.teenmissions.org/wp-content/uploads/2016/05/1407858226.png"], ["created_at", "2020-03-24 18:27:06.774317"], ["updated_at", "2020-03-24 18:27:06.774317"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/" for ::1 at 2020-03-24 18:27:23 +0000
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/musta88/.rvm/gems/ruby-2.6.1/gems/railties-6.0.2.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/musta88/.rvm/gems/ruby-2.6.1/gems/railties-6.0.2.2/lib/rails/templates/rails/welcome/index.html.erb (Duration: 6.4ms | Allocations: 315)
+Completed 200 OK in 13ms (Views: 9.9ms | ActiveRecord: 0.0ms | Allocations: 1596)
+
+
+Started GET "/players" for ::1 at 2020-03-24 18:27:27 +0000
+Processing by PlayersController#index as HTML
+  [1m[36mPlayer Load (0.2ms)[0m  [1m[34mSELECT "players".* FROM "players"[0m
+  ↳ app/controllers/players_controller.rb:5:in `index'
+Completed 200 OK in 10ms (Views: 5.6ms | ActiveRecord: 0.9ms | Allocations: 5547)
+
+
+Started GET "/games" for ::1 at 2020-03-24 18:27:34 +0000
+Processing by GamesController#index as HTML
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+  ↳ app/services/game_serializer.rb:18:in `to_serialized_json'
+Completed 200 OK in 8ms (Views: 0.1ms | ActiveRecord: 0.3ms | Allocations: 2875)
+
+
+Started POST "/players" for ::1 at 2020-03-24 18:29:11 +0000
+Processing by PlayersController#create as JSON
+  Parameters: {"name"=>"", "password"=>"[FILTERED]", "player"=>{"name"=>""}}
+  [1m[36mPlayer Load (0.2ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."name" = ? LIMIT ?[0m  [["name", ""], ["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:13:in `create'
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/players_controller.rb:13:in `create'
+  [1m[36mPlayer Create (0.5ms)[0m  [1m[32mINSERT INTO "players" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", ""], ["created_at", "2020-03-24 18:29:11.125965"], ["updated_at", "2020-03-24 18:29:11.125965"]]
+  ↳ app/controllers/players_controller.rb:13:in `create'
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/players_controller.rb:13:in `create'
+Completed 500 Internal Server Error in 168ms (ActiveRecord: 1.5ms | Allocations: 77082)
+
+
+  
+NameError (undefined local variable or method `player' for #<PlayersController:0x00007f9a68a32d70>
+Did you mean?  @player):
+  
+app/controllers/players_controller.rb:15:in `create'
+Started POST "/players" for ::1 at 2020-03-24 18:30:06 +0000
+Processing by PlayersController#create as JSON
+  Parameters: {"name"=>"", "password"=>"[FILTERED]", "player"=>{"name"=>""}}
+  [1m[36mPlayer Load (0.2ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."name" = ? LIMIT ?[0m  [["name", ""], ["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:13:in `create'
+Completed 500 Internal Server Error in 123ms (ActiveRecord: 0.2ms | Allocations: 72773)
+
+
+  
+NameError (undefined local variable or method `player' for #<PlayersController:0x00007f9a68982dd0>
+Did you mean?  @player):
+  
+app/controllers/players_controller.rb:15:in `create'
+Started GET "/players" for ::1 at 2020-03-24 18:32:40 +0000
+Processing by PlayersController#index as HTML
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT "players".* FROM "players"[0m
+  ↳ app/controllers/players_controller.rb:5:in `index'
+Completed 200 OK in 2ms (Views: 2.1ms | ActiveRecord: 0.1ms | Allocations: 1103)
+
+
+Started POST "/players" for ::1 at 2020-03-24 18:33:09 +0000
+Processing by PlayersController#create as JSON
+  Parameters: {"name"=>"Bryn", "password"=>"[FILTERED]", "player"=>{"name"=>"Bryn"}}
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."name" = ? LIMIT ?[0m  [["name", "Bryn"], ["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:13:in `create'
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/players_controller.rb:13:in `create'
+  [1m[36mPlayer Create (0.4ms)[0m  [1m[32mINSERT INTO "players" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Bryn"], ["created_at", "2020-03-24 18:33:09.203546"], ["updated_at", "2020-03-24 18:33:09.203546"]]
+  ↳ app/controllers/players_controller.rb:13:in `create'
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/players_controller.rb:13:in `create'
+Completed 500 Internal Server Error in 168ms (ActiveRecord: 1.6ms | Allocations: 74954)
+
+
+  
+NameError (undefined local variable or method `player' for #<PlayersController:0x00007f9a689dd2f8>
+Did you mean?  @player):
+  
+app/controllers/players_controller.rb:15:in `create'
+Started POST "/players" for ::1 at 2020-03-24 18:34:40 +0000
+Processing by PlayersController#create as JSON
+  Parameters: {"name"=>"", "password"=>"[FILTERED]", "player"=>{"name"=>""}}
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."name" = ? LIMIT ?[0m  [["name", ""], ["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:13:in `create'
+Completed 500 Internal Server Error in 168ms (ActiveRecord: 0.1ms | Allocations: 72772)
+
+
+  
+NameError (undefined local variable or method `player' for #<PlayersController:0x00007f9a664081e0>
+Did you mean?  @player):
+  
+app/controllers/players_controller.rb:15:in `create'
+Started POST "/players" for ::1 at 2020-03-24 18:34:52 +0000
+Processing by PlayersController#create as JSON
+  Parameters: {"name"=>"Moustafa Mohamed", "password"=>"[FILTERED]", "player"=>{"name"=>"Moustafa Mohamed"}}
+  [1m[36mPlayer Load (0.2ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."name" = ? LIMIT ?[0m  [["name", "Moustafa Mohamed"], ["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:13:in `create'
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/players_controller.rb:13:in `create'
+  [1m[36mPlayer Create (0.4ms)[0m  [1m[32mINSERT INTO "players" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Moustafa Mohamed"], ["created_at", "2020-03-24 18:34:52.154347"], ["updated_at", "2020-03-24 18:34:52.154347"]]
+  ↳ app/controllers/players_controller.rb:13:in `create'
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/players_controller.rb:13:in `create'
+Completed 500 Internal Server Error in 139ms (ActiveRecord: 1.3ms | Allocations: 74958)
+
+
+  
+NameError (undefined local variable or method `player' for #<PlayersController:0x00007f9a663a7688>
+Did you mean?  @player):
+  
+app/controllers/players_controller.rb:15:in `create'
+Started POST "/players" for ::1 at 2020-03-24 18:34:53 +0000
+Processing by PlayersController#create as JSON
+  Parameters: {"name"=>"Moustafa Mohamed", "password"=>"[FILTERED]", "player"=>{"name"=>"Moustafa Mohamed"}}
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."name" = ? LIMIT ?[0m  [["name", "Moustafa Mohamed"], ["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:13:in `create'
+Completed 500 Internal Server Error in 128ms (ActiveRecord: 0.1ms | Allocations: 72794)
+
+
+  
+NameError (undefined local variable or method `player' for #<PlayersController:0x00007f9a6c921a18>
+Did you mean?  @player):
+  
+app/controllers/players_controller.rb:15:in `create'
+Started POST "/players" for ::1 at 2020-03-24 18:34:53 +0000
+Processing by PlayersController#create as JSON
+  Parameters: {"name"=>"Moustafa Mohamed", "password"=>"[FILTERED]", "player"=>{"name"=>"Moustafa Mohamed"}}
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."name" = ? LIMIT ?[0m  [["name", "Moustafa Mohamed"], ["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:13:in `create'
+Completed 500 Internal Server Error in 117ms (ActiveRecord: 0.1ms | Allocations: 72774)
+
+
+  
+NameError (undefined local variable or method `player' for #<PlayersController:0x00007f9a6c88c468>
+Did you mean?  @player):
+  
+app/controllers/players_controller.rb:15:in `create'
+Started POST "/players" for ::1 at 2020-03-24 18:34:53 +0000
+Processing by PlayersController#create as JSON
+  Parameters: {"name"=>"Moustafa Mohamed", "password"=>"[FILTERED]", "player"=>{"name"=>"Moustafa Mohamed"}}
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."name" = ? LIMIT ?[0m  [["name", "Moustafa Mohamed"], ["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:13:in `create'
+Completed 500 Internal Server Error in 120ms (ActiveRecord: 0.1ms | Allocations: 72772)
+
+
+  
+NameError (undefined local variable or method `player' for #<PlayersController:0x00007f9a6827e520>
+Did you mean?  @player):
+  
+app/controllers/players_controller.rb:15:in `create'
+Started POST "/players" for ::1 at 2020-03-24 18:34:54 +0000
+Processing by PlayersController#create as JSON
+  Parameters: {"name"=>"Moustafa Mohamed", "password"=>"[FILTERED]", "player"=>{"name"=>"Moustafa Mohamed"}}
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."name" = ? LIMIT ?[0m  [["name", "Moustafa Mohamed"], ["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:13:in `create'
+Completed 500 Internal Server Error in 109ms (ActiveRecord: 0.1ms | Allocations: 72803)
+
+
+  
+NameError (undefined local variable or method `player' for #<PlayersController:0x00007f9a668e5f28>
+Did you mean?  @player):
+  
+app/controllers/players_controller.rb:15:in `create'
+Started POST "/players" for ::1 at 2020-03-24 18:34:54 +0000
+Processing by PlayersController#create as JSON
+  Parameters: {"name"=>"Moustafa Mohamed", "password"=>"[FILTERED]", "player"=>{"name"=>"Moustafa Mohamed"}}
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."name" = ? LIMIT ?[0m  [["name", "Moustafa Mohamed"], ["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:13:in `create'
+Completed 500 Internal Server Error in 104ms (ActiveRecord: 0.1ms | Allocations: 72877)
+
+
+Started POST "/players" for ::1 at 2020-03-24 18:34:54 +0000
+  
+NameError (undefined local variable or method `player' for #<PlayersController:0x00007f9a68a32500>
+Did you mean?  @player):
+  
+app/controllers/players_controller.rb:15:in `create'
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by PlayersController#create as JSON
+  Parameters: {"name"=>"Moustafa Mohamed", "password"=>"[FILTERED]", "player"=>{"name"=>"Moustafa Mohamed"}}
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."name" = ? LIMIT ?[0m  [["name", "Moustafa Mohamed"], ["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:13:in `create'
+Completed 500 Internal Server Error in 92ms (ActiveRecord: 0.1ms | Allocations: 72789)
+
+
+  
+NameError (undefined local variable or method `player' for #<PlayersController:0x00007f9a68bae028>
+Did you mean?  @player):
+  
+app/controllers/players_controller.rb:15:in `create'
+Started POST "/players" for ::1 at 2020-03-24 18:34:55 +0000
+Processing by PlayersController#create as JSON
+  Parameters: {"name"=>"Moustafa Mohamed", "password"=>"[FILTERED]", "player"=>{"name"=>"Moustafa Mohamed"}}
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."name" = ? LIMIT ?[0m  [["name", "Moustafa Mohamed"], ["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:13:in `create'
+Completed 500 Internal Server Error in 123ms (ActiveRecord: 0.1ms | Allocations: 72772)
+
+
+  
+NameError (undefined local variable or method `player' for #<PlayersController:0x00007f9a68ca59e0>
+Did you mean?  @player):
+  
+app/controllers/players_controller.rb:15:in `create'
+Started GET "/players" for ::1 at 2020-03-24 18:35:10 +0000
+Processing by PlayersController#index as HTML
+  [1m[36mPlayer Load (0.2ms)[0m  [1m[34mSELECT "players".* FROM "players"[0m
+  ↳ app/controllers/players_controller.rb:5:in `index'
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.2ms | Allocations: 1359)
+
+
