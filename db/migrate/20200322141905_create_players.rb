@@ -3,8 +3,7 @@ class CreatePlayers < ActiveRecord::Migration[6.0]
     create_table :players do |t|
       t.string :name
       t.integer :score, :default => 0
-      t.string :password_diget
-      t.string :password_confirmation
+      t.string :password
 
       t.timestamps
     end
