@@ -19,13 +19,5 @@ class PlayersController < ApplicationController
                 render json: { errors: player.errors.full_messages }, status: :not_acceptable    
         end
     end
-
-
- private
-
-        def player_params
-            params.require(:player).permit(:name, :password)
-        end
-
     
 end
