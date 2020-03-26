@@ -4,6 +4,7 @@ class CreateCards < ActiveRecord::Migration[6.0]
       t.string :word
       t.string :image1
       t.string :image2
+      t.integer :score
 
       t.timestamps
     end

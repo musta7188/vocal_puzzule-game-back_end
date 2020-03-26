@@ -16,6 +16,7 @@ ActiveRecord::Schema.define(version: 2020_03_24_181932) do
     t.string "word"
     t.string "image1"
     t.string "image2"
+    t.integer "score"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
