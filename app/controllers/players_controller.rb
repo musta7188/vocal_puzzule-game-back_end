@@ -10,7 +10,7 @@ class PlayersController < ApplicationController
     end
 
     def create
-        @player = Player.find_or_create_by(name: params[:name])
+        player = Player.find_or_create_by(name: params[:name])
         
             if player.valid?
                 player.save

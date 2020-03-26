@@ -3657,3 +3657,798 @@ puma (4.3.3) lib/puma/server.rb:682:in `handle_request'
 puma (4.3.3) lib/puma/server.rb:472:in `process_client'
 puma (4.3.3) lib/puma/server.rb:328:in `block in run'
 puma (4.3.3) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/cards" for ::1 at 2020-03-25 21:28:44 +0000
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by CardsController#index as */*
+  [1m[36mCard Load (0.7ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  ↳ app/controllers/cards_controller.rb:5:in `index'
+Completed 200 OK in 14ms (Views: 6.0ms | ActiveRecord: 1.3ms | Allocations: 7500)
+
+
+Started GET "/cards" for ::1 at 2020-03-25 22:26:30 +0000
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by CardsController#index as */*
+  [1m[36mCard Load (0.8ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  ↳ app/controllers/cards_controller.rb:5:in `index'
+Completed 200 OK in 6ms (Views: 4.2ms | ActiveRecord: 0.8ms | Allocations: 1165)
+
+
+Started GET "/cards" for ::1 at 2020-03-25 22:26:43 +0000
+Processing by CardsController#index as */*
+  [1m[36mCard Load (0.1ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  ↳ app/controllers/cards_controller.rb:5:in `index'
+Completed 200 OK in 3ms (Views: 2.8ms | ActiveRecord: 0.1ms | Allocations: 1151)
+
+
+Started GET "/cards" for ::1 at 2020-03-26 10:39:11 +0000
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by CardsController#index as */*
+  [1m[36mCard Load (0.8ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  ↳ app/controllers/cards_controller.rb:5:in `index'
+Completed 200 OK in 11ms (Views: 7.5ms | ActiveRecord: 0.8ms | Allocations: 1165)
+
+
+Started GET "/" for ::1 at 2020-03-26 10:45:55 +0000
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/musta88/.rvm/gems/ruby-2.6.1/gems/railties-6.0.2.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/musta88/.rvm/gems/ruby-2.6.1/gems/railties-6.0.2.2/lib/rails/templates/rails/welcome/index.html.erb (Duration: 7.8ms | Allocations: 315)
+Completed 200 OK in 17ms (Views: 12.4ms | ActiveRecord: 0.0ms | Allocations: 1591)
+
+
+Started GET "/players" for ::1 at 2020-03-26 10:46:00 +0000
+Processing by PlayersController#index as HTML
+  [1m[36mPlayer Load (0.5ms)[0m  [1m[34mSELECT "players".* FROM "players"[0m
+  ↳ app/controllers/players_controller.rb:5:in `index'
+Completed 200 OK in 14ms (Views: 9.3ms | ActiveRecord: 1.2ms | Allocations: 4942)
+
+
+Started POST "/players" for ::1 at 2020-03-26 10:47:51 +0000
+Processing by PlayersController#create as JSON
+  Parameters: {"name"=>"Moustafa Mohamed", "player"=>{"name"=>"Moustafa Mohamed"}}
+  [1m[36mPlayer Load (0.3ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."name" = ? LIMIT ?[0m  [["name", "Moustafa Mohamed"], ["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:13:in `create'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/players_controller.rb:13:in `create'
+  [1m[36mPlayer Create (0.9ms)[0m  [1m[32mINSERT INTO "players" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Moustafa Mohamed"], ["created_at", "2020-03-26 10:47:51.365383"], ["updated_at", "2020-03-26 10:47:51.365383"]]
+  ↳ app/controllers/players_controller.rb:13:in `create'
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/players_controller.rb:13:in `create'
+Completed 500 Internal Server Error in 152ms (ActiveRecord: 2.2ms | Allocations: 77015)
+
+
+  
+NameError (undefined local variable or method `player' for #<PlayersController:0x00007fd7036f79f8>
+Did you mean?  @player):
+  
+app/controllers/players_controller.rb:15:in `create'
+Started GET "/players" for ::1 at 2020-03-26 10:47:56 +0000
+Processing by PlayersController#index as HTML
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT "players".* FROM "players"[0m
+  ↳ app/controllers/players_controller.rb:5:in `index'
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.1ms | Allocations: 1103)
+
+
+Started POST "/players" for ::1 at 2020-03-26 11:04:36 +0000
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by PlayersController#create as JSON
+  Parameters: {"name"=>"Test1", "player"=>{"name"=>"Test1"}}
+  [1m[36mPlayer Load (0.5ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."name" = ? LIMIT ?[0m  [["name", "Test1"], ["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:13:in `create'
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/players_controller.rb:13:in `create'
+  [1m[36mPlayer Create (0.5ms)[0m  [1m[32mINSERT INTO "players" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Test1"], ["created_at", "2020-03-26 11:04:36.122760"], ["updated_at", "2020-03-26 11:04:36.122760"]]
+  ↳ app/controllers/players_controller.rb:13:in `create'
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/players_controller.rb:13:in `create'
+Completed 500 Internal Server Error in 137ms (ActiveRecord: 1.7ms | Allocations: 74925)
+
+
+  
+NameError (undefined local variable or method `player' for #<PlayersController:0x00007fd705dd1768>
+Did you mean?  @player):
+  
+app/controllers/players_controller.rb:15:in `create'
+Started POST "/players" for ::1 at 2020-03-26 11:05:31 +0000
+Processing by PlayersController#create as JSON
+  Parameters: {"name"=>"Test1", "player"=>{"name"=>"Test1"}}
+  [1m[36mPlayer Load (0.2ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."name" = ? LIMIT ?[0m  [["name", "Test1"], ["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:13:in `create'
+Completed 500 Internal Server Error in 108ms (ActiveRecord: 0.2ms | Allocations: 72725)
+
+
+  
+NameError (undefined local variable or method `player' for #<PlayersController:0x00007fd705e63e10>
+Did you mean?  @player):
+  
+app/controllers/players_controller.rb:15:in `create'
+Started POST "/players" for ::1 at 2020-03-26 11:05:51 +0000
+Processing by PlayersController#create as JSON
+  Parameters: {"name"=>"mustafa", "player"=>{"name"=>"mustafa"}}
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."name" = ? LIMIT ?[0m  [["name", "mustafa"], ["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:13:in `create'
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/players_controller.rb:13:in `create'
+  [1m[36mPlayer Create (0.4ms)[0m  [1m[32mINSERT INTO "players" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "mustafa"], ["created_at", "2020-03-26 11:05:51.555427"], ["updated_at", "2020-03-26 11:05:51.555427"]]
+  ↳ app/controllers/players_controller.rb:13:in `create'
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/players_controller.rb:13:in `create'
+Completed 500 Internal Server Error in 102ms (ActiveRecord: 1.2ms | Allocations: 74909)
+
+
+  
+NameError (undefined local variable or method `player' for #<PlayersController:0x00007fd705a7d5d0>
+Did you mean?  @player):
+  
+app/controllers/players_controller.rb:15:in `create'
+Started GET "/cards" for ::1 at 2020-03-26 11:05:51 +0000
+Processing by CardsController#index as */*
+  [1m[36mCard Load (0.3ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  ↳ app/controllers/cards_controller.rb:5:in `index'
+Completed 200 OK in 2ms (Views: 1.8ms | ActiveRecord: 0.3ms | Allocations: 1150)
+
+
+Started POST "/players" for ::1 at 2020-03-26 11:08:21 +0000
+Processing by PlayersController#create as JSON
+  Parameters: {"name"=>"Moustafa Mohamed", "player"=>{"name"=>"Moustafa Mohamed"}}
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."name" = ? LIMIT ?[0m  [["name", "Moustafa Mohamed"], ["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:13:in `create'
+Completed 500 Internal Server Error in 129ms (ActiveRecord: 0.1ms | Allocations: 72727)
+
+
+  
+NameError (undefined local variable or method `player' for #<PlayersController:0x00007fd703601a30>
+Did you mean?  @player):
+  
+app/controllers/players_controller.rb:15:in `create'
+Started GET "/cards" for ::1 at 2020-03-26 11:08:21 +0000
+Processing by CardsController#index as */*
+  [1m[36mCard Load (0.1ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  ↳ app/controllers/cards_controller.rb:5:in `index'
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.1ms | Allocations: 1133)
+
+
+Started POST "/players" for ::1 at 2020-03-26 11:08:53 +0000
+Processing by PlayersController#create as JSON
+  Parameters: {"name"=>"acunamatata", "player"=>{"name"=>"acunamatata"}}
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."name" = ? LIMIT ?[0m  [["name", "acunamatata"], ["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:13:in `create'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/players_controller.rb:13:in `create'
+  [1m[36mPlayer Create (0.6ms)[0m  [1m[32mINSERT INTO "players" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "acunamatata"], ["created_at", "2020-03-26 11:08:53.510780"], ["updated_at", "2020-03-26 11:08:53.510780"]]
+  ↳ app/controllers/players_controller.rb:13:in `create'
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/players_controller.rb:13:in `create'
+Completed 500 Internal Server Error in 115ms (ActiveRecord: 1.5ms | Allocations: 74906)
+
+
+  
+NameError (undefined local variable or method `player' for #<PlayersController:0x00007fd703a7ea90>
+Did you mean?  @player):
+  
+app/controllers/players_controller.rb:15:in `create'
+Started GET "/cards" for ::1 at 2020-03-26 11:08:53 +0000
+Processing by CardsController#index as */*
+  [1m[36mCard Load (0.2ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  ↳ app/controllers/cards_controller.rb:5:in `index'
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.2ms | Allocations: 1133)
+
+
+Started GET "/players" for ::1 at 2020-03-26 11:09:07 +0000
+Processing by PlayersController#index as HTML
+  [1m[36mPlayer Load (0.2ms)[0m  [1m[34mSELECT "players".* FROM "players"[0m
+  ↳ app/controllers/players_controller.rb:5:in `index'
+Completed 200 OK in 2ms (Views: 1.8ms | ActiveRecord: 0.2ms | Allocations: 1481)
+
+
+Started POST "/players" for ::1 at 2020-03-26 11:10:02 +0000
+Processing by PlayersController#create as JSON
+  Parameters: {"name"=>"is me the new sea ba", "player"=>{"name"=>"is me the new sea ba"}}
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."name" = ? LIMIT ?[0m  [["name", "is me the new sea ba"], ["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:13:in `create'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/players_controller.rb:13:in `create'
+  [1m[36mPlayer Create (0.5ms)[0m  [1m[32mINSERT INTO "players" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "is me the new sea ba"], ["created_at", "2020-03-26 11:10:02.036397"], ["updated_at", "2020-03-26 11:10:02.036397"]]
+  ↳ app/controllers/players_controller.rb:13:in `create'
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/players_controller.rb:13:in `create'
+Completed 500 Internal Server Error in 112ms (ActiveRecord: 1.4ms | Allocations: 74909)
+
+
+  
+NameError (undefined local variable or method `player' for #<PlayersController:0x00007fd705ee7580>
+Did you mean?  @player):
+  
+app/controllers/players_controller.rb:15:in `create'
+Started GET "/cards" for ::1 at 2020-03-26 11:10:02 +0000
+Processing by CardsController#index as */*
+  [1m[36mCard Load (0.1ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  ↳ app/controllers/cards_controller.rb:5:in `index'
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.1ms | Allocations: 1133)
+
+
+Started POST "/players" for ::1 at 2020-03-26 11:11:33 +0000
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by PlayersController#create as JSON
+  Parameters: {"name"=>"Moustafa Mohamed", "player"=>{"name"=>"Moustafa Mohamed"}}
+  [1m[36mPlayer Load (0.2ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."name" = ? LIMIT ?[0m  [["name", "Moustafa Mohamed"], ["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:13:in `create'
+Completed 200 OK in 5ms (Views: 0.2ms | ActiveRecord: 0.7ms | Allocations: 3393)
+
+
+Started GET "/cards" for ::1 at 2020-03-26 11:11:33 +0000
+Processing by CardsController#index as */*
+  [1m[36mCard Load (0.2ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  ↳ app/controllers/cards_controller.rb:5:in `index'
+Completed 200 OK in 11ms (Views: 6.6ms | ActiveRecord: 0.7ms | Allocations: 6426)
+
+
+Started POST "/players" for ::1 at 2020-03-26 11:12:17 +0000
+Processing by PlayersController#create as JSON
+  Parameters: {"name"=>"Moustafa Mohamed", "player"=>{"name"=>"Moustafa Mohamed"}}
+  [1m[36mPlayer Load (0.2ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."name" = ? LIMIT ?[0m  [["name", "Moustafa Mohamed"], ["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:13:in `create'
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.2ms | Allocations: 979)
+
+
+Started GET "/cards" for ::1 at 2020-03-26 11:12:17 +0000
+Processing by CardsController#index as */*
+  [1m[36mCard Load (0.1ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  ↳ app/controllers/cards_controller.rb:5:in `index'
+Completed 200 OK in 2ms (Views: 1.8ms | ActiveRecord: 0.1ms | Allocations: 1134)
+
+
+Started POST "/players" for ::1 at 2020-03-26 11:19:00 +0000
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by PlayersController#create as JSON
+  Parameters: {"name"=>"Moustafa Mohamed", "player"=>{"name"=>"Moustafa Mohamed"}}
+  [1m[36mPlayer Load (0.4ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."name" = ? LIMIT ?[0m  [["name", "Moustafa Mohamed"], ["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:13:in `create'
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.4ms | Allocations: 1007)
+
+
+Started POST "/players" for ::1 at 2020-03-26 11:19:01 +0000
+Processing by PlayersController#create as JSON
+  Parameters: {"name"=>"Moustafa Mohamed", "player"=>{"name"=>"Moustafa Mohamed"}}
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."name" = ? LIMIT ?[0m  [["name", "Moustafa Mohamed"], ["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:13:in `create'
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.1ms | Allocations: 977)
+
+
+Started POST "/players" for ::1 at 2020-03-26 11:19:01 +0000
+Processing by PlayersController#create as JSON
+  Parameters: {"name"=>"Moustafa Mohamed", "player"=>{"name"=>"Moustafa Mohamed"}}
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."name" = ? LIMIT ?[0m  [["name", "Moustafa Mohamed"], ["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:13:in `create'
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.1ms | Allocations: 977)
+
+
+Started POST "/players" for ::1 at 2020-03-26 11:19:02 +0000
+Processing by PlayersController#create as JSON
+  Parameters: {"name"=>"Moustafa Mohamed", "player"=>{"name"=>"Moustafa Mohamed"}}
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."name" = ? LIMIT ?[0m  [["name", "Moustafa Mohamed"], ["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:13:in `create'
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.1ms | Allocations: 977)
+
+
+Started POST "/players" for ::1 at 2020-03-26 11:19:02 +0000
+Processing by PlayersController#create as JSON
+  Parameters: {"name"=>"Moustafa Mohamed", "player"=>{"name"=>"Moustafa Mohamed"}}
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."name" = ? LIMIT ?[0m  [["name", "Moustafa Mohamed"], ["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:13:in `create'
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.1ms | Allocations: 977)
+
+
+Started POST "/players" for ::1 at 2020-03-26 11:19:02 +0000
+Processing by PlayersController#create as JSON
+  Parameters: {"name"=>"Moustafa Mohamed", "player"=>{"name"=>"Moustafa Mohamed"}}
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."name" = ? LIMIT ?[0m  [["name", "Moustafa Mohamed"], ["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:13:in `create'
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.1ms | Allocations: 977)
+
+
+Started POST "/players" for ::1 at 2020-03-26 11:19:02 +0000
+Processing by PlayersController#create as JSON
+  Parameters: {"name"=>"Moustafa Mohamed", "player"=>{"name"=>"Moustafa Mohamed"}}
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."name" = ? LIMIT ?[0m  [["name", "Moustafa Mohamed"], ["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:13:in `create'
+Completed 200 OK in 12ms (Views: 0.2ms | ActiveRecord: 0.1ms | Allocations: 980)
+
+
+Started POST "/players" for ::1 at 2020-03-26 11:19:03 +0000
+Processing by PlayersController#create as JSON
+  Parameters: {"name"=>"Moustafa Mohamed", "player"=>{"name"=>"Moustafa Mohamed"}}
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."name" = ? LIMIT ?[0m  [["name", "Moustafa Mohamed"], ["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:13:in `create'
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.1ms | Allocations: 977)
+
+
+Started POST "/players" for ::1 at 2020-03-26 11:19:03 +0000
+Processing by PlayersController#create as JSON
+  Parameters: {"name"=>"Moustafa Mohamed", "player"=>{"name"=>"Moustafa Mohamed"}}
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."name" = ? LIMIT ?[0m  [["name", "Moustafa Mohamed"], ["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:13:in `create'
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.1ms | Allocations: 977)
+
+
+Started POST "/players" for ::1 at 2020-03-26 11:19:50 +0000
+Processing by PlayersController#create as JSON
+  Parameters: {"name"=>"Moustafa Mohamed", "player"=>{"name"=>"Moustafa Mohamed"}}
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."name" = ? LIMIT ?[0m  [["name", "Moustafa Mohamed"], ["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:13:in `create'
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.1ms | Allocations: 977)
+
+
+Started GET "/cards" for ::1 at 2020-03-26 11:19:50 +0000
+Processing by CardsController#index as */*
+  [1m[36mCard Load (0.3ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  ↳ app/controllers/cards_controller.rb:5:in `index'
+Completed 200 OK in 2ms (Views: 1.2ms | ActiveRecord: 0.3ms | Allocations: 1151)
+
+
+Started POST "/players" for ::1 at 2020-03-26 11:19:59 +0000
+Processing by PlayersController#create as JSON
+  Parameters: {"name"=>"Test1", "player"=>{"name"=>"Test1"}}
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."name" = ? LIMIT ?[0m  [["name", "Test1"], ["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:13:in `create'
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.1ms | Allocations: 977)
+
+
+Started GET "/cards" for ::1 at 2020-03-26 11:19:59 +0000
+Processing by CardsController#index as */*
+  [1m[36mCard Load (0.1ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  ↳ app/controllers/cards_controller.rb:5:in `index'
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.1ms | Allocations: 1134)
+
+
+Started GET "/cards" for ::1 at 2020-03-26 11:20:10 +0000
+Processing by CardsController#index as */*
+  [1m[36mCard Load (0.2ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  ↳ app/controllers/cards_controller.rb:5:in `index'
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.2ms | Allocations: 1134)
+
+
+Started GET "/cards" for ::1 at 2020-03-26 11:21:00 +0000
+Processing by CardsController#index as */*
+  [1m[36mCard Load (0.1ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  ↳ app/controllers/cards_controller.rb:5:in `index'
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.1ms | Allocations: 1134)
+
+
+Started POST "/players" for ::1 at 2020-03-26 11:21:50 +0000
+Processing by PlayersController#create as JSON
+  Parameters: {"name"=>"Moustafa Mohamed", "player"=>{"name"=>"Moustafa Mohamed"}}
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."name" = ? LIMIT ?[0m  [["name", "Moustafa Mohamed"], ["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:13:in `create'
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.1ms | Allocations: 977)
+
+
+Started GET "/players" for ::1 at 2020-03-26 11:22:11 +0000
+Processing by PlayersController#index as HTML
+  [1m[36mPlayer Load (0.2ms)[0m  [1m[34mSELECT "players".* FROM "players"[0m
+  ↳ app/controllers/players_controller.rb:5:in `index'
+Completed 200 OK in 2ms (Views: 2.0ms | ActiveRecord: 0.2ms | Allocations: 1602)
+
+
+Started POST "/players" for ::1 at 2020-03-26 11:30:40 +0000
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PlayersController#create as JSON
+  Parameters: {"name"=>"Moustafa Mohamed", "player"=>{"name"=>"Moustafa Mohamed"}}
+  [1m[36mPlayer Load (0.3ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."name" = ? LIMIT ?[0m  [["name", "Moustafa Mohamed"], ["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:13:in `create'
+Completed 200 OK in 7ms (Views: 0.5ms | ActiveRecord: 0.9ms | Allocations: 4051)
+
+
+Started GET "/cards" for ::1 at 2020-03-26 11:30:40 +0000
+Processing by CardsController#index as */*
+  [1m[36mCard Load (0.2ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  ↳ app/controllers/cards_controller.rb:5:in `index'
+Completed 200 OK in 10ms (Views: 5.4ms | ActiveRecord: 0.8ms | Allocations: 6644)
+
+
+Started GET "/cards" for ::1 at 2020-03-26 11:31:10 +0000
+Processing by CardsController#index as */*
+  [1m[36mCard Load (0.1ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  ↳ app/controllers/cards_controller.rb:5:in `index'
+Completed 200 OK in 2ms (Views: 1.9ms | ActiveRecord: 0.1ms | Allocations: 1151)
+
+
+Started POST "/players" for ::1 at 2020-03-26 11:32:41 +0000
+Processing by PlayersController#create as JSON
+  Parameters: {"name"=>"Moustafa Mohamed", "player"=>{"name"=>"Moustafa Mohamed"}}
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."name" = ? LIMIT ?[0m  [["name", "Moustafa Mohamed"], ["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:13:in `create'
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.1ms | Allocations: 997)
+
+
+Started GET "/cards" for ::1 at 2020-03-26 11:32:41 +0000
+Processing by CardsController#index as */*
+  [1m[36mCard Load (0.1ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  ↳ app/controllers/cards_controller.rb:5:in `index'
+Completed 200 OK in 2ms (Views: 1.2ms | ActiveRecord: 0.1ms | Allocations: 1134)
+
+
+Started GET "/cards" for ::1 at 2020-03-26 11:32:48 +0000
+Processing by CardsController#index as */*
+  [1m[36mCard Load (0.1ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  ↳ app/controllers/cards_controller.rb:5:in `index'
+Completed 200 OK in 1ms (Views: 1.2ms | ActiveRecord: 0.1ms | Allocations: 1151)
+
+
+Started GET "/cards" for ::1 at 2020-03-26 11:32:55 +0000
+Processing by CardsController#index as */*
+  [1m[36mCard Load (0.1ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  ↳ app/controllers/cards_controller.rb:5:in `index'
+Completed 200 OK in 1ms (Views: 1.1ms | ActiveRecord: 0.1ms | Allocations: 1151)
+
+
+Started GET "/cards" for ::1 at 2020-03-26 11:33:09 +0000
+Processing by CardsController#index as */*
+  [1m[36mCard Load (0.1ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  ↳ app/controllers/cards_controller.rb:5:in `index'
+Completed 200 OK in 1ms (Views: 1.0ms | ActiveRecord: 0.1ms | Allocations: 1134)
+
+
+Started POST "/players" for ::1 at 2020-03-26 11:35:31 +0000
+Processing by PlayersController#create as JSON
+  Parameters: {"name"=>"Moustafa Mohamed", "player"=>{"name"=>"Moustafa Mohamed"}}
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."name" = ? LIMIT ?[0m  [["name", "Moustafa Mohamed"], ["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:13:in `create'
+Completed 200 OK in 2ms (Views: 0.5ms | ActiveRecord: 0.1ms | Allocations: 978)
+
+
+Started GET "/cards" for ::1 at 2020-03-26 11:35:31 +0000
+Processing by CardsController#index as */*
+  [1m[36mCard Load (0.1ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  ↳ app/controllers/cards_controller.rb:5:in `index'
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.1ms | Allocations: 1134)
+
+
+Started POST "/players" for ::1 at 2020-03-26 11:46:59 +0000
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PlayersController#create as JSON
+  Parameters: {"name"=>"Moustafa Mohamed", "player"=>{"name"=>"Moustafa Mohamed"}}
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."name" = ? LIMIT ?[0m  [["name", "Moustafa Mohamed"], ["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:13:in `create'
+Completed 200 OK in 6ms (Views: 0.3ms | ActiveRecord: 0.5ms | Allocations: 4052)
+
+
+Started GET "/cards" for ::1 at 2020-03-26 11:46:59 +0000
+Processing by CardsController#index as */*
+  [1m[36mCard Load (0.3ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  ↳ app/controllers/cards_controller.rb:5:in `index'
+Completed 200 OK in 9ms (Views: 5.0ms | ActiveRecord: 0.6ms | Allocations: 6644)
+
+
+Started GET "/cards" for ::1 at 2020-03-26 11:47:06 +0000
+Processing by CardsController#index as */*
+  [1m[36mCard Load (0.1ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  ↳ app/controllers/cards_controller.rb:5:in `index'
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.1ms | Allocations: 1151)
+
+
+Started GET "/cards" for ::1 at 2020-03-26 11:47:13 +0000
+Processing by CardsController#index as */*
+  [1m[36mCard Load (0.1ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  ↳ app/controllers/cards_controller.rb:5:in `index'
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.1ms | Allocations: 1151)
+
+
+Started POST "/players" for ::1 at 2020-03-26 11:48:51 +0000
+Processing by PlayersController#create as JSON
+  Parameters: {"name"=>"Moustafa Mohamed", "player"=>{"name"=>"Moustafa Mohamed"}}
+  [1m[36mPlayer Load (0.2ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."name" = ? LIMIT ?[0m  [["name", "Moustafa Mohamed"], ["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:13:in `create'
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.2ms | Allocations: 997)
+
+
+Started GET "/cards" for ::1 at 2020-03-26 11:48:51 +0000
+Processing by CardsController#index as */*
+  [1m[36mCard Load (0.1ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  ↳ app/controllers/cards_controller.rb:5:in `index'
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.1ms | Allocations: 1134)
+
+
+Started GET "/cards" for ::1 at 2020-03-26 11:48:59 +0000
+Processing by CardsController#index as */*
+  [1m[36mCard Load (0.1ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  ↳ app/controllers/cards_controller.rb:5:in `index'
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.1ms | Allocations: 1151)
+
+
+Started GET "/cards" for ::1 at 2020-03-26 11:49:06 +0000
+Processing by CardsController#index as */*
+  [1m[36mCard Load (0.2ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  ↳ app/controllers/cards_controller.rb:5:in `index'
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.2ms | Allocations: 1134)
+
+
+Started POST "/players" for ::1 at 2020-03-26 11:50:52 +0000
+Processing by PlayersController#create as JSON
+  Parameters: {"name"=>"Moustafa Mohamed", "player"=>{"name"=>"Moustafa Mohamed"}}
+  [1m[36mPlayer Load (0.2ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."name" = ? LIMIT ?[0m  [["name", "Moustafa Mohamed"], ["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:13:in `create'
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.2ms | Allocations: 979)
+
+
+Started GET "/cards" for ::1 at 2020-03-26 11:50:52 +0000
+Processing by CardsController#index as */*
+  [1m[36mCard Load (0.1ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  ↳ app/controllers/cards_controller.rb:5:in `index'
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.1ms | Allocations: 1134)
+
+
+Started GET "/cards" for ::1 at 2020-03-26 11:50:59 +0000
+Processing by CardsController#index as */*
+  [1m[36mCard Load (0.2ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  ↳ app/controllers/cards_controller.rb:5:in `index'
+Completed 200 OK in 2ms (Views: 1.9ms | ActiveRecord: 0.2ms | Allocations: 1134)
+
+
+Started GET "/cards" for ::1 at 2020-03-26 11:51:05 +0000
+Processing by CardsController#index as */*
+  [1m[36mCard Load (0.2ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  ↳ app/controllers/cards_controller.rb:5:in `index'
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.2ms | Allocations: 1134)
+
+
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mGame Create (0.4ms)[0m  [1m[32mINSERT INTO "games" ("player_id", "score", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["player_id", 1], ["score", 10], ["created_at", "2020-03-26 11:54:22.452176"], ["updated_at", "2020-03-26 11:54:22.452176"]]
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mGame Load (0.3ms)[0m  [1m[34mSELECT "games".* FROM "games" ORDER BY "games"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mGame Load (0.3ms)[0m  [1m[34mSELECT "games".* FROM "games" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mGame Load (0.2ms)[0m  [1m[34mSELECT "games".* FROM "games" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mGame Create (0.5ms)[0m  [1m[32mINSERT INTO "games" ("player_id", "score", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["player_id", 1], ["score", 10], ["created_at", "2020-03-26 11:55:13.359748"], ["updated_at", "2020-03-26 11:55:13.359748"]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateGameCards (20200324181932)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE "game_cards"[0m
+  [1m[36mprimary::SchemaMigration Destroy (0.1ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = ?[0m  [["version", "20200324181932"]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateGames (20200322143026)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE "games"[0m
+  [1m[36mprimary::SchemaMigration Destroy (0.1ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = ?[0m  [["version", "20200322143026"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateCards (20200322142916)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE "cards"[0m
+  [1m[36mprimary::SchemaMigration Destroy (0.1ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = ?[0m  [["version", "20200322142916"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreatePlayers (20200322141905)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE "players"[0m
+  [1m[36mprimary::SchemaMigration Destroy (0.1ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = ?[0m  [["version", "20200322141905"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreatePlayers (20200322141905)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE "players" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mprimary::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20200322141905"]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateCards (20200322142916)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "cards" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "word" varchar, "image1" varchar, "image2" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mprimary::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20200322142916"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateGames (20200322143026)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "games" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "player_id" integer NOT NULL, "card_id" integer DEFAULT NULL NOT NULL, "score" integer DEFAULT 0, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, CONSTRAINT "fk_rails_39e1446fa9"
+FOREIGN KEY ("player_id")
+  REFERENCES "players" ("id")
+, CONSTRAINT "fk_rails_5a5b41dea0"
+FOREIGN KEY ("card_id")
+  REFERENCES "cards" ("id")
+)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_games_on_player_id" ON "games" ("player_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_games_on_card_id" ON "games" ("card_id")[0m
+  [1m[36mprimary::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20200322143026"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateGameCards (20200324181932)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "game_cards" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "card_id" integer NOT NULL, "game_id" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, CONSTRAINT "fk_rails_1c011f3fa6"
+FOREIGN KEY ("card_id")
+  REFERENCES "cards" ("id")
+, CONSTRAINT "fk_rails_aacd038e12"
+FOREIGN KEY ("game_id")
+  REFERENCES "games" ("id")
+)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_game_cards_on_card_id" ON "game_cards" ("card_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_game_cards_on_game_id" ON "game_cards" ("game_id")[0m
+  [1m[36mprimary::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20200324181932"]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPlayer Create (0.4ms)[0m  [1m[32mINSERT INTO "players" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Mustafa"], ["created_at", "2020-03-26 11:57:36.567877"], ["updated_at", "2020-03-26 11:57:36.567877"]]
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPlayer Create (0.3ms)[0m  [1m[32mINSERT INTO "players" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Alex"], ["created_at", "2020-03-26 11:57:36.572785"], ["updated_at", "2020-03-26 11:57:36.572785"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCard Create (0.3ms)[0m  [1m[32mINSERT INTO "cards" ("word", "image1", "image2", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["word", "hourglass"], ["image1", "https://images-na.ssl-images-amazon.com/images/I/812L5zyAmpL._AC_SX522_.jpg"], ["image2", "https://media.tiffany.com/is/image/Tiffany/EcomItemL2/all-purpose-white-wine-glass-25486439_870853_ED_M.jpg?&op_usm=2.0,1.0,6.0&$cropN=0.1,0.1,0.8,0.8&defaultImage=NoImageAvailableInternal&"], ["created_at", "2020-03-26 11:57:36.583518"], ["updated_at", "2020-03-26 11:57:36.583518"]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCard Create (0.3ms)[0m  [1m[32mINSERT INTO "cards" ("word", "image1", "image2", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["word", "basketball"], ["image1", "https://www.fruitgravycompany.com/wp-content/uploads/2018/12/basket.jpg"], ["image2", "https://www.teenmissions.org/wp-content/uploads/2016/05/1407858226.png"], ["created_at", "2020-03-26 11:57:36.586954"], ["updated_at", "2020-03-26 11:57:36.586954"]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCard Create (0.3ms)[0m  [1m[32mINSERT INTO "cards" ("word", "image1", "image2", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["word", "hotdog"], ["image1", "https://media-cdn.tripadvisor.com/media/photo-s/04/52/79/59/amici-brick-oven-pizza.jpg"], ["image2", "https://www.akc.org/wp-content/themes/akc/component-library/assets/img/welcome.jpg"], ["created_at", "2020-03-26 11:57:36.589989"], ["updated_at", "2020-03-26 11:57:36.589989"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT "players".* FROM "players" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mPlayer Load (0.4ms)[0m  [1m[34mSELECT "players".* FROM "players" ORDER BY "players"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mPlayer Load (0.3ms)[0m  [1m[34mSELECT "players".* FROM "players" ORDER BY "players"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mGame Create (0.5ms)[0m  [1m[32mINSERT INTO "games" ("player_id", "score", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["player_id", 1], ["score", 10], ["created_at", "2020-03-26 11:58:17.981635"], ["updated_at", "2020-03-26 11:58:17.981635"]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mGame Load (0.3ms)[0m  [1m[34mSELECT "games".* FROM "games" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateGameCards (20200324181932)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[35mDROP TABLE "game_cards"[0m
+  [1m[36mprimary::SchemaMigration Destroy (0.1ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = ?[0m  [["version", "20200324181932"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateGames (20200322143026)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE "games"[0m
+  [1m[36mprimary::SchemaMigration Destroy (0.1ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = ?[0m  [["version", "20200322143026"]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateCards (20200322142916)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE "cards"[0m
+  [1m[36mprimary::SchemaMigration Destroy (0.1ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = ?[0m  [["version", "20200322142916"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreatePlayers (20200322141905)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE "players"[0m
+  [1m[36mprimary::SchemaMigration Destroy (0.1ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = ?[0m  [["version", "20200322141905"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreatePlayers (20200322141905)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE TABLE "players" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mprimary::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20200322141905"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateCards (20200322142916)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE TABLE "cards" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "word" varchar, "image1" varchar, "image2" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mprimary::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20200322142916"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateGames (20200322143026)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE TABLE "games" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "player_id" integer NOT NULL, "score" integer DEFAULT 0, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, CONSTRAINT "fk_rails_39e1446fa9"
+FOREIGN KEY ("player_id")
+  REFERENCES "players" ("id")
+)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_games_on_player_id" ON "games" ("player_id")[0m
+  [1m[36mprimary::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20200322143026"]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateGameCards (20200324181932)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.6ms)[0m  [1m[35mCREATE TABLE "game_cards" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "card_id" integer NOT NULL, "game_id" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, CONSTRAINT "fk_rails_1c011f3fa6"
+FOREIGN KEY ("card_id")
+  REFERENCES "cards" ("id")
+, CONSTRAINT "fk_rails_aacd038e12"
+FOREIGN KEY ("game_id")
+  REFERENCES "games" ("id")
+)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE  INDEX "index_game_cards_on_card_id" ON "game_cards" ("card_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_game_cards_on_game_id" ON "game_cards" ("game_id")[0m
+  [1m[36mprimary::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20200324181932"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPlayer Create (0.3ms)[0m  [1m[32mINSERT INTO "players" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Mustafa"], ["created_at", "2020-03-26 11:59:33.620857"], ["updated_at", "2020-03-26 11:59:33.620857"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPlayer Create (0.2ms)[0m  [1m[32mINSERT INTO "players" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Alex"], ["created_at", "2020-03-26 11:59:33.624109"], ["updated_at", "2020-03-26 11:59:33.624109"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCard Create (0.2ms)[0m  [1m[32mINSERT INTO "cards" ("word", "image1", "image2", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["word", "hourglass"], ["image1", "https://images-na.ssl-images-amazon.com/images/I/812L5zyAmpL._AC_SX522_.jpg"], ["image2", "https://media.tiffany.com/is/image/Tiffany/EcomItemL2/all-purpose-white-wine-glass-25486439_870853_ED_M.jpg?&op_usm=2.0,1.0,6.0&$cropN=0.1,0.1,0.8,0.8&defaultImage=NoImageAvailableInternal&"], ["created_at", "2020-03-26 11:59:33.633390"], ["updated_at", "2020-03-26 11:59:33.633390"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCard Create (0.2ms)[0m  [1m[32mINSERT INTO "cards" ("word", "image1", "image2", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["word", "basketball"], ["image1", "https://www.fruitgravycompany.com/wp-content/uploads/2018/12/basket.jpg"], ["image2", "https://www.teenmissions.org/wp-content/uploads/2016/05/1407858226.png"], ["created_at", "2020-03-26 11:59:33.636528"], ["updated_at", "2020-03-26 11:59:33.636528"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCard Create (0.2ms)[0m  [1m[32mINSERT INTO "cards" ("word", "image1", "image2", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["word", "hotdog"], ["image1", "https://media-cdn.tripadvisor.com/media/photo-s/04/52/79/59/amici-brick-oven-pizza.jpg"], ["image2", "https://www.akc.org/wp-content/themes/akc/component-library/assets/img/welcome.jpg"], ["created_at", "2020-03-26 11:59:33.639364"], ["updated_at", "2020-03-26 11:59:33.639364"]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT "players".* FROM "players" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPlayer Load (0.2ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mGame Create (0.6ms)[0m  [1m[32mINSERT INTO "games" ("player_id", "score", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["player_id", 1], ["score", 10], ["created_at", "2020-03-26 11:59:50.341180"], ["updated_at", "2020-03-26 11:59:50.341180"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mGame Load (0.4ms)[0m  [1m[34mSELECT "games".* FROM "games" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mGame Load (0.3ms)[0m  [1m[34mSELECT "games".* FROM "games" ORDER BY "games"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]

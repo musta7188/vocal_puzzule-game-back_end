@@ -31,11 +31,9 @@ ActiveRecord::Schema.define(version: 2020_03_24_181932) do
 
   create_table "games", force: :cascade do |t|
     t.integer "player_id", null: false
-    t.integer "card_id", null: false
     t.integer "score", default: 0
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["card_id"], name: "index_games_on_card_id"
     t.index ["player_id"], name: "index_games_on_player_id"
   end
 
@@ -47,6 +45,5 @@ ActiveRecord::Schema.define(version: 2020_03_24_181932) do
 
   add_foreign_key "game_cards", "cards"
   add_foreign_key "game_cards", "games"
-  add_foreign_key "games", "cards"
   add_foreign_key "games", "players"
 end

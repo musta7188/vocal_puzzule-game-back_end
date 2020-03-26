@@ -15,7 +15,7 @@ class GamesController < ApplicationController
 
   def create
     game = Game.create(player_id: params[:player_id], score: params[:score])
-    # params[user_id], params[score], params[card_ids]
+
   end
  
 end
