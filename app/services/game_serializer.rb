@@ -5,15 +5,7 @@ class GameSerializer
   end
 
   def to_serialized_json 
-    data = {
-      include: {
-        player: {
-          only: [:name, :id, :score]
-        },
-        card: {only: [:id, :word, :image1, :image2]}
-      },
-      only: [:id, :player_id, :card_id]
-    }
+    data = { include: { player: {only: [:name, :id]} }, only: [:id, :score] }
 
     @games.to_json(data)
 

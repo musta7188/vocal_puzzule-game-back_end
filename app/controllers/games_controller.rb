@@ -2,8 +2,9 @@ class GamesController < ApplicationController
 
   # before_action :require_player
 
+  # leadrb
   def index 
-    games = Game.all
+    games = Game.sort_by_score.take(5);
 
     render json: GameSerializer.new(games).to_serialized_json 
   end
@@ -15,7 +16,7 @@ class GamesController < ApplicationController
 
   def create
     game = Game.create(player_id: params[:player_id], score: params[:score])
-
+    render json: GameSerializer.new(game).to_serialized_json
   end
  
 end

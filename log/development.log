@@ -4452,3 +4452,2556 @@ FOREIGN KEY ("game_id")
   [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
   [1m[36mGame Load (0.4ms)[0m  [1m[34mSELECT "games".* FROM "games" LIMIT ?[0m  [["LIMIT", 11]]
   [1m[36mGame Load (0.3ms)[0m  [1m[34mSELECT "games".* FROM "games" ORDER BY "games"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+Started GET "/games" for ::1 at 2020-03-26 12:06:56 +0000
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by GamesController#index as HTML
+  [1m[36mGame Load (0.5ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+  ↳ app/services/game_serializer.rb:18:in `to_serialized_json'
+  [1m[36mPlayer Load (0.4ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/services/game_serializer.rb:18:in `to_serialized_json'
+Completed 500 Internal Server Error in 23ms (ActiveRecord: 1.5ms | Allocations: 14806)
+
+
+  
+NoMethodError (undefined method `card' for #<Game:0x00007fad58c2cd80>
+Did you mean?  cards):
+  
+app/services/game_serializer.rb:18:in `to_serialized_json'
+app/controllers/games_controller.rb:8:in `index'
+Started GET "/games" for ::1 at 2020-03-26 12:08:40 +0000
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by GamesController#index as HTML
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms | Allocations: 1804)
+
+
+  
+SyntaxError (/Users/musta88/Development/code/module_3_project_back_end/puzzule-game-back_end/app/services/game_serializer.rb:16: syntax error, unexpected tIVAR, expecting '}'
+    @games.to_json(data)
+    ^~~~~~):
+  
+app/services/game_serializer.rb:16: syntax error, unexpected tIVAR, expecting '}'
+app/services/game_serializer.rb:16: syntax error, unexpected tIVAR, expecting '}'
+app/controllers/games_controller.rb:8:in `index'
+Started GET "/games" for ::1 at 2020-03-26 12:09:06 +0000
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by GamesController#index as HTML
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms | Allocations: 1751)
+
+
+  
+SyntaxError (/Users/musta88/Development/code/module_3_project_back_end/puzzule-game-back_end/app/services/game_serializer.rb:13: syntax error, unexpected tIDENTIFIER, expecting '}'
+      only: [:id, :player_id, :card_id]
+      ^~~~
+/Users/musta88/Development/code/module_3_project_back_end/puzzule-game-back_end/app/services/game_serializer.rb:14: syntax error, unexpected '}', expecting end
+    }
+    ^):
+  
+app/services/game_serializer.rb:13: syntax error, unexpected tIDENTIFIER, expecting '}'
+app/services/game_serializer.rb:14: syntax error, unexpected '}', expecting end
+app/services/game_serializer.rb:13: syntax error, unexpected tIDENTIFIER, expecting '}'
+app/services/game_serializer.rb:14: syntax error, unexpected '}', expecting end
+app/controllers/games_controller.rb:8:in `index'
+Started GET "/games" for ::1 at 2020-03-26 12:09:31 +0000
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by GamesController#index as HTML
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms | Allocations: 1751)
+
+
+  
+SyntaxError (/Users/musta88/Development/code/module_3_project_back_end/puzzule-game-back_end/app/services/game_serializer.rb:13: syntax error, unexpected tIDENTIFIER, expecting '}'
+      only: [:id, :player_id, :score]
+      ^~~~
+/Users/musta88/Development/code/module_3_project_back_end/puzzule-game-back_end/app/services/game_serializer.rb:14: syntax error, unexpected '}', expecting end
+    }
+    ^):
+  
+app/services/game_serializer.rb:13: syntax error, unexpected tIDENTIFIER, expecting '}'
+app/services/game_serializer.rb:14: syntax error, unexpected '}', expecting end
+app/services/game_serializer.rb:13: syntax error, unexpected tIDENTIFIER, expecting '}'
+app/services/game_serializer.rb:14: syntax error, unexpected '}', expecting end
+app/controllers/games_controller.rb:8:in `index'
+Started GET "/games" for ::1 at 2020-03-26 12:10:23 +0000
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by GamesController#index as HTML
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms | Allocations: 1745)
+
+
+  
+SyntaxError (/Users/musta88/Development/code/module_3_project_back_end/puzzule-game-back_end/app/services/game_serializer.rb:9: syntax error, unexpected ','
+      include: { player:, only: [:name, :id] }
+                        ^
+/Users/musta88/Development/code/module_3_project_back_end/puzzule-game-back_end/app/services/game_serializer.rb:9: syntax error, unexpected '}', expecting end
+...{ player:, only: [:name, :id] }
+...                              ^
+/Users/musta88/Development/code/module_3_project_back_end/puzzule-game-back_end/app/services/game_serializer.rb:11: syntax error, unexpected '}', expecting end
+    }
+    ^):
+  
+app/services/game_serializer.rb:9: syntax error, unexpected ','
+app/services/game_serializer.rb:9: syntax error, unexpected '}', expecting end
+app/services/game_serializer.rb:11: syntax error, unexpected '}', expecting end
+app/services/game_serializer.rb:9: syntax error, unexpected ','
+app/services/game_serializer.rb:9: syntax error, unexpected '}', expecting end
+app/services/game_serializer.rb:11: syntax error, unexpected '}', expecting end
+app/controllers/games_controller.rb:8:in `index'
+Started GET "/games" for ::1 at 2020-03-26 12:10:40 +0000
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by GamesController#index as HTML
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms | Allocations: 1724)
+
+
+  
+Zeitwerk::NameError (expected file /Users/musta88/Development/code/module_3_project_back_end/puzzule-game-back_end/app/services/game_serializer.rb to define constant GameSerializer, but didn't):
+  
+app/controllers/games_controller.rb:8:in `index'
+Started GET "/games" for ::1 at 2020-03-26 12:11:22 +0000
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by GamesController#index as HTML
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms | Allocations: 1736)
+
+
+  
+SyntaxError (/Users/musta88/Development/code/module_3_project_back_end/puzzule-game-back_end/app/services/game_serializer.rb:8: syntax error, unexpected ','
+    data = { nclude: { player:, only: [:name, :id] }
+                              ^
+/Users/musta88/Development/code/module_3_project_back_end/puzzule-game-back_end/app/services/game_serializer.rb:8: syntax error, unexpected '}', expecting end
+...{ player:, only: [:name, :id] }
+...                              ^
+/Users/musta88/Development/code/module_3_project_back_end/puzzule-game-back_end/app/services/game_serializer.rb:10: syntax error, unexpected '}', expecting end
+    }
+    ^):
+  
+app/services/game_serializer.rb:8: syntax error, unexpected ','
+app/services/game_serializer.rb:8: syntax error, unexpected '}', expecting end
+app/services/game_serializer.rb:10: syntax error, unexpected '}', expecting end
+app/services/game_serializer.rb:8: syntax error, unexpected ','
+app/services/game_serializer.rb:8: syntax error, unexpected '}', expecting end
+app/services/game_serializer.rb:10: syntax error, unexpected '}', expecting end
+app/controllers/games_controller.rb:8:in `index'
+Started GET "/games" for ::1 at 2020-03-26 12:11:48 +0000
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by GamesController#index as HTML
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms | Allocations: 1730)
+
+
+  
+SyntaxError (/Users/musta88/Development/code/module_3_project_back_end/puzzule-game-back_end/app/services/game_serializer.rb:8: syntax error, unexpected ','
+...   data = { include: { player:, only: [:name, :id] } only: [...
+...                              ^
+/Users/musta88/Development/code/module_3_project_back_end/puzzule-game-back_end/app/services/game_serializer.rb:8: syntax error, unexpected '}', expecting end
+...{ player:, only: [:name, :id] } only: [:id, :score] }
+...                              ^
+/Users/musta88/Development/code/module_3_project_back_end/puzzule-game-back_end/app/services/game_serializer.rb:8: syntax error, unexpected '}', expecting end
+...e, :id] } only: [:id, :score] }
+...                              ^):
+  
+app/services/game_serializer.rb:8: syntax error, unexpected ','
+app/services/game_serializer.rb:8: syntax error, unexpected '}', expecting end
+app/services/game_serializer.rb:8: syntax error, unexpected '}', expecting end
+app/services/game_serializer.rb:8: syntax error, unexpected ','
+app/services/game_serializer.rb:8: syntax error, unexpected '}', expecting end
+app/services/game_serializer.rb:8: syntax error, unexpected '}', expecting end
+app/controllers/games_controller.rb:8:in `index'
+Started GET "/games" for ::1 at 2020-03-26 12:12:07 +0000
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by GamesController#index as HTML
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms | Allocations: 1730)
+
+
+  
+SyntaxError (/Users/musta88/Development/code/module_3_project_back_end/puzzule-game-back_end/app/services/game_serializer.rb:8: syntax error, unexpected tIDENTIFIER, expecting '}'
+...er: {only: [:name, :id]} } only: [:id, :score] }
+...                           ^~~~
+/Users/musta88/Development/code/module_3_project_back_end/puzzule-game-back_end/app/services/game_serializer.rb:8: syntax error, unexpected '}', expecting end
+..., :id]} } only: [:id, :score] }
+...                              ^):
+  
+app/services/game_serializer.rb:8: syntax error, unexpected tIDENTIFIER, expecting '}'
+app/services/game_serializer.rb:8: syntax error, unexpected '}', expecting end
+app/services/game_serializer.rb:8: syntax error, unexpected tIDENTIFIER, expecting '}'
+app/services/game_serializer.rb:8: syntax error, unexpected '}', expecting end
+app/controllers/games_controller.rb:8:in `index'
+Started GET "/games" for ::1 at 2020-03-26 12:12:13 +0000
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by GamesController#index as HTML
+  [1m[36mGame Load (0.3ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+  ↳ app/services/game_serializer.rb:10:in `to_serialized_json'
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/services/game_serializer.rb:10:in `to_serialized_json'
+Completed 200 OK in 25ms (Views: 0.2ms | ActiveRecord: 1.3ms | Allocations: 10365)
+
+
+Started POST "/players" for ::1 at 2020-03-26 12:14:53 +0000
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by PlayersController#create as JSON
+  Parameters: {"name"=>"name1", "player"=>{"name"=>"name1"}}
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."name" = ? LIMIT ?[0m  [["name", "name1"], ["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:13:in `create'
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/players_controller.rb:13:in `create'
+  [1m[36mPlayer Create (0.4ms)[0m  [1m[32mINSERT INTO "players" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "name1"], ["created_at", "2020-03-26 12:14:53.528988"], ["updated_at", "2020-03-26 12:14:53.528988"]]
+  ↳ app/controllers/players_controller.rb:13:in `create'
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/players_controller.rb:13:in `create'
+Completed 200 OK in 7ms (Views: 0.2ms | ActiveRecord: 1.6ms | Allocations: 5783)
+
+
+Started GET "/cards" for ::1 at 2020-03-26 12:14:53 +0000
+Processing by CardsController#index as */*
+  [1m[36mCard Load (0.2ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  ↳ app/controllers/cards_controller.rb:5:in `index'
+Completed 200 OK in 6ms (Views: 3.8ms | ActiveRecord: 0.4ms | Allocations: 6590)
+
+
+Started GET "/cards" for ::1 at 2020-03-26 12:14:59 +0000
+Processing by CardsController#index as */*
+  [1m[36mCard Load (0.2ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  ↳ app/controllers/cards_controller.rb:5:in `index'
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.2ms | Allocations: 1134)
+
+
+Started GET "/cards" for ::1 at 2020-03-26 12:15:06 +0000
+Processing by CardsController#index as */*
+  [1m[36mCard Load (0.2ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  ↳ app/controllers/cards_controller.rb:5:in `index'
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.2ms | Allocations: 1136)
+
+
+Started POST "/games" for ::1 at 2020-03-26 12:15:19 +0000
+  
+ActionController::RoutingError (No route matches [POST] "/games"):
+  
+actionpack (6.0.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.2.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.2.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.2.2) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.2.2) lib/rails/engine.rb:526:in `call'
+puma (4.3.3) lib/puma/configuration.rb:228:in `call'
+puma (4.3.3) lib/puma/server.rb:682:in `handle_request'
+puma (4.3.3) lib/puma/server.rb:472:in `process_client'
+puma (4.3.3) lib/puma/server.rb:328:in `block in run'
+puma (4.3.3) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/games" for ::1 at 2020-03-26 12:15:55 +0000
+Processing by GamesController#index as HTML
+  [1m[36mGame Load (0.2ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+  ↳ app/services/game_serializer.rb:10:in `to_serialized_json'
+  [1m[36mPlayer Load (0.2ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/services/game_serializer.rb:10:in `to_serialized_json'
+Completed 200 OK in 17ms (Views: 0.1ms | ActiveRecord: 0.7ms | Allocations: 6201)
+
+
+Started POST "/players" for ::1 at 2020-03-26 12:16:41 +0000
+Processing by PlayersController#create as JSON
+  Parameters: {"name"=>"Moustafa Mohamed", "player"=>{"name"=>"Moustafa Mohamed"}}
+  [1m[36mPlayer Load (0.5ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."name" = ? LIMIT ?[0m  [["name", "Moustafa Mohamed"], ["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:13:in `create'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/players_controller.rb:13:in `create'
+  [1m[36mPlayer Create (0.4ms)[0m  [1m[32mINSERT INTO "players" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Moustafa Mohamed"], ["created_at", "2020-03-26 12:16:41.841101"], ["updated_at", "2020-03-26 12:16:41.841101"]]
+  ↳ app/controllers/players_controller.rb:13:in `create'
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/players_controller.rb:13:in `create'
+Completed 200 OK in 7ms (Views: 0.2ms | ActiveRecord: 1.9ms | Allocations: 3149)
+
+
+Started GET "/cards" for ::1 at 2020-03-26 12:16:41 +0000
+Processing by CardsController#index as */*
+  [1m[36mCard Load (0.1ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  ↳ app/controllers/cards_controller.rb:5:in `index'
+Completed 200 OK in 1ms (Views: 1.2ms | ActiveRecord: 0.1ms | Allocations: 1134)
+
+
+Started GET "/cards" for ::1 at 2020-03-26 12:16:52 +0000
+Processing by CardsController#index as */*
+  [1m[36mCard Load (0.1ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  ↳ app/controllers/cards_controller.rb:5:in `index'
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.1ms | Allocations: 1136)
+
+
+Started POST "/games" for ::1 at 2020-03-26 12:17:39 +0000
+  
+ActionController::RoutingError (No route matches [POST] "/games"):
+  
+actionpack (6.0.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.2.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.2.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.2.2) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.2.2) lib/rails/engine.rb:526:in `call'
+puma (4.3.3) lib/puma/configuration.rb:228:in `call'
+puma (4.3.3) lib/puma/server.rb:682:in `handle_request'
+puma (4.3.3) lib/puma/server.rb:472:in `process_client'
+puma (4.3.3) lib/puma/server.rb:328:in `block in run'
+puma (4.3.3) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started POST "/players" for ::1 at 2020-03-26 12:19:32 +0000
+Processing by PlayersController#create as JSON
+  Parameters: {"name"=>"Moustafa Mohamed", "player"=>{"name"=>"Moustafa Mohamed"}}
+  [1m[36mPlayer Load (0.2ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."name" = ? LIMIT ?[0m  [["name", "Moustafa Mohamed"], ["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:13:in `create'
+Completed 200 OK in 3ms (Views: 0.3ms | ActiveRecord: 0.2ms | Allocations: 978)
+
+
+Started GET "/cards" for ::1 at 2020-03-26 12:19:32 +0000
+Processing by CardsController#index as */*
+  [1m[36mCard Load (0.1ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  ↳ app/controllers/cards_controller.rb:5:in `index'
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.1ms | Allocations: 1134)
+
+
+Started GET "/cards" for ::1 at 2020-03-26 12:19:38 +0000
+Processing by CardsController#index as */*
+  [1m[36mCard Load (0.1ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  ↳ app/controllers/cards_controller.rb:5:in `index'
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.1ms | Allocations: 1134)
+
+
+Started POST "/games" for ::1 at 2020-03-26 12:20:03 +0000
+  
+ActionController::RoutingError (No route matches [POST] "/games"):
+  
+actionpack (6.0.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.2.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.2.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.2.2) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.2.2) lib/rails/engine.rb:526:in `call'
+puma (4.3.3) lib/puma/configuration.rb:228:in `call'
+puma (4.3.3) lib/puma/server.rb:682:in `handle_request'
+puma (4.3.3) lib/puma/server.rb:472:in `process_client'
+puma (4.3.3) lib/puma/server.rb:328:in `block in run'
+puma (4.3.3) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/games" for ::1 at 2020-03-26 12:21:41 +0000
+Processing by GamesController#index as */*
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+  ↳ app/services/game_serializer.rb:10:in `to_serialized_json'
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/services/game_serializer.rb:10:in `to_serialized_json'
+Completed 200 OK in 3ms (Views: 0.1ms | ActiveRecord: 0.2ms | Allocations: 1519)
+
+
+Started GET "/games" for ::1 at 2020-03-26 12:21:51 +0000
+Processing by GamesController#index as */*
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+  ↳ app/services/game_serializer.rb:10:in `to_serialized_json'
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/services/game_serializer.rb:10:in `to_serialized_json'
+Completed 200 OK in 3ms (Views: 0.1ms | ActiveRecord: 0.2ms | Allocations: 1520)
+
+
+Started GET "/games" for ::1 at 2020-03-26 12:22:11 +0000
+Processing by GamesController#index as */*
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+  ↳ app/services/game_serializer.rb:10:in `to_serialized_json'
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/services/game_serializer.rb:10:in `to_serialized_json'
+Completed 200 OK in 3ms (Views: 0.1ms | ActiveRecord: 0.2ms | Allocations: 1520)
+
+
+Started GET "/games" for ::1 at 2020-03-26 12:23:11 +0000
+Processing by GamesController#index as HTML
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+  ↳ app/services/game_serializer.rb:10:in `to_serialized_json'
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/services/game_serializer.rb:10:in `to_serialized_json'
+Completed 200 OK in 3ms (Views: 0.1ms | ActiveRecord: 0.2ms | Allocations: 1518)
+
+
+Started POST "/players" for ::1 at 2020-03-26 12:23:35 +0000
+Processing by PlayersController#create as JSON
+  Parameters: {"name"=>"Moustafa Mohamed", "player"=>{"name"=>"Moustafa Mohamed"}}
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."name" = ? LIMIT ?[0m  [["name", "Moustafa Mohamed"], ["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:13:in `create'
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.1ms | Allocations: 979)
+
+
+Started GET "/cards" for ::1 at 2020-03-26 12:23:36 +0000
+Processing by CardsController#index as */*
+  [1m[36mCard Load (0.1ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  ↳ app/controllers/cards_controller.rb:5:in `index'
+Completed 200 OK in 1ms (Views: 1.2ms | ActiveRecord: 0.1ms | Allocations: 1134)
+
+
+Started GET "/cards" for ::1 at 2020-03-26 12:23:48 +0000
+Processing by CardsController#index as */*
+  [1m[36mCard Load (0.1ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  ↳ app/controllers/cards_controller.rb:5:in `index'
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.1ms | Allocations: 1134)
+
+
+Started POST "/games" for ::1 at 2020-03-26 12:24:08 +0000
+  
+ActionController::RoutingError (No route matches [POST] "/games"):
+  
+actionpack (6.0.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.2.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.2.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.2.2) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.2.2) lib/rails/engine.rb:526:in `call'
+puma (4.3.3) lib/puma/configuration.rb:228:in `call'
+puma (4.3.3) lib/puma/server.rb:682:in `handle_request'
+puma (4.3.3) lib/puma/server.rb:472:in `process_client'
+puma (4.3.3) lib/puma/server.rb:328:in `block in run'
+puma (4.3.3) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started POST "/players" for ::1 at 2020-03-26 12:25:37 +0000
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PlayersController#create as JSON
+  Parameters: {"name"=>"Moustafa Mohamed", "player"=>{"name"=>"Moustafa Mohamed"}}
+  [1m[36mPlayer Load (0.2ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."name" = ? LIMIT ?[0m  [["name", "Moustafa Mohamed"], ["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:13:in `create'
+Completed 200 OK in 8ms (Views: 0.4ms | ActiveRecord: 1.0ms | Allocations: 4052)
+
+
+Started GET "/cards" for ::1 at 2020-03-26 12:25:37 +0000
+Processing by CardsController#index as */*
+  [1m[36mCard Load (0.2ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  ↳ app/controllers/cards_controller.rb:5:in `index'
+Completed 200 OK in 9ms (Views: 5.7ms | ActiveRecord: 0.5ms | Allocations: 6644)
+
+
+Started GET "/cards" for ::1 at 2020-03-26 12:25:44 +0000
+Processing by CardsController#index as */*
+  [1m[36mCard Load (0.2ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  ↳ app/controllers/cards_controller.rb:5:in `index'
+Completed 200 OK in 2ms (Views: 1.2ms | ActiveRecord: 0.2ms | Allocations: 1151)
+
+
+Started POST "/games" for ::1 at 2020-03-26 12:25:57 +0000
+  
+ActionController::RoutingError (No route matches [POST] "/games"):
+  
+actionpack (6.0.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.2.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.2.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.2.2) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.2.2) lib/rails/engine.rb:526:in `call'
+puma (4.3.3) lib/puma/configuration.rb:228:in `call'
+puma (4.3.3) lib/puma/server.rb:682:in `handle_request'
+puma (4.3.3) lib/puma/server.rb:472:in `process_client'
+puma (4.3.3) lib/puma/server.rb:328:in `block in run'
+puma (4.3.3) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started POST "/players" for ::1 at 2020-03-26 12:27:42 +0000
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by PlayersController#create as JSON
+  Parameters: {"name"=>"Moustafa Mohamed", "player"=>{"name"=>"Moustafa Mohamed"}}
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."name" = ? LIMIT ?[0m  [["name", "Moustafa Mohamed"], ["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:13:in `create'
+Completed 200 OK in 6ms (Views: 0.2ms | ActiveRecord: 1.3ms | Allocations: 3351)
+
+
+Started GET "/cards" for ::1 at 2020-03-26 12:27:42 +0000
+Processing by CardsController#index as */*
+  [1m[36mCard Load (0.3ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  ↳ app/controllers/cards_controller.rb:5:in `index'
+Completed 200 OK in 11ms (Views: 6.2ms | ActiveRecord: 1.0ms | Allocations: 6425)
+
+
+Started GET "/cards" for ::1 at 2020-03-26 12:27:48 +0000
+Processing by CardsController#index as */*
+  [1m[36mCard Load (0.1ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  ↳ app/controllers/cards_controller.rb:5:in `index'
+Completed 200 OK in 1ms (Views: 1.0ms | ActiveRecord: 0.1ms | Allocations: 1151)
+
+
+Started POST "/games" for ::1 at 2020-03-26 12:27:57 +0000
+Processing by GamesController#create as JSON
+  Parameters: {"player_id"=>4, "score"=>2, "game"=>{"player_id"=>4, "score"=>2}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/games_controller.rb:17:in `create'
+  [1m[36mPlayer Load (0.2ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/games_controller.rb:17:in `create'
+  [1m[36mGame Create (0.4ms)[0m  [1m[32mINSERT INTO "games" ("player_id", "score", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["player_id", 4], ["score", 2], ["created_at", "2020-03-26 12:27:57.096737"], ["updated_at", "2020-03-26 12:27:57.096737"]]
+  ↳ app/controllers/games_controller.rb:17:in `create'
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/games_controller.rb:17:in `create'
+Completed 200 OK in 15ms (Views: 0.1ms | ActiveRecord: 2.0ms | Allocations: 7774)
+
+
+Started GET "/games" for ::1 at 2020-03-26 12:28:23 +0000
+Processing by GamesController#index as HTML
+  [1m[36mGame Load (0.2ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+  ↳ app/services/game_serializer.rb:10:in `to_serialized_json'
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/services/game_serializer.rb:10:in `to_serialized_json'
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/services/game_serializer.rb:10:in `to_serialized_json'
+Completed 200 OK in 4ms (Views: 0.1ms | ActiveRecord: 0.4ms | Allocations: 2456)
+
+
+Started GET "/games" for ::1 at 2020-03-26 12:53:38 +0000
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by GamesController#index as HTML
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+  ↳ app/services/game_serializer.rb:10:in `to_serialized_json'
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/services/game_serializer.rb:10:in `to_serialized_json'
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/services/game_serializer.rb:10:in `to_serialized_json'
+Completed 200 OK in 17ms (Views: 0.1ms | ActiveRecord: 0.4ms | Allocations: 10574)
+
+
+Started POST "/players" for ::1 at 2020-03-26 13:02:15 +0000
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by PlayersController#create as JSON
+  Parameters: {"name"=>"", "player"=>{"name"=>""}}
+  [1m[36mPlayer Load (0.7ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."name" = ? LIMIT ?[0m  [["name", ""], ["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:13:in `create'
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/players_controller.rb:13:in `create'
+  [1m[36mPlayer Create (1.4ms)[0m  [1m[32mINSERT INTO "players" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", ""], ["created_at", "2020-03-26 13:02:15.287702"], ["updated_at", "2020-03-26 13:02:15.287702"]]
+  ↳ app/controllers/players_controller.rb:13:in `create'
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/players_controller.rb:13:in `create'
+Completed 200 OK in 8ms (Views: 0.2ms | ActiveRecord: 2.8ms | Allocations: 3371)
+
+
+Started GET "/cards" for ::1 at 2020-03-26 13:02:15 +0000
+Processing by CardsController#index as */*
+  [1m[36mCard Load (0.2ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  ↳ app/controllers/cards_controller.rb:5:in `index'
+Completed 200 OK in 8ms (Views: 4.7ms | ActiveRecord: 0.2ms | Allocations: 6283)
+
+
+Started POST "/players" for ::1 at 2020-03-26 13:05:48 +0000
+Processing by PlayersController#create as JSON
+  Parameters: {"name"=>"Moustafa Mohamed", "player"=>{"name"=>"Moustafa Mohamed"}}
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."name" = ? LIMIT ?[0m  [["name", "Moustafa Mohamed"], ["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:13:in `create'
+Completed 200 OK in 3ms (Views: 0.3ms | ActiveRecord: 0.1ms | Allocations: 979)
+
+
+Started GET "/cards" for ::1 at 2020-03-26 13:05:48 +0000
+Processing by CardsController#index as */*
+  [1m[36mCard Load (0.2ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  ↳ app/controllers/cards_controller.rb:5:in `index'
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.2ms | Allocations: 1134)
+
+
+Started POST "/players" for ::1 at 2020-03-26 13:08:31 +0000
+Processing by PlayersController#create as JSON
+  Parameters: {"name"=>"", "player"=>{"name"=>""}}
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."name" = ? LIMIT ?[0m  [["name", ""], ["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:13:in `create'
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.1ms | Allocations: 977)
+
+
+Started GET "/cards" for ::1 at 2020-03-26 13:08:31 +0000
+Processing by CardsController#index as */*
+  [1m[36mCard Load (0.1ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  ↳ app/controllers/cards_controller.rb:5:in `index'
+Completed 200 OK in 1ms (Views: 1.2ms | ActiveRecord: 0.1ms | Allocations: 1134)
+
+
+Started POST "/players" for ::1 at 2020-03-26 13:27:12 +0000
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by PlayersController#create as JSON
+  Parameters: {"name"=>"Moustafa Mohamed", "player"=>{"name"=>"Moustafa Mohamed"}}
+  [1m[36mPlayer Load (0.5ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."name" = ? LIMIT ?[0m  [["name", "Moustafa Mohamed"], ["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:13:in `create'
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.5ms | Allocations: 995)
+
+
+Started GET "/cards" for ::1 at 2020-03-26 13:27:12 +0000
+Processing by CardsController#index as */*
+  [1m[36mCard Load (0.5ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  ↳ app/controllers/cards_controller.rb:5:in `index'
+Completed 200 OK in 12ms (Views: 11.4ms | ActiveRecord: 0.5ms | Allocations: 1154)
+
+
+Started GET "/cards" for ::1 at 2020-03-26 13:27:18 +0000
+Processing by CardsController#index as */*
+  [1m[36mCard Load (0.1ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  ↳ app/controllers/cards_controller.rb:5:in `index'
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.1ms | Allocations: 1150)
+
+
+Started POST "/games" for ::1 at 2020-03-26 13:27:43 +0000
+Processing by GamesController#create as JSON
+  Parameters: {"player_id"=>4, "score"=>2, "game"=>{"player_id"=>4, "score"=>2}}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/games_controller.rb:17:in `create'
+  [1m[36mPlayer Load (0.2ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/games_controller.rb:17:in `create'
+  [1m[36mGame Create (1.6ms)[0m  [1m[32mINSERT INTO "games" ("player_id", "score", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["player_id", 4], ["score", 2], ["created_at", "2020-03-26 13:27:43.213221"], ["updated_at", "2020-03-26 13:27:43.213221"]]
+  ↳ app/controllers/games_controller.rb:17:in `create'
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/games_controller.rb:17:in `create'
+Completed 200 OK in 8ms (Views: 0.1ms | ActiveRecord: 2.7ms | Allocations: 3482)
+
+
+Started POST "/players" for ::1 at 2020-03-26 13:28:45 +0000
+Processing by PlayersController#create as JSON
+  Parameters: {"name"=>"Armela ", "player"=>{"name"=>"Armela "}}
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."name" = ? LIMIT ?[0m  [["name", "Armela "], ["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:13:in `create'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/players_controller.rb:13:in `create'
+  [1m[36mPlayer Create (0.4ms)[0m  [1m[32mINSERT INTO "players" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Armela "], ["created_at", "2020-03-26 13:28:45.343471"], ["updated_at", "2020-03-26 13:28:45.343471"]]
+  ↳ app/controllers/players_controller.rb:13:in `create'
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/players_controller.rb:13:in `create'
+Completed 200 OK in 6ms (Views: 0.2ms | ActiveRecord: 1.5ms | Allocations: 3147)
+
+
+Started GET "/cards" for ::1 at 2020-03-26 13:28:45 +0000
+Processing by CardsController#index as */*
+  [1m[36mCard Load (0.1ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  ↳ app/controllers/cards_controller.rb:5:in `index'
+Completed 200 OK in 1ms (Views: 1.1ms | ActiveRecord: 0.1ms | Allocations: 1134)
+
+
+Started GET "/cards" for ::1 at 2020-03-26 13:28:57 +0000
+Processing by CardsController#index as */*
+  [1m[36mCard Load (0.2ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  ↳ app/controllers/cards_controller.rb:5:in `index'
+Completed 200 OK in 2ms (Views: 2.0ms | ActiveRecord: 0.2ms | Allocations: 1134)
+
+
+Started POST "/players" for ::1 at 2020-03-26 13:29:51 +0000
+Processing by PlayersController#create as JSON
+  Parameters: {"name"=>"Bballers", "player"=>{"name"=>"Bballers"}}
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."name" = ? LIMIT ?[0m  [["name", "Bballers"], ["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:13:in `create'
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/players_controller.rb:13:in `create'
+  [1m[36mPlayer Create (0.3ms)[0m  [1m[32mINSERT INTO "players" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Bballers"], ["created_at", "2020-03-26 13:29:51.261793"], ["updated_at", "2020-03-26 13:29:51.261793"]]
+  ↳ app/controllers/players_controller.rb:13:in `create'
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/players_controller.rb:13:in `create'
+Completed 200 OK in 4ms (Views: 0.2ms | ActiveRecord: 1.1ms | Allocations: 3147)
+
+
+Started GET "/cards" for ::1 at 2020-03-26 13:29:51 +0000
+Processing by CardsController#index as */*
+  [1m[36mCard Load (0.1ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  ↳ app/controllers/cards_controller.rb:5:in `index'
+Completed 200 OK in 1ms (Views: 1.0ms | ActiveRecord: 0.1ms | Allocations: 1134)
+
+
+Started GET "/cards" for ::1 at 2020-03-26 13:29:57 +0000
+Processing by CardsController#index as */*
+  [1m[36mCard Load (0.1ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  ↳ app/controllers/cards_controller.rb:5:in `index'
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.1ms | Allocations: 1134)
+
+
+Started POST "/games" for ::1 at 2020-03-26 13:30:02 +0000
+Processing by GamesController#create as JSON
+  Parameters: {"player_id"=>7, "score"=>2, "game"=>{"player_id"=>7, "score"=>2}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/games_controller.rb:17:in `create'
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/games_controller.rb:17:in `create'
+  [1m[36mGame Create (0.4ms)[0m  [1m[32mINSERT INTO "games" ("player_id", "score", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["player_id", 7], ["score", 2], ["created_at", "2020-03-26 13:30:02.775294"], ["updated_at", "2020-03-26 13:30:02.775294"]]
+  ↳ app/controllers/games_controller.rb:17:in `create'
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/games_controller.rb:17:in `create'
+Completed 200 OK in 6ms (Views: 0.1ms | ActiveRecord: 1.5ms | Allocations: 3340)
+
+
+Started GET "/games" for ::1 at 2020-03-26 13:30:11 +0000
+Processing by GamesController#index as HTML
+  [1m[36mGame Load (0.2ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+  ↳ app/services/game_serializer.rb:10:in `to_serialized_json'
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/services/game_serializer.rb:10:in `to_serialized_json'
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/services/game_serializer.rb:10:in `to_serialized_json'
+  [1m[36mCACHE Player Load (0.0ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/services/game_serializer.rb:10:in `to_serialized_json'
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/services/game_serializer.rb:10:in `to_serialized_json'
+Completed 200 OK in 5ms (Views: 0.1ms | ActiveRecord: 0.4ms | Allocations: 4204)
+
+
+Started POST "/players" for ::1 at 2020-03-26 13:32:20 +0000
+Processing by PlayersController#create as JSON
+  Parameters: {"name"=>"", "player"=>{"name"=>""}}
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."name" = ? LIMIT ?[0m  [["name", ""], ["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:13:in `create'
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.1ms | Allocations: 979)
+
+
+Started GET "/cards" for ::1 at 2020-03-26 13:32:20 +0000
+Processing by CardsController#index as */*
+  [1m[36mCard Load (0.1ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  ↳ app/controllers/cards_controller.rb:5:in `index'
+Completed 200 OK in 1ms (Views: 0.9ms | ActiveRecord: 0.1ms | Allocations: 1134)
+
+
+Started GET "/cards" for ::1 at 2020-03-26 13:32:32 +0000
+Processing by CardsController#index as */*
+  [1m[36mCard Load (0.1ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  ↳ app/controllers/cards_controller.rb:5:in `index'
+Completed 200 OK in 1ms (Views: 1.2ms | ActiveRecord: 0.1ms | Allocations: 1134)
+
+
+Started POST "/games" for ::1 at 2020-03-26 13:32:49 +0000
+Processing by GamesController#create as JSON
+  Parameters: {"player_id"=>5, "score"=>0, "game"=>{"player_id"=>5, "score"=>0}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/games_controller.rb:17:in `create'
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/games_controller.rb:17:in `create'
+  [1m[36mGame Create (0.4ms)[0m  [1m[32mINSERT INTO "games" ("player_id", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["player_id", 5], ["created_at", "2020-03-26 13:32:49.827759"], ["updated_at", "2020-03-26 13:32:49.827759"]]
+  ↳ app/controllers/games_controller.rb:17:in `create'
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/games_controller.rb:17:in `create'
+Completed 200 OK in 7ms (Views: 0.1ms | ActiveRecord: 1.3ms | Allocations: 3333)
+
+
+Started POST "/players" for ::1 at 2020-03-26 13:36:15 +0000
+Processing by PlayersController#create as JSON
+  Parameters: {"name"=>"", "player"=>{"name"=>""}}
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."name" = ? LIMIT ?[0m  [["name", ""], ["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:13:in `create'
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.1ms | Allocations: 977)
+
+
+Started GET "/cards" for ::1 at 2020-03-26 13:36:15 +0000
+Processing by CardsController#index as */*
+  [1m[36mCard Load (0.1ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  ↳ app/controllers/cards_controller.rb:5:in `index'
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.1ms | Allocations: 1134)
+
+
+Started POST "/players" for ::1 at 2020-03-26 13:36:55 +0000
+Processing by PlayersController#create as JSON
+  Parameters: {"name"=>"Moustafa Mohamed", "player"=>{"name"=>"Moustafa Mohamed"}}
+  [1m[36mPlayer Load (0.4ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."name" = ? LIMIT ?[0m  [["name", "Moustafa Mohamed"], ["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:13:in `create'
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.4ms | Allocations: 977)
+
+
+Started GET "/cards" for ::1 at 2020-03-26 13:36:55 +0000
+Processing by CardsController#index as */*
+  [1m[36mCard Load (0.1ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  ↳ app/controllers/cards_controller.rb:5:in `index'
+Completed 200 OK in 2ms (Views: 1.2ms | ActiveRecord: 0.1ms | Allocations: 1134)
+
+
+Started GET "/cards" for ::1 at 2020-03-26 13:37:03 +0000
+Processing by CardsController#index as */*
+  [1m[36mCard Load (0.1ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  ↳ app/controllers/cards_controller.rb:5:in `index'
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.1ms | Allocations: 1134)
+
+
+Started POST "/games" for ::1 at 2020-03-26 13:37:13 +0000
+Processing by GamesController#create as JSON
+  Parameters: {"player_id"=>4, "score"=>2, "game"=>{"player_id"=>4, "score"=>2}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/games_controller.rb:17:in `create'
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/games_controller.rb:17:in `create'
+  [1m[36mGame Create (0.3ms)[0m  [1m[32mINSERT INTO "games" ("player_id", "score", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["player_id", 4], ["score", 2], ["created_at", "2020-03-26 13:37:13.072788"], ["updated_at", "2020-03-26 13:37:13.072788"]]
+  ↳ app/controllers/games_controller.rb:17:in `create'
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/games_controller.rb:17:in `create'
+Completed 200 OK in 5ms (Views: 0.1ms | ActiveRecord: 1.2ms | Allocations: 3340)
+
+
+Started GET "/games" for ::1 at 2020-03-26 13:42:15 +0000
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by GamesController#index as HTML
+  [1m[36mGame Load (0.2ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+  ↳ app/models/game.rb:7:in `sort_by'
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/services/game_serializer.rb:10:in `to_serialized_json'
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/services/game_serializer.rb:10:in `to_serialized_json'
+  [1m[36mCACHE Player Load (0.0ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/services/game_serializer.rb:10:in `to_serialized_json'
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/services/game_serializer.rb:10:in `to_serialized_json'
+  [1m[36mCACHE Player Load (0.0ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/services/game_serializer.rb:10:in `to_serialized_json'
+Completed 200 OK in 27ms (Views: 0.1ms | ActiveRecord: 1.3ms | Allocations: 16106)
+
+
+Started GET "/games" for ::1 at 2020-03-26 13:43:07 +0000
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by GamesController#index as HTML
+  [1m[36mGame Load (0.2ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+  ↳ app/models/game.rb:7:in `sort_by'
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/services/game_serializer.rb:10:in `to_serialized_json'
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/services/game_serializer.rb:10:in `to_serialized_json'
+  [1m[36mCACHE Player Load (0.0ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/services/game_serializer.rb:10:in `to_serialized_json'
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/services/game_serializer.rb:10:in `to_serialized_json'
+  [1m[36mCACHE Player Load (0.0ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/services/game_serializer.rb:10:in `to_serialized_json'
+Completed 200 OK in 21ms (Views: 0.1ms | ActiveRecord: 1.6ms | Allocations: 13695)
+
+
+Started POST "/players" for ::1 at 2020-03-26 13:44:52 +0000
+Processing by PlayersController#create as JSON
+  Parameters: {"name"=>"Moustafa Mohamed", "player"=>{"name"=>"Moustafa Mohamed"}}
+  [1m[36mPlayer Load (0.2ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."name" = ? LIMIT ?[0m  [["name", "Moustafa Mohamed"], ["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:13:in `create'
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.2ms | Allocations: 1243)
+
+
+Started GET "/cards" for ::1 at 2020-03-26 13:44:52 +0000
+Processing by CardsController#index as */*
+  [1m[36mCard Load (0.2ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  ↳ app/controllers/cards_controller.rb:5:in `index'
+Completed 200 OK in 8ms (Views: 4.8ms | ActiveRecord: 0.6ms | Allocations: 6595)
+
+
+Started GET "/cards" for ::1 at 2020-03-26 13:44:58 +0000
+Processing by CardsController#index as */*
+  [1m[36mCard Load (0.2ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  ↳ app/controllers/cards_controller.rb:5:in `index'
+Completed 200 OK in 2ms (Views: 1.8ms | ActiveRecord: 0.2ms | Allocations: 1134)
+
+
+Started POST "/games" for ::1 at 2020-03-26 13:45:04 +0000
+Processing by GamesController#create as JSON
+  Parameters: {"player_id"=>4, "score"=>2, "game"=>{"player_id"=>4, "score"=>2}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/games_controller.rb:18:in `create'
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/games_controller.rb:18:in `create'
+  [1m[36mGame Create (1.2ms)[0m  [1m[32mINSERT INTO "games" ("player_id", "score", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["player_id", 4], ["score", 2], ["created_at", "2020-03-26 13:45:04.416387"], ["updated_at", "2020-03-26 13:45:04.416387"]]
+  ↳ app/controllers/games_controller.rb:18:in `create'
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/games_controller.rb:18:in `create'
+Completed 200 OK in 8ms (Views: 0.1ms | ActiveRecord: 2.6ms | Allocations: 3571)
+
+
+Started POST "/players" for ::1 at 2020-03-26 15:07:19 +0000
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PlayersController#create as JSON
+  Parameters: {"name"=>"mustafa", "player"=>{"name"=>"mustafa"}}
+  [1m[36mPlayer Load (0.2ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."name" = ? LIMIT ?[0m  [["name", "mustafa"], ["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:13:in `create'
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/players_controller.rb:13:in `create'
+  [1m[36mPlayer Create (0.4ms)[0m  [1m[32mINSERT INTO "players" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "mustafa"], ["created_at", "2020-03-26 15:07:19.149462"], ["updated_at", "2020-03-26 15:07:19.149462"]]
+  ↳ app/controllers/players_controller.rb:13:in `create'
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/players_controller.rb:13:in `create'
+Completed 200 OK in 10ms (Views: 0.3ms | ActiveRecord: 1.7ms | Allocations: 6374)
+
+
+Started GET "/cards" for ::1 at 2020-03-26 15:07:19 +0000
+Processing by CardsController#index as */*
+  [1m[36mCard Load (0.1ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  ↳ app/controllers/cards_controller.rb:5:in `index'
+Completed 200 OK in 7ms (Views: 4.8ms | ActiveRecord: 0.5ms | Allocations: 6650)
+
+
+Started POST "/players" for ::1 at 2020-03-26 15:08:06 +0000
+Processing by PlayersController#create as JSON
+  Parameters: {"name"=>"", "player"=>{"name"=>""}}
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."name" = ? LIMIT ?[0m  [["name", ""], ["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:13:in `create'
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.1ms | Allocations: 1005)
+
+
+Started GET "/cards" for ::1 at 2020-03-26 15:08:06 +0000
+Processing by CardsController#index as */*
+  [1m[36mCard Load (0.1ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  ↳ app/controllers/cards_controller.rb:5:in `index'
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.1ms | Allocations: 1134)
+
+
+Started POST "/players" for ::1 at 2020-03-26 15:08:16 +0000
+Processing by PlayersController#create as JSON
+  Parameters: {"name"=>"", "player"=>{"name"=>""}}
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."name" = ? LIMIT ?[0m  [["name", ""], ["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:13:in `create'
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.1ms | Allocations: 997)
+
+
+Started GET "/cards" for ::1 at 2020-03-26 15:08:16 +0000
+Processing by CardsController#index as */*
+  [1m[36mCard Load (0.1ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  ↳ app/controllers/cards_controller.rb:5:in `index'
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.1ms | Allocations: 1134)
+
+
+Started POST "/players" for ::1 at 2020-03-26 15:08:37 +0000
+Processing by PlayersController#create as JSON
+  Parameters: {"name"=>"", "player"=>{"name"=>""}}
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."name" = ? LIMIT ?[0m  [["name", ""], ["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:13:in `create'
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.1ms | Allocations: 997)
+
+
+Started GET "/cards" for ::1 at 2020-03-26 15:08:37 +0000
+Processing by CardsController#index as */*
+  [1m[36mCard Load (0.2ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  ↳ app/controllers/cards_controller.rb:5:in `index'
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.2ms | Allocations: 1134)
+
+
+Started POST "/players" for ::1 at 2020-03-26 15:09:58 +0000
+Processing by PlayersController#create as JSON
+  Parameters: {"name"=>"Moustafa Mohamed", "player"=>{"name"=>"Moustafa Mohamed"}}
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."name" = ? LIMIT ?[0m  [["name", "Moustafa Mohamed"], ["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:13:in `create'
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.1ms | Allocations: 997)
+
+
+Started GET "/cards" for ::1 at 2020-03-26 15:09:59 +0000
+Processing by CardsController#index as */*
+  [1m[36mCard Load (0.1ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  ↳ app/controllers/cards_controller.rb:5:in `index'
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.1ms | Allocations: 1134)
+
+
+Started GET "/cards" for ::1 at 2020-03-26 15:10:10 +0000
+Processing by CardsController#index as */*
+  [1m[36mCard Load (0.1ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  ↳ app/controllers/cards_controller.rb:5:in `index'
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.1ms | Allocations: 1134)
+
+
+Started POST "/games" for ::1 at 2020-03-26 15:10:17 +0000
+Processing by GamesController#create as JSON
+  Parameters: {"player_id"=>4, "score"=>1, "game"=>{"player_id"=>4, "score"=>1}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/games_controller.rb:18:in `create'
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/games_controller.rb:18:in `create'
+  [1m[36mGame Create (0.3ms)[0m  [1m[32mINSERT INTO "games" ("player_id", "score", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["player_id", 4], ["score", 1], ["created_at", "2020-03-26 15:10:17.626300"], ["updated_at", "2020-03-26 15:10:17.626300"]]
+  ↳ app/controllers/games_controller.rb:18:in `create'
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/games_controller.rb:18:in `create'
+Completed 200 OK in 16ms (Views: 0.1ms | ActiveRecord: 1.7ms | Allocations: 7700)
+
+
+Started POST "/players" for ::1 at 2020-03-26 15:11:31 +0000
+Processing by PlayersController#create as JSON
+  Parameters: {"name"=>"", "player"=>{"name"=>""}}
+  [1m[36mPlayer Load (0.2ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."name" = ? LIMIT ?[0m  [["name", ""], ["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:13:in `create'
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.2ms | Allocations: 977)
+
+
+Started GET "/cards" for ::1 at 2020-03-26 15:11:31 +0000
+Processing by CardsController#index as */*
+  [1m[36mCard Load (0.1ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  ↳ app/controllers/cards_controller.rb:5:in `index'
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.1ms | Allocations: 1134)
+
+
+Started GET "/cards" for ::1 at 2020-03-26 15:11:41 +0000
+Processing by CardsController#index as */*
+  [1m[36mCard Load (0.1ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  ↳ app/controllers/cards_controller.rb:5:in `index'
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.1ms | Allocations: 1134)
+
+
+Started POST "/games" for ::1 at 2020-03-26 15:11:47 +0000
+Processing by GamesController#create as JSON
+  Parameters: {"player_id"=>5, "score"=>1, "game"=>{"player_id"=>5, "score"=>1}}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/games_controller.rb:18:in `create'
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/games_controller.rb:18:in `create'
+  [1m[36mGame Create (0.3ms)[0m  [1m[32mINSERT INTO "games" ("player_id", "score", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["player_id", 5], ["score", 1], ["created_at", "2020-03-26 15:11:47.587437"], ["updated_at", "2020-03-26 15:11:47.587437"]]
+  ↳ app/controllers/games_controller.rb:18:in `create'
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/games_controller.rb:18:in `create'
+Completed 200 OK in 4ms (Views: 0.1ms | ActiveRecord: 0.9ms | Allocations: 3340)
+
+
+Started POST "/players" for ::1 at 2020-03-26 15:14:49 +0000
+Processing by PlayersController#create as JSON
+  Parameters: {"name"=>"Moustafa Mohamed", "player"=>{"name"=>"Moustafa Mohamed"}}
+  [1m[36mPlayer Load (0.2ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."name" = ? LIMIT ?[0m  [["name", "Moustafa Mohamed"], ["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:13:in `create'
+Completed 200 OK in 3ms (Views: 0.3ms | ActiveRecord: 0.2ms | Allocations: 977)
+
+
+Started GET "/cards" for ::1 at 2020-03-26 15:14:49 +0000
+Processing by CardsController#index as */*
+  [1m[36mCard Load (0.1ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  ↳ app/controllers/cards_controller.rb:5:in `index'
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.1ms | Allocations: 1134)
+
+
+Started GET "/cards" for ::1 at 2020-03-26 15:15:01 +0000
+Processing by CardsController#index as */*
+  [1m[36mCard Load (0.2ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  ↳ app/controllers/cards_controller.rb:5:in `index'
+Completed 200 OK in 2ms (Views: 1.8ms | ActiveRecord: 0.2ms | Allocations: 1134)
+
+
+Started POST "/games" for ::1 at 2020-03-26 15:15:07 +0000
+Processing by GamesController#create as JSON
+  Parameters: {"player_id"=>4, "score"=>1, "game"=>{"player_id"=>4, "score"=>1}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/games_controller.rb:18:in `create'
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/games_controller.rb:18:in `create'
+  [1m[36mGame Create (0.4ms)[0m  [1m[32mINSERT INTO "games" ("player_id", "score", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["player_id", 4], ["score", 1], ["created_at", "2020-03-26 15:15:07.697627"], ["updated_at", "2020-03-26 15:15:07.697627"]]
+  ↳ app/controllers/games_controller.rb:18:in `create'
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/games_controller.rb:18:in `create'
+Completed 200 OK in 6ms (Views: 0.1ms | ActiveRecord: 1.4ms | Allocations: 3340)
+
+
+Started POST "/players" for ::1 at 2020-03-26 15:36:59 +0000
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by PlayersController#create as JSON
+  Parameters: {"name"=>"", "player"=>{"name"=>""}}
+  [1m[36mPlayer Load (0.7ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."name" = ? LIMIT ?[0m  [["name", ""], ["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:13:in `create'
+Completed 200 OK in 5ms (Views: 0.6ms | ActiveRecord: 0.7ms | Allocations: 994)
+
+
+Started GET "/cards" for ::1 at 2020-03-26 15:36:59 +0000
+Processing by CardsController#index as */*
+  [1m[36mCard Load (0.5ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  ↳ app/controllers/cards_controller.rb:5:in `index'
+Completed 200 OK in 3ms (Views: 1.8ms | ActiveRecord: 0.5ms | Allocations: 1151)
+
+
+Started POST "/players" for ::1 at 2020-03-26 15:39:56 +0000
+Processing by PlayersController#create as JSON
+  Parameters: {"name"=>"mustafa", "player"=>{"name"=>"mustafa"}}
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."name" = ? LIMIT ?[0m  [["name", "mustafa"], ["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:13:in `create'
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.1ms | Allocations: 977)
+
+
+Started GET "/cards" for ::1 at 2020-03-26 15:39:56 +0000
+Processing by CardsController#index as */*
+  [1m[36mCard Load (0.1ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  ↳ app/controllers/cards_controller.rb:5:in `index'
+Completed 200 OK in 2ms (Views: 1.9ms | ActiveRecord: 0.1ms | Allocations: 1134)
+
+
+Started GET "/cards" for ::1 at 2020-03-26 15:40:07 +0000
+Processing by CardsController#index as */*
+  [1m[36mCard Load (0.1ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  ↳ app/controllers/cards_controller.rb:5:in `index'
+Completed 200 OK in 2ms (Views: 1.8ms | ActiveRecord: 0.1ms | Allocations: 1134)
+
+
+Started POST "/games" for ::1 at 2020-03-26 15:40:18 +0000
+Processing by GamesController#create as JSON
+  Parameters: {"player_id"=>8, "score"=>0, "game"=>{"player_id"=>8, "score"=>0}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/games_controller.rb:18:in `create'
+  [1m[36mPlayer Load (0.2ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/games_controller.rb:18:in `create'
+  [1m[36mGame Create (1.8ms)[0m  [1m[32mINSERT INTO "games" ("player_id", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["player_id", 8], ["created_at", "2020-03-26 15:40:18.684365"], ["updated_at", "2020-03-26 15:40:18.684365"]]
+  ↳ app/controllers/games_controller.rb:18:in `create'
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/games_controller.rb:18:in `create'
+Completed 200 OK in 9ms (Views: 0.1ms | ActiveRecord: 3.0ms | Allocations: 3346)
+
+
+Started POST "/players" for ::1 at 2020-03-26 15:41:06 +0000
+Processing by PlayersController#create as JSON
+  Parameters: {"name"=>"", "player"=>{"name"=>""}}
+  [1m[36mPlayer Load (0.2ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."name" = ? LIMIT ?[0m  [["name", ""], ["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:13:in `create'
+Completed 200 OK in 3ms (Views: 0.4ms | ActiveRecord: 0.2ms | Allocations: 977)
+
+
+Started GET "/cards" for ::1 at 2020-03-26 15:41:06 +0000
+Processing by CardsController#index as */*
+  [1m[36mCard Load (0.2ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  ↳ app/controllers/cards_controller.rb:5:in `index'
+Completed 200 OK in 2ms (Views: 1.2ms | ActiveRecord: 0.2ms | Allocations: 1134)
+
+
+Started GET "/cards" for ::1 at 2020-03-26 15:41:17 +0000
+Processing by CardsController#index as */*
+  [1m[36mCard Load (0.1ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  ↳ app/controllers/cards_controller.rb:5:in `index'
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.1ms | Allocations: 1134)
+
+
+Started POST "/games" for ::1 at 2020-03-26 15:41:28 +0000
+Processing by GamesController#create as JSON
+  Parameters: {"player_id"=>5, "score"=>0, "game"=>{"player_id"=>5, "score"=>0}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/games_controller.rb:18:in `create'
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/games_controller.rb:18:in `create'
+  [1m[36mGame Create (0.4ms)[0m  [1m[32mINSERT INTO "games" ("player_id", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["player_id", 5], ["created_at", "2020-03-26 15:41:28.577285"], ["updated_at", "2020-03-26 15:41:28.577285"]]
+  ↳ app/controllers/games_controller.rb:18:in `create'
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/games_controller.rb:18:in `create'
+Completed 200 OK in 6ms (Views: 0.1ms | ActiveRecord: 1.7ms | Allocations: 3331)
+
+
+Started POST "/players" for ::1 at 2020-03-26 15:46:51 +0000
+Processing by PlayersController#create as JSON
+  Parameters: {"name"=>"mustafa", "player"=>{"name"=>"mustafa"}}
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."name" = ? LIMIT ?[0m  [["name", "mustafa"], ["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:13:in `create'
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.1ms | Allocations: 977)
+
+
+Started GET "/cards" for ::1 at 2020-03-26 15:46:51 +0000
+Processing by CardsController#index as */*
+  [1m[36mCard Load (0.1ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  ↳ app/controllers/cards_controller.rb:5:in `index'
+Completed 200 OK in 1ms (Views: 1.0ms | ActiveRecord: 0.1ms | Allocations: 1134)
+
+
+Started GET "/cards" for ::1 at 2020-03-26 15:46:57 +0000
+Processing by CardsController#index as */*
+  [1m[36mCard Load (0.2ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  ↳ app/controllers/cards_controller.rb:5:in `index'
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.2ms | Allocations: 1134)
+
+
+Started POST "/games" for ::1 at 2020-03-26 15:47:05 +0000
+Processing by GamesController#create as JSON
+  Parameters: {"player_id"=>8, "score"=>2, "game"=>{"player_id"=>8, "score"=>2}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/games_controller.rb:18:in `create'
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/games_controller.rb:18:in `create'
+  [1m[36mGame Create (0.4ms)[0m  [1m[32mINSERT INTO "games" ("player_id", "score", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["player_id", 8], ["score", 2], ["created_at", "2020-03-26 15:47:05.547465"], ["updated_at", "2020-03-26 15:47:05.547465"]]
+  ↳ app/controllers/games_controller.rb:18:in `create'
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/games_controller.rb:18:in `create'
+Completed 200 OK in 6ms (Views: 0.1ms | ActiveRecord: 1.6ms | Allocations: 3340)
+
+
+Started POST "/players" for ::1 at 2020-03-26 15:47:48 +0000
+Processing by PlayersController#create as JSON
+  Parameters: {"name"=>"", "player"=>{"name"=>""}}
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."name" = ? LIMIT ?[0m  [["name", ""], ["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:13:in `create'
+Completed 200 OK in 3ms (Views: 0.3ms | ActiveRecord: 0.1ms | Allocations: 977)
+
+
+Started GET "/cards" for ::1 at 2020-03-26 15:47:48 +0000
+Processing by CardsController#index as */*
+  [1m[36mCard Load (0.1ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  ↳ app/controllers/cards_controller.rb:5:in `index'
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.1ms | Allocations: 1134)
+
+
+Started POST "/players" for ::1 at 2020-03-26 15:47:54 +0000
+Processing by PlayersController#create as JSON
+  Parameters: {"name"=>"mustafa", "player"=>{"name"=>"mustafa"}}
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."name" = ? LIMIT ?[0m  [["name", "mustafa"], ["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:13:in `create'
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.1ms | Allocations: 977)
+
+
+Started GET "/cards" for ::1 at 2020-03-26 15:47:54 +0000
+Processing by CardsController#index as */*
+  [1m[36mCard Load (0.1ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  ↳ app/controllers/cards_controller.rb:5:in `index'
+Completed 200 OK in 1ms (Views: 1.1ms | ActiveRecord: 0.1ms | Allocations: 1134)
+
+
+Started GET "/cards" for ::1 at 2020-03-26 15:48:00 +0000
+Processing by CardsController#index as */*
+  [1m[36mCard Load (0.2ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  ↳ app/controllers/cards_controller.rb:5:in `index'
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.2ms | Allocations: 1134)
+
+
+Started POST "/games" for ::1 at 2020-03-26 15:48:06 +0000
+Processing by GamesController#create as JSON
+  Parameters: {"player_id"=>8, "score"=>2, "game"=>{"player_id"=>8, "score"=>2}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/games_controller.rb:18:in `create'
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/games_controller.rb:18:in `create'
+  [1m[36mGame Create (0.4ms)[0m  [1m[32mINSERT INTO "games" ("player_id", "score", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["player_id", 8], ["score", 2], ["created_at", "2020-03-26 15:48:06.211460"], ["updated_at", "2020-03-26 15:48:06.211460"]]
+  ↳ app/controllers/games_controller.rb:18:in `create'
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/games_controller.rb:18:in `create'
+Completed 200 OK in 6ms (Views: 0.1ms | ActiveRecord: 1.6ms | Allocations: 3340)
+
+
+Started GET "/games" for ::1 at 2020-03-26 16:33:24 +0000
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by GamesController#index as */*
+  [1m[36mGame Load (0.2ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+  ↳ app/models/game.rb:7:in `sort_by'
+  [1m[36mPlayer Load (0.2ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/services/game_serializer.rb:10:in `to_serialized_json'
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/services/game_serializer.rb:10:in `to_serialized_json'
+  [1m[36mCACHE Player Load (0.0ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/services/game_serializer.rb:10:in `to_serialized_json'
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/services/game_serializer.rb:10:in `to_serialized_json'
+  [1m[36mCACHE Player Load (0.0ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/services/game_serializer.rb:10:in `to_serialized_json'
+Completed 200 OK in 11ms (Views: 0.1ms | ActiveRecord: 0.6ms | Allocations: 5118)
+
+
+Started GET "/games" for ::1 at 2020-03-26 16:33:27 +0000
+Processing by GamesController#index as HTML
+  [1m[36mGame Load (0.2ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+  ↳ app/models/game.rb:7:in `sort_by'
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/services/game_serializer.rb:10:in `to_serialized_json'
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/services/game_serializer.rb:10:in `to_serialized_json'
+  [1m[36mCACHE Player Load (0.0ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/services/game_serializer.rb:10:in `to_serialized_json'
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/services/game_serializer.rb:10:in `to_serialized_json'
+  [1m[36mCACHE Player Load (0.0ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/services/game_serializer.rb:10:in `to_serialized_json'
+Completed 200 OK in 16ms (Views: 0.1ms | ActiveRecord: 0.4ms | Allocations: 5069)
+
+
+Started GET "/games" for ::1 at 2020-03-26 16:33:31 +0000
+Processing by GamesController#index as */*
+  [1m[36mGame Load (0.2ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+  ↳ app/models/game.rb:7:in `sort_by'
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/services/game_serializer.rb:10:in `to_serialized_json'
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/services/game_serializer.rb:10:in `to_serialized_json'
+  [1m[36mCACHE Player Load (0.0ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/services/game_serializer.rb:10:in `to_serialized_json'
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/services/game_serializer.rb:10:in `to_serialized_json'
+  [1m[36mCACHE Player Load (0.0ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/services/game_serializer.rb:10:in `to_serialized_json'
+Completed 200 OK in 7ms (Views: 0.1ms | ActiveRecord: 0.5ms | Allocations: 5068)
+
+
+Started POST "/players" for ::1 at 2020-03-26 16:39:44 +0000
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by PlayersController#create as JSON
+  Parameters: {"name"=>"Hey man", "player"=>{"name"=>"Hey man"}}
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."name" = ? LIMIT ?[0m  [["name", "Hey man"], ["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:13:in `create'
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/players_controller.rb:13:in `create'
+  [1m[36mPlayer Create (0.3ms)[0m  [1m[32mINSERT INTO "players" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Hey man"], ["created_at", "2020-03-26 16:39:44.768940"], ["updated_at", "2020-03-26 16:39:44.768940"]]
+  ↳ app/controllers/players_controller.rb:13:in `create'
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/players_controller.rb:13:in `create'
+Completed 200 OK in 4ms (Views: 0.2ms | ActiveRecord: 1.0ms | Allocations: 3163)
+
+
+Started GET "/cards" for ::1 at 2020-03-26 16:39:44 +0000
+Processing by CardsController#index as */*
+  [1m[36mCard Load (0.1ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  ↳ app/controllers/cards_controller.rb:5:in `index'
+Completed 200 OK in 1ms (Views: 1.1ms | ActiveRecord: 0.1ms | Allocations: 1151)
+
+
+Started GET "/cards" for ::1 at 2020-03-26 16:40:00 +0000
+Processing by CardsController#index as */*
+  [1m[36mCard Load (0.1ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  ↳ app/controllers/cards_controller.rb:5:in `index'
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.1ms | Allocations: 1134)
+
+
+Started POST "/games" for ::1 at 2020-03-26 16:40:15 +0000
+Processing by GamesController#create as JSON
+  Parameters: {"player_id"=>9, "score"=>0, "game"=>{"player_id"=>9, "score"=>0}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/games_controller.rb:18:in `create'
+  [1m[36mPlayer Load (0.2ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/games_controller.rb:18:in `create'
+  [1m[36mGame Create (0.4ms)[0m  [1m[32mINSERT INTO "games" ("player_id", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["player_id", 9], ["created_at", "2020-03-26 16:40:15.798091"], ["updated_at", "2020-03-26 16:40:15.798091"]]
+  ↳ app/controllers/games_controller.rb:18:in `create'
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/games_controller.rb:18:in `create'
+Completed 200 OK in 7ms (Views: 0.2ms | ActiveRecord: 1.9ms | Allocations: 3344)
+
+
+Started GET "/games" for ::1 at 2020-03-26 16:50:51 +0000
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by GamesController#index as */*
+  [1m[36mGame Load (0.5ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+  ↳ app/models/game.rb:7:in `sort_by'
+  [1m[36mPlayer Load (0.4ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/services/game_serializer.rb:10:in `to_serialized_json'
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/services/game_serializer.rb:10:in `to_serialized_json'
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/services/game_serializer.rb:10:in `to_serialized_json'
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/services/game_serializer.rb:10:in `to_serialized_json'
+  [1m[36mCACHE Player Load (0.0ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/services/game_serializer.rb:10:in `to_serialized_json'
+Completed 200 OK in 6ms (Views: 0.1ms | ActiveRecord: 1.1ms | Allocations: 5164)
+
+
+Started POST "/players" for ::1 at 2020-03-26 16:52:01 +0000
+Processing by PlayersController#create as JSON
+  Parameters: {"name"=>"Bryan", "player"=>{"name"=>"Bryan"}}
+  [1m[36mPlayer Load (0.2ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."name" = ? LIMIT ?[0m  [["name", "Bryan"], ["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:13:in `create'
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/players_controller.rb:13:in `create'
+  [1m[36mPlayer Create (0.6ms)[0m  [1m[32mINSERT INTO "players" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Bryan"], ["created_at", "2020-03-26 16:52:01.490899"], ["updated_at", "2020-03-26 16:52:01.490899"]]
+  ↳ app/controllers/players_controller.rb:13:in `create'
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/players_controller.rb:13:in `create'
+Completed 200 OK in 6ms (Views: 0.2ms | ActiveRecord: 1.5ms | Allocations: 3159)
+
+
+Started GET "/cards" for ::1 at 2020-03-26 16:52:01 +0000
+Processing by CardsController#index as */*
+  [1m[36mCard Load (0.2ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  ↳ app/controllers/cards_controller.rb:5:in `index'
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.2ms | Allocations: 1151)
+
+
+Started GET "/cards" for ::1 at 2020-03-26 16:52:08 +0000
+Processing by CardsController#index as */*
+  [1m[36mCard Load (0.1ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  ↳ app/controllers/cards_controller.rb:5:in `index'
+Completed 200 OK in 2ms (Views: 1.8ms | ActiveRecord: 0.1ms | Allocations: 1134)
+
+
+Started POST "/games" for ::1 at 2020-03-26 16:52:14 +0000
+Processing by GamesController#create as JSON
+  Parameters: {"player_id"=>10, "score"=>2, "game"=>{"player_id"=>10, "score"=>2}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/games_controller.rb:18:in `create'
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/games_controller.rb:18:in `create'
+  [1m[36mGame Create (0.4ms)[0m  [1m[32mINSERT INTO "games" ("player_id", "score", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["player_id", 10], ["score", 2], ["created_at", "2020-03-26 16:52:14.560630"], ["updated_at", "2020-03-26 16:52:14.560630"]]
+  ↳ app/controllers/games_controller.rb:18:in `create'
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/games_controller.rb:18:in `create'
+Completed 200 OK in 6ms (Views: 0.1ms | ActiveRecord: 1.4ms | Allocations: 3340)
+
+
+Started GET "/games" for ::1 at 2020-03-26 16:52:17 +0000
+Processing by GamesController#index as */*
+  [1m[36mGame Load (0.2ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+  ↳ app/models/game.rb:7:in `sort_by'
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/services/game_serializer.rb:10:in `to_serialized_json'
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/services/game_serializer.rb:10:in `to_serialized_json'
+  [1m[36mCACHE Player Load (0.0ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/services/game_serializer.rb:10:in `to_serialized_json'
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/services/game_serializer.rb:10:in `to_serialized_json'
+  [1m[36mCACHE Player Load (0.0ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/services/game_serializer.rb:10:in `to_serialized_json'
+Completed 200 OK in 8ms (Views: 0.1ms | ActiveRecord: 0.5ms | Allocations: 5088)
+
+
+Started POST "/players" for ::1 at 2020-03-26 18:29:05 +0000
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by PlayersController#create as JSON
+  Parameters: {"name"=>"Moustafa Mohamed", "player"=>{"name"=>"Moustafa Mohamed"}}
+  [1m[36mPlayer Load (0.7ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."name" = ? LIMIT ?[0m  [["name", "Moustafa Mohamed"], ["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:13:in `create'
+Completed 200 OK in 5ms (Views: 0.5ms | ActiveRecord: 0.7ms | Allocations: 996)
+
+
+Started GET "/cards" for ::1 at 2020-03-26 18:29:05 +0000
+Processing by CardsController#index as */*
+  [1m[36mCard Load (0.5ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  ↳ app/controllers/cards_controller.rb:5:in `index'
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.5ms | Allocations: 1151)
+
+
+Started GET "/cards" for ::1 at 2020-03-26 18:29:17 +0000
+Processing by CardsController#index as */*
+  [1m[36mCard Load (0.1ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  ↳ app/controllers/cards_controller.rb:5:in `index'
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.1ms | Allocations: 1134)
+
+
+Started POST "/games" for ::1 at 2020-03-26 18:29:26 +0000
+Processing by GamesController#create as JSON
+  Parameters: {"player_id"=>4, "score"=>1, "game"=>{"player_id"=>4, "score"=>1}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/games_controller.rb:18:in `create'
+  [1m[36mPlayer Load (0.2ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/games_controller.rb:18:in `create'
+  [1m[36mGame Create (2.0ms)[0m  [1m[32mINSERT INTO "games" ("player_id", "score", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["player_id", 4], ["score", 1], ["created_at", "2020-03-26 18:29:26.315384"], ["updated_at", "2020-03-26 18:29:26.315384"]]
+  ↳ app/controllers/games_controller.rb:18:in `create'
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/games_controller.rb:18:in `create'
+Completed 200 OK in 8ms (Views: 0.1ms | ActiveRecord: 2.9ms | Allocations: 3353)
+
+
+Started GET "/games" for ::1 at 2020-03-26 18:29:36 +0000
+Processing by GamesController#index as */*
+  [1m[36mGame Load (0.2ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+  ↳ app/models/game.rb:7:in `sort_by'
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/services/game_serializer.rb:10:in `to_serialized_json'
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/services/game_serializer.rb:10:in `to_serialized_json'
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/services/game_serializer.rb:10:in `to_serialized_json'
+  [1m[36mCACHE Player Load (0.0ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/services/game_serializer.rb:10:in `to_serialized_json'
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/services/game_serializer.rb:10:in `to_serialized_json'
+Completed 200 OK in 9ms (Views: 0.1ms | ActiveRecord: 0.7ms | Allocations: 5169)
+
+
+Started POST "/players" for ::1 at 2020-03-26 18:42:04 +0000
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by PlayersController#create as JSON
+  Parameters: {"name"=>"Bballers", "player"=>{"name"=>"Bballers"}}
+  [1m[36mPlayer Load (0.5ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."name" = ? LIMIT ?[0m  [["name", "Bballers"], ["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:13:in `create'
+Completed 200 OK in 3ms (Views: 0.3ms | ActiveRecord: 0.5ms | Allocations: 993)
+
+
+Started GET "/cards" for ::1 at 2020-03-26 18:42:04 +0000
+Processing by CardsController#index as */*
+  [1m[36mCard Load (0.5ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  ↳ app/controllers/cards_controller.rb:5:in `index'
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.5ms | Allocations: 1151)
+
+
+Started GET "/cards" for ::1 at 2020-03-26 18:42:15 +0000
+Processing by CardsController#index as */*
+  [1m[36mCard Load (0.1ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  ↳ app/controllers/cards_controller.rb:5:in `index'
+Completed 200 OK in 1ms (Views: 1.1ms | ActiveRecord: 0.1ms | Allocations: 1134)
+
+
+Started GET "/cards" for ::1 at 2020-03-26 18:42:21 +0000
+Processing by CardsController#index as */*
+  [1m[36mCard Load (0.1ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  ↳ app/controllers/cards_controller.rb:5:in `index'
+Completed 200 OK in 1ms (Views: 1.2ms | ActiveRecord: 0.1ms | Allocations: 1134)
+
+
+Started GET "/cards" for ::1 at 2020-03-26 18:42:28 +0000
+Processing by CardsController#index as */*
+  [1m[36mCard Load (0.2ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  ↳ app/controllers/cards_controller.rb:5:in `index'
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.2ms | Allocations: 1134)
+
+
+Started POST "/players" for ::1 at 2020-03-26 18:42:37 +0000
+Processing by PlayersController#create as JSON
+  Parameters: {"name"=>"Bballers", "player"=>{"name"=>"Bballers"}}
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."name" = ? LIMIT ?[0m  [["name", "Bballers"], ["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:13:in `create'
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.1ms | Allocations: 977)
+
+
+Started GET "/cards" for ::1 at 2020-03-26 18:42:37 +0000
+Processing by CardsController#index as */*
+  [1m[36mCard Load (0.1ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  ↳ app/controllers/cards_controller.rb:5:in `index'
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.1ms | Allocations: 1134)
+
+
+Started GET "/cards" for ::1 at 2020-03-26 18:42:53 +0000
+Processing by CardsController#index as */*
+  [1m[36mCard Load (0.1ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  ↳ app/controllers/cards_controller.rb:5:in `index'
+Completed 200 OK in 2ms (Views: 2.0ms | ActiveRecord: 0.1ms | Allocations: 1134)
+
+
+Started POST "/games" for ::1 at 2020-03-26 18:42:59 +0000
+Processing by GamesController#create as JSON
+  Parameters: {"player_id"=>7, "score"=>1, "game"=>{"player_id"=>7, "score"=>1}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/games_controller.rb:18:in `create'
+  [1m[36mPlayer Load (0.2ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/games_controller.rb:18:in `create'
+  [1m[36mGame Create (1.6ms)[0m  [1m[32mINSERT INTO "games" ("player_id", "score", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["player_id", 7], ["score", 1], ["created_at", "2020-03-26 18:42:59.197195"], ["updated_at", "2020-03-26 18:42:59.197195"]]
+  ↳ app/controllers/games_controller.rb:18:in `create'
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/games_controller.rb:18:in `create'
+Completed 200 OK in 9ms (Views: 0.1ms | ActiveRecord: 2.6ms | Allocations: 3353)
+
+
+Started POST "/games" for ::1 at 2020-03-26 18:43:00 +0000
+Processing by GamesController#create as JSON
+  Parameters: {"player_id"=>7, "score"=>1, "game"=>{"player_id"=>7, "score"=>1}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/games_controller.rb:18:in `create'
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/games_controller.rb:18:in `create'
+  [1m[36mGame Create (0.4ms)[0m  [1m[32mINSERT INTO "games" ("player_id", "score", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["player_id", 7], ["score", 1], ["created_at", "2020-03-26 18:43:00.189891"], ["updated_at", "2020-03-26 18:43:00.189891"]]
+  ↳ app/controllers/games_controller.rb:18:in `create'
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/games_controller.rb:18:in `create'
+Completed 200 OK in 6ms (Views: 0.1ms | ActiveRecord: 1.6ms | Allocations: 3340)
+
+
+Started POST "/games" for ::1 at 2020-03-26 18:43:00 +0000
+Processing by GamesController#create as JSON
+  Parameters: {"player_id"=>7, "score"=>1, "game"=>{"player_id"=>7, "score"=>1}}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/games_controller.rb:18:in `create'
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/games_controller.rb:18:in `create'
+  [1m[36mGame Create (0.4ms)[0m  [1m[32mINSERT INTO "games" ("player_id", "score", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["player_id", 7], ["score", 1], ["created_at", "2020-03-26 18:43:00.448552"], ["updated_at", "2020-03-26 18:43:00.448552"]]
+  ↳ app/controllers/games_controller.rb:18:in `create'
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/games_controller.rb:18:in `create'
+Completed 200 OK in 6ms (Views: 0.1ms | ActiveRecord: 1.4ms | Allocations: 3340)
+
+
+Started POST "/games" for ::1 at 2020-03-26 18:43:00 +0000
+Processing by GamesController#create as JSON
+  Parameters: {"player_id"=>7, "score"=>1, "game"=>{"player_id"=>7, "score"=>1}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/games_controller.rb:18:in `create'
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/games_controller.rb:18:in `create'
+  [1m[36mGame Create (0.4ms)[0m  [1m[32mINSERT INTO "games" ("player_id", "score", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["player_id", 7], ["score", 1], ["created_at", "2020-03-26 18:43:00.692998"], ["updated_at", "2020-03-26 18:43:00.692998"]]
+  ↳ app/controllers/games_controller.rb:18:in `create'
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/games_controller.rb:18:in `create'
+Completed 200 OK in 6ms (Views: 0.1ms | ActiveRecord: 1.5ms | Allocations: 3340)
+
+
+Started POST "/games" for ::1 at 2020-03-26 18:43:00 +0000
+Processing by GamesController#create as JSON
+  Parameters: {"player_id"=>7, "score"=>1, "game"=>{"player_id"=>7, "score"=>1}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/games_controller.rb:18:in `create'
+  [1m[36mPlayer Load (0.2ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/games_controller.rb:18:in `create'
+  [1m[36mGame Create (0.5ms)[0m  [1m[32mINSERT INTO "games" ("player_id", "score", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["player_id", 7], ["score", 1], ["created_at", "2020-03-26 18:43:00.890889"], ["updated_at", "2020-03-26 18:43:00.890889"]]
+  ↳ app/controllers/games_controller.rb:18:in `create'
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/games_controller.rb:18:in `create'
+Completed 200 OK in 7ms (Views: 0.1ms | ActiveRecord: 1.6ms | Allocations: 3340)
+
+
+Started POST "/games" for ::1 at 2020-03-26 18:43:01 +0000
+Processing by GamesController#create as JSON
+  Parameters: {"player_id"=>7, "score"=>1, "game"=>{"player_id"=>7, "score"=>1}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/games_controller.rb:18:in `create'
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/games_controller.rb:18:in `create'
+  [1m[36mGame Create (0.4ms)[0m  [1m[32mINSERT INTO "games" ("player_id", "score", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["player_id", 7], ["score", 1], ["created_at", "2020-03-26 18:43:01.914576"], ["updated_at", "2020-03-26 18:43:01.914576"]]
+  ↳ app/controllers/games_controller.rb:18:in `create'
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/games_controller.rb:18:in `create'
+Completed 200 OK in 6ms (Views: 0.1ms | ActiveRecord: 1.4ms | Allocations: 3340)
+
+
+Started POST "/games" for ::1 at 2020-03-26 18:43:02 +0000
+Processing by GamesController#create as JSON
+  Parameters: {"player_id"=>7, "score"=>1, "game"=>{"player_id"=>7, "score"=>1}}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/games_controller.rb:18:in `create'
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/games_controller.rb:18:in `create'
+  [1m[36mGame Create (0.4ms)[0m  [1m[32mINSERT INTO "games" ("player_id", "score", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["player_id", 7], ["score", 1], ["created_at", "2020-03-26 18:43:02.152179"], ["updated_at", "2020-03-26 18:43:02.152179"]]
+  ↳ app/controllers/games_controller.rb:18:in `create'
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/games_controller.rb:18:in `create'
+Completed 200 OK in 5ms (Views: 0.1ms | ActiveRecord: 1.5ms | Allocations: 3343)
+
+
+Started POST "/games" for ::1 at 2020-03-26 18:43:02 +0000
+Processing by GamesController#create as JSON
+  Parameters: {"player_id"=>7, "score"=>1, "game"=>{"player_id"=>7, "score"=>1}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/games_controller.rb:18:in `create'
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/games_controller.rb:18:in `create'
+  [1m[36mGame Create (0.4ms)[0m  [1m[32mINSERT INTO "games" ("player_id", "score", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["player_id", 7], ["score", 1], ["created_at", "2020-03-26 18:43:02.343440"], ["updated_at", "2020-03-26 18:43:02.343440"]]
+  ↳ app/controllers/games_controller.rb:18:in `create'
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/games_controller.rb:18:in `create'
+Completed 200 OK in 6ms (Views: 0.1ms | ActiveRecord: 1.6ms | Allocations: 3340)
+
+
+Started POST "/games" for ::1 at 2020-03-26 18:43:02 +0000
+Processing by GamesController#create as JSON
+  Parameters: {"player_id"=>7, "score"=>1, "game"=>{"player_id"=>7, "score"=>1}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/games_controller.rb:18:in `create'
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/games_controller.rb:18:in `create'
+  [1m[36mGame Create (0.4ms)[0m  [1m[32mINSERT INTO "games" ("player_id", "score", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["player_id", 7], ["score", 1], ["created_at", "2020-03-26 18:43:02.550325"], ["updated_at", "2020-03-26 18:43:02.550325"]]
+  ↳ app/controllers/games_controller.rb:18:in `create'
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/games_controller.rb:18:in `create'
+Completed 200 OK in 6ms (Views: 0.1ms | ActiveRecord: 1.7ms | Allocations: 3340)
+
+
+Started POST "/games" for ::1 at 2020-03-26 18:43:02 +0000
+Processing by GamesController#create as JSON
+  Parameters: {"player_id"=>7, "score"=>1, "game"=>{"player_id"=>7, "score"=>1}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/games_controller.rb:18:in `create'
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/games_controller.rb:18:in `create'
+  [1m[36mGame Create (0.4ms)[0m  [1m[32mINSERT INTO "games" ("player_id", "score", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["player_id", 7], ["score", 1], ["created_at", "2020-03-26 18:43:02.757033"], ["updated_at", "2020-03-26 18:43:02.757033"]]
+  ↳ app/controllers/games_controller.rb:18:in `create'
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/games_controller.rb:18:in `create'
+Completed 200 OK in 6ms (Views: 0.1ms | ActiveRecord: 1.5ms | Allocations: 3340)
+
+
+Started POST "/games" for ::1 at 2020-03-26 18:43:03 +0000
+Processing by GamesController#create as JSON
+  Parameters: {"player_id"=>7, "score"=>1, "game"=>{"player_id"=>7, "score"=>1}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/games_controller.rb:18:in `create'
+  [1m[36mPlayer Load (0.2ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/games_controller.rb:18:in `create'
+  [1m[36mGame Create (0.4ms)[0m  [1m[32mINSERT INTO "games" ("player_id", "score", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["player_id", 7], ["score", 1], ["created_at", "2020-03-26 18:43:03.070732"], ["updated_at", "2020-03-26 18:43:03.070732"]]
+  ↳ app/controllers/games_controller.rb:18:in `create'
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/games_controller.rb:18:in `create'
+Completed 200 OK in 6ms (Views: 0.1ms | ActiveRecord: 1.7ms | Allocations: 3340)
+
+
+Started POST "/games" for ::1 at 2020-03-26 18:43:03 +0000
+Processing by GamesController#create as JSON
+  Parameters: {"player_id"=>7, "score"=>1, "game"=>{"player_id"=>7, "score"=>1}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/games_controller.rb:18:in `create'
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/games_controller.rb:18:in `create'
+  [1m[36mGame Create (0.4ms)[0m  [1m[32mINSERT INTO "games" ("player_id", "score", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["player_id", 7], ["score", 1], ["created_at", "2020-03-26 18:43:03.243364"], ["updated_at", "2020-03-26 18:43:03.243364"]]
+  ↳ app/controllers/games_controller.rb:18:in `create'
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/games_controller.rb:18:in `create'
+Completed 200 OK in 6ms (Views: 0.1ms | ActiveRecord: 1.5ms | Allocations: 3340)
+
+
+Started POST "/games" for ::1 at 2020-03-26 18:43:03 +0000
+Processing by GamesController#create as JSON
+  Parameters: {"player_id"=>7, "score"=>1, "game"=>{"player_id"=>7, "score"=>1}}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/games_controller.rb:18:in `create'
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/games_controller.rb:18:in `create'
+  [1m[36mGame Create (0.4ms)[0m  [1m[32mINSERT INTO "games" ("player_id", "score", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["player_id", 7], ["score", 1], ["created_at", "2020-03-26 18:43:03.455857"], ["updated_at", "2020-03-26 18:43:03.455857"]]
+  ↳ app/controllers/games_controller.rb:18:in `create'
+  [1m[35m (4.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/games_controller.rb:18:in `create'
+Completed 200 OK in 9ms (Views: 0.1ms | ActiveRecord: 4.5ms | Allocations: 3356)
+
+
+Started POST "/games" for ::1 at 2020-03-26 18:43:03 +0000
+Processing by GamesController#create as JSON
+  Parameters: {"player_id"=>7, "score"=>1, "game"=>{"player_id"=>7, "score"=>1}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/games_controller.rb:18:in `create'
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/games_controller.rb:18:in `create'
+  [1m[36mGame Create (0.4ms)[0m  [1m[32mINSERT INTO "games" ("player_id", "score", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["player_id", 7], ["score", 1], ["created_at", "2020-03-26 18:43:03.607255"], ["updated_at", "2020-03-26 18:43:03.607255"]]
+  ↳ app/controllers/games_controller.rb:18:in `create'
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/games_controller.rb:18:in `create'
+Completed 200 OK in 6ms (Views: 0.1ms | ActiveRecord: 1.4ms | Allocations: 3340)
+
+
+Started POST "/games" for ::1 at 2020-03-26 18:43:04 +0000
+Processing by GamesController#create as JSON
+  Parameters: {"player_id"=>7, "score"=>1, "game"=>{"player_id"=>7, "score"=>1}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/games_controller.rb:18:in `create'
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/games_controller.rb:18:in `create'
+  [1m[36mGame Create (0.4ms)[0m  [1m[32mINSERT INTO "games" ("player_id", "score", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["player_id", 7], ["score", 1], ["created_at", "2020-03-26 18:43:04.027603"], ["updated_at", "2020-03-26 18:43:04.027603"]]
+  ↳ app/controllers/games_controller.rb:18:in `create'
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/games_controller.rb:18:in `create'
+Completed 200 OK in 6ms (Views: 0.1ms | ActiveRecord: 1.6ms | Allocations: 3340)
+
+
+Started POST "/games" for ::1 at 2020-03-26 18:43:04 +0000
+Processing by GamesController#create as JSON
+  Parameters: {"player_id"=>7, "score"=>1, "game"=>{"player_id"=>7, "score"=>1}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/games_controller.rb:18:in `create'
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/games_controller.rb:18:in `create'
+  [1m[36mGame Create (0.5ms)[0m  [1m[32mINSERT INTO "games" ("player_id", "score", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["player_id", 7], ["score", 1], ["created_at", "2020-03-26 18:43:04.200208"], ["updated_at", "2020-03-26 18:43:04.200208"]]
+  ↳ app/controllers/games_controller.rb:18:in `create'
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/games_controller.rb:18:in `create'
+Completed 200 OK in 7ms (Views: 0.1ms | ActiveRecord: 1.8ms | Allocations: 3340)
+
+
+Started POST "/games" for ::1 at 2020-03-26 18:43:04 +0000
+Processing by GamesController#create as JSON
+  Parameters: {"player_id"=>7, "score"=>1, "game"=>{"player_id"=>7, "score"=>1}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/games_controller.rb:18:in `create'
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/games_controller.rb:18:in `create'
+  [1m[36mGame Create (0.4ms)[0m  [1m[32mINSERT INTO "games" ("player_id", "score", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["player_id", 7], ["score", 1], ["created_at", "2020-03-26 18:43:04.408131"], ["updated_at", "2020-03-26 18:43:04.408131"]]
+  ↳ app/controllers/games_controller.rb:18:in `create'
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/games_controller.rb:18:in `create'
+Completed 200 OK in 8ms (Views: 0.1ms | ActiveRecord: 1.5ms | Allocations: 3340)
+
+
+Started POST "/games" for ::1 at 2020-03-26 18:44:10 +0000
+Processing by GamesController#create as JSON
+  Parameters: {"player_id"=>7, "score"=>1, "game"=>{"player_id"=>7, "score"=>1}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/games_controller.rb:18:in `create'
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/games_controller.rb:18:in `create'
+  [1m[36mGame Create (0.3ms)[0m  [1m[32mINSERT INTO "games" ("player_id", "score", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["player_id", 7], ["score", 1], ["created_at", "2020-03-26 18:44:10.399774"], ["updated_at", "2020-03-26 18:44:10.399774"]]
+  ↳ app/controllers/games_controller.rb:18:in `create'
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/games_controller.rb:18:in `create'
+Completed 200 OK in 14ms (Views: 0.1ms | ActiveRecord: 1.3ms | Allocations: 3343)
+
+
+Started POST "/games" for ::1 at 2020-03-26 18:44:16 +0000
+Processing by GamesController#create as JSON
+  Parameters: {"player_id"=>7, "score"=>1, "game"=>{"player_id"=>7, "score"=>1}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/games_controller.rb:18:in `create'
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/games_controller.rb:18:in `create'
+  [1m[36mGame Create (0.4ms)[0m  [1m[32mINSERT INTO "games" ("player_id", "score", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["player_id", 7], ["score", 1], ["created_at", "2020-03-26 18:44:16.610686"], ["updated_at", "2020-03-26 18:44:16.610686"]]
+  ↳ app/controllers/games_controller.rb:18:in `create'
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/games_controller.rb:18:in `create'
+Completed 200 OK in 7ms (Views: 0.1ms | ActiveRecord: 2.0ms | Allocations: 3340)
+
+
+Started POST "/games" for ::1 at 2020-03-26 18:44:17 +0000
+Processing by GamesController#create as JSON
+  Parameters: {"player_id"=>7, "score"=>1, "game"=>{"player_id"=>7, "score"=>1}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/games_controller.rb:18:in `create'
+  [1m[36mPlayer Load (0.2ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/games_controller.rb:18:in `create'
+  [1m[36mGame Create (0.4ms)[0m  [1m[32mINSERT INTO "games" ("player_id", "score", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["player_id", 7], ["score", 1], ["created_at", "2020-03-26 18:44:17.047605"], ["updated_at", "2020-03-26 18:44:17.047605"]]
+  ↳ app/controllers/games_controller.rb:18:in `create'
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/games_controller.rb:18:in `create'
+Completed 200 OK in 6ms (Views: 0.1ms | ActiveRecord: 1.7ms | Allocations: 3340)
+
+
+Started POST "/games" for ::1 at 2020-03-26 18:44:17 +0000
+Processing by GamesController#create as JSON
+  Parameters: {"player_id"=>7, "score"=>1, "game"=>{"player_id"=>7, "score"=>1}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/games_controller.rb:18:in `create'
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/games_controller.rb:18:in `create'
+  [1m[36mGame Create (0.4ms)[0m  [1m[32mINSERT INTO "games" ("player_id", "score", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["player_id", 7], ["score", 1], ["created_at", "2020-03-26 18:44:17.213189"], ["updated_at", "2020-03-26 18:44:17.213189"]]
+  ↳ app/controllers/games_controller.rb:18:in `create'
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/games_controller.rb:18:in `create'
+Completed 200 OK in 6ms (Views: 0.1ms | ActiveRecord: 1.3ms | Allocations: 3340)
+
+
+Started POST "/games" for ::1 at 2020-03-26 18:44:17 +0000
+Processing by GamesController#create as JSON
+  Parameters: {"player_id"=>7, "score"=>1, "game"=>{"player_id"=>7, "score"=>1}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/games_controller.rb:18:in `create'
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/games_controller.rb:18:in `create'
+  [1m[36mGame Create (0.4ms)[0m  [1m[32mINSERT INTO "games" ("player_id", "score", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["player_id", 7], ["score", 1], ["created_at", "2020-03-26 18:44:17.385624"], ["updated_at", "2020-03-26 18:44:17.385624"]]
+  ↳ app/controllers/games_controller.rb:18:in `create'
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/games_controller.rb:18:in `create'
+Completed 200 OK in 6ms (Views: 0.1ms | ActiveRecord: 1.6ms | Allocations: 3340)
+
+
+Started POST "/games" for ::1 at 2020-03-26 18:44:17 +0000
+Processing by GamesController#create as JSON
+  Parameters: {"player_id"=>7, "score"=>1, "game"=>{"player_id"=>7, "score"=>1}}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/games_controller.rb:18:in `create'
+  [1m[36mPlayer Load (0.2ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/games_controller.rb:18:in `create'
+  [1m[36mGame Create (0.4ms)[0m  [1m[32mINSERT INTO "games" ("player_id", "score", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["player_id", 7], ["score", 1], ["created_at", "2020-03-26 18:44:17.537779"], ["updated_at", "2020-03-26 18:44:17.537779"]]
+  ↳ app/controllers/games_controller.rb:18:in `create'
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/games_controller.rb:18:in `create'
+Completed 200 OK in 5ms (Views: 0.1ms | ActiveRecord: 1.4ms | Allocations: 3340)
+
+
+Started POST "/games" for ::1 at 2020-03-26 18:44:17 +0000
+Processing by GamesController#create as JSON
+  Parameters: {"player_id"=>7, "score"=>1, "game"=>{"player_id"=>7, "score"=>1}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/games_controller.rb:18:in `create'
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/games_controller.rb:18:in `create'
+  [1m[36mGame Create (0.4ms)[0m  [1m[32mINSERT INTO "games" ("player_id", "score", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["player_id", 7], ["score", 1], ["created_at", "2020-03-26 18:44:17.715397"], ["updated_at", "2020-03-26 18:44:17.715397"]]
+  ↳ app/controllers/games_controller.rb:18:in `create'
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/games_controller.rb:18:in `create'
+Completed 200 OK in 6ms (Views: 0.1ms | ActiveRecord: 1.7ms | Allocations: 3340)
+
+
+Started POST "/games" for ::1 at 2020-03-26 18:44:17 +0000
+Processing by GamesController#create as JSON
+  Parameters: {"player_id"=>7, "score"=>1, "game"=>{"player_id"=>7, "score"=>1}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/games_controller.rb:18:in `create'
+  [1m[36mPlayer Load (0.2ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/games_controller.rb:18:in `create'
+  [1m[36mGame Create (0.4ms)[0m  [1m[32mINSERT INTO "games" ("player_id", "score", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["player_id", 7], ["score", 1], ["created_at", "2020-03-26 18:44:17.879356"], ["updated_at", "2020-03-26 18:44:17.879356"]]
+  ↳ app/controllers/games_controller.rb:18:in `create'
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/games_controller.rb:18:in `create'
+Completed 200 OK in 6ms (Views: 0.1ms | ActiveRecord: 1.3ms | Allocations: 3340)
+
+
+Started POST "/games" for ::1 at 2020-03-26 18:44:18 +0000
+Processing by GamesController#create as JSON
+  Parameters: {"player_id"=>7, "score"=>1, "game"=>{"player_id"=>7, "score"=>1}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/games_controller.rb:18:in `create'
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/games_controller.rb:18:in `create'
+  [1m[36mGame Create (0.5ms)[0m  [1m[32mINSERT INTO "games" ("player_id", "score", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["player_id", 7], ["score", 1], ["created_at", "2020-03-26 18:44:18.046139"], ["updated_at", "2020-03-26 18:44:18.046139"]]
+  ↳ app/controllers/games_controller.rb:18:in `create'
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/games_controller.rb:18:in `create'
+Completed 200 OK in 6ms (Views: 0.1ms | ActiveRecord: 1.7ms | Allocations: 3340)
+
+
+Started POST "/players" for ::1 at 2020-03-26 18:46:35 +0000
+Processing by PlayersController#create as JSON
+  Parameters: {"name"=>"Moustafa Mohamed", "player"=>{"name"=>"Moustafa Mohamed"}}
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."name" = ? LIMIT ?[0m  [["name", "Moustafa Mohamed"], ["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:13:in `create'
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.1ms | Allocations: 977)
+
+
+Started GET "/cards" for ::1 at 2020-03-26 18:46:35 +0000
+Processing by CardsController#index as */*
+  [1m[36mCard Load (0.1ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  ↳ app/controllers/cards_controller.rb:5:in `index'
+Completed 200 OK in 1ms (Views: 1.2ms | ActiveRecord: 0.1ms | Allocations: 1134)
+
+
+Started GET "/cards" for ::1 at 2020-03-26 18:46:46 +0000
+Processing by CardsController#index as */*
+  [1m[36mCard Load (0.2ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  ↳ app/controllers/cards_controller.rb:5:in `index'
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.2ms | Allocations: 1134)
+
+
+Started GET "/cards" for ::1 at 2020-03-26 18:46:53 +0000
+Processing by CardsController#index as */*
+  [1m[36mCard Load (0.1ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  ↳ app/controllers/cards_controller.rb:5:in `index'
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.1ms | Allocations: 1134)
+
+
+Started POST "/players" for ::1 at 2020-03-26 18:47:07 +0000
+Processing by PlayersController#create as JSON
+  Parameters: {"name"=>"Moustafa Mohamed", "player"=>{"name"=>"Moustafa Mohamed"}}
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."name" = ? LIMIT ?[0m  [["name", "Moustafa Mohamed"], ["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:13:in `create'
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.1ms | Allocations: 977)
+
+
+Started GET "/cards" for ::1 at 2020-03-26 18:47:07 +0000
+Processing by CardsController#index as */*
+  [1m[36mCard Load (0.1ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  ↳ app/controllers/cards_controller.rb:5:in `index'
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.1ms | Allocations: 1134)
+
+
+Started GET "/cards" for ::1 at 2020-03-26 18:47:19 +0000
+Processing by CardsController#index as */*
+  [1m[36mCard Load (0.2ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  ↳ app/controllers/cards_controller.rb:5:in `index'
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.2ms | Allocations: 1134)
+
+
+Started POST "/games" for ::1 at 2020-03-26 18:47:27 +0000
+Processing by GamesController#create as JSON
+  Parameters: {"player_id"=>4, "score"=>1, "game"=>{"player_id"=>4, "score"=>1}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/games_controller.rb:18:in `create'
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/games_controller.rb:18:in `create'
+  [1m[36mGame Create (0.4ms)[0m  [1m[32mINSERT INTO "games" ("player_id", "score", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["player_id", 4], ["score", 1], ["created_at", "2020-03-26 18:47:27.760861"], ["updated_at", "2020-03-26 18:47:27.760861"]]
+  ↳ app/controllers/games_controller.rb:18:in `create'
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/games_controller.rb:18:in `create'
+Completed 200 OK in 6ms (Views: 0.1ms | ActiveRecord: 1.6ms | Allocations: 3340)
+
+
+Started POST "/players" for ::1 at 2020-03-26 18:48:29 +0000
+Processing by PlayersController#create as JSON
+  Parameters: {"name"=>"Moustafa Mohamed", "player"=>{"name"=>"Moustafa Mohamed"}}
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."name" = ? LIMIT ?[0m  [["name", "Moustafa Mohamed"], ["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:13:in `create'
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.1ms | Allocations: 980)
+
+
+Started GET "/cards" for ::1 at 2020-03-26 18:48:29 +0000
+Processing by CardsController#index as */*
+  [1m[36mCard Load (0.1ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  ↳ app/controllers/cards_controller.rb:5:in `index'
+Completed 200 OK in 1ms (Views: 1.2ms | ActiveRecord: 0.1ms | Allocations: 1134)
+
+
+Started GET "/cards" for ::1 at 2020-03-26 18:48:35 +0000
+Processing by CardsController#index as */*
+  [1m[36mCard Load (0.1ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  ↳ app/controllers/cards_controller.rb:5:in `index'
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.1ms | Allocations: 1134)
+
+
+Started POST "/games" for ::1 at 2020-03-26 18:48:42 +0000
+Processing by GamesController#create as JSON
+  Parameters: {"player_id"=>4, "score"=>2, "game"=>{"player_id"=>4, "score"=>2}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/games_controller.rb:18:in `create'
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/games_controller.rb:18:in `create'
+  [1m[36mGame Create (0.4ms)[0m  [1m[32mINSERT INTO "games" ("player_id", "score", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["player_id", 4], ["score", 2], ["created_at", "2020-03-26 18:48:42.357461"], ["updated_at", "2020-03-26 18:48:42.357461"]]
+  ↳ app/controllers/games_controller.rb:18:in `create'
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/games_controller.rb:18:in `create'
+Completed 200 OK in 7ms (Views: 0.1ms | ActiveRecord: 1.6ms | Allocations: 3340)
+
+
+Started GET "/games" for ::1 at 2020-03-26 18:48:43 +0000
+Processing by GamesController#index as */*
+  [1m[36mGame Load (0.3ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+  ↳ app/models/game.rb:7:in `sort_by'
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/services/game_serializer.rb:10:in `to_serialized_json'
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/services/game_serializer.rb:10:in `to_serialized_json'
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/services/game_serializer.rb:10:in `to_serialized_json'
+  [1m[36mCACHE Player Load (0.0ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/services/game_serializer.rb:10:in `to_serialized_json'
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/services/game_serializer.rb:10:in `to_serialized_json'
+Completed 200 OK in 8ms (Views: 0.1ms | ActiveRecord: 0.7ms | Allocations: 5448)
+
+
+Started POST "/players" for ::1 at 2020-03-26 18:50:31 +0000
+Processing by PlayersController#create as JSON
+  Parameters: {"name"=>"Moustafa Mohamed", "player"=>{"name"=>"Moustafa Mohamed"}}
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."name" = ? LIMIT ?[0m  [["name", "Moustafa Mohamed"], ["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:13:in `create'
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.1ms | Allocations: 977)
+
+
+Started GET "/cards" for ::1 at 2020-03-26 18:50:31 +0000
+Processing by CardsController#index as */*
+  [1m[36mCard Load (0.1ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  ↳ app/controllers/cards_controller.rb:5:in `index'
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.1ms | Allocations: 1134)
+
+
+Started GET "/cards" for ::1 at 2020-03-26 18:50:42 +0000
+Processing by CardsController#index as */*
+  [1m[36mCard Load (0.1ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  ↳ app/controllers/cards_controller.rb:5:in `index'
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.1ms | Allocations: 1134)
+
+
+Started POST "/games" for ::1 at 2020-03-26 18:50:48 +0000
+Processing by GamesController#create as JSON
+  Parameters: {"player_id"=>4, "score"=>1, "game"=>{"player_id"=>4, "score"=>1}}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/games_controller.rb:18:in `create'
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/games_controller.rb:18:in `create'
+  [1m[36mGame Create (0.3ms)[0m  [1m[32mINSERT INTO "games" ("player_id", "score", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["player_id", 4], ["score", 1], ["created_at", "2020-03-26 18:50:48.398401"], ["updated_at", "2020-03-26 18:50:48.398401"]]
+  ↳ app/controllers/games_controller.rb:18:in `create'
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/games_controller.rb:18:in `create'
+Completed 200 OK in 5ms (Views: 0.1ms | ActiveRecord: 1.4ms | Allocations: 3340)
+
+
+Started GET "/games" for ::1 at 2020-03-26 18:50:49 +0000
+Processing by GamesController#index as */*
+  [1m[36mGame Load (0.2ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+  ↳ app/models/game.rb:7:in `sort_by'
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/services/game_serializer.rb:10:in `to_serialized_json'
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/services/game_serializer.rb:10:in `to_serialized_json'
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/services/game_serializer.rb:10:in `to_serialized_json'
+  [1m[36mCACHE Player Load (0.0ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/services/game_serializer.rb:10:in `to_serialized_json'
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/services/game_serializer.rb:10:in `to_serialized_json'
+Completed 200 OK in 8ms (Views: 0.1ms | ActiveRecord: 0.7ms | Allocations: 5444)
+
+
+Started POST "/players" for ::1 at 2020-03-26 18:51:08 +0000
+Processing by PlayersController#create as JSON
+  Parameters: {"name"=>"Moustafa Mohamed", "player"=>{"name"=>"Moustafa Mohamed"}}
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."name" = ? LIMIT ?[0m  [["name", "Moustafa Mohamed"], ["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:13:in `create'
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.1ms | Allocations: 977)
+
+
+Started GET "/cards" for ::1 at 2020-03-26 18:51:08 +0000
+Processing by CardsController#index as */*
+  [1m[36mCard Load (0.1ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  ↳ app/controllers/cards_controller.rb:5:in `index'
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.1ms | Allocations: 1134)
+
+
+Started GET "/cards" for ::1 at 2020-03-26 18:51:19 +0000
+Processing by CardsController#index as */*
+  [1m[36mCard Load (0.2ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  ↳ app/controllers/cards_controller.rb:5:in `index'
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.2ms | Allocations: 1134)
+
+
+Started POST "/games" for ::1 at 2020-03-26 18:51:30 +0000
+Processing by GamesController#create as JSON
+  Parameters: {"player_id"=>4, "score"=>0, "game"=>{"player_id"=>4, "score"=>0}}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/games_controller.rb:18:in `create'
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/games_controller.rb:18:in `create'
+  [1m[36mGame Create (0.4ms)[0m  [1m[32mINSERT INTO "games" ("player_id", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["player_id", 4], ["created_at", "2020-03-26 18:51:30.484810"], ["updated_at", "2020-03-26 18:51:30.484810"]]
+  ↳ app/controllers/games_controller.rb:18:in `create'
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/games_controller.rb:18:in `create'
+Completed 200 OK in 5ms (Views: 0.1ms | ActiveRecord: 1.2ms | Allocations: 3331)
+
+
+Started GET "/games" for ::1 at 2020-03-26 18:51:31 +0000
+Processing by GamesController#index as */*
+  [1m[36mGame Load (0.2ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+  ↳ app/models/game.rb:7:in `sort_by'
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/services/game_serializer.rb:10:in `to_serialized_json'
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/services/game_serializer.rb:10:in `to_serialized_json'
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/services/game_serializer.rb:10:in `to_serialized_json'
+  [1m[36mCACHE Player Load (0.0ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/services/game_serializer.rb:10:in `to_serialized_json'
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/services/game_serializer.rb:10:in `to_serialized_json'
+Completed 200 OK in 8ms (Views: 0.1ms | ActiveRecord: 0.7ms | Allocations: 5453)
+
+
+Started POST "/players" for ::1 at 2020-03-26 18:58:17 +0000
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PlayersController#create as JSON
+  Parameters: {"name"=>"Moustafa Mohamed", "player"=>{"name"=>"Moustafa Mohamed"}}
+  [1m[36mPlayer Load (0.2ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."name" = ? LIMIT ?[0m  [["name", "Moustafa Mohamed"], ["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:13:in `create'
+Completed 200 OK in 8ms (Views: 0.3ms | ActiveRecord: 0.9ms | Allocations: 4052)
+
+
+Started GET "/cards" for ::1 at 2020-03-26 18:58:18 +0000
+Processing by CardsController#index as */*
+  [1m[36mCard Load (0.2ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  ↳ app/controllers/cards_controller.rb:5:in `index'
+Completed 200 OK in 7ms (Views: 4.4ms | ActiveRecord: 0.5ms | Allocations: 6644)
+
+
+Started GET "/cards" for ::1 at 2020-03-26 18:58:34 +0000
+Processing by CardsController#index as */*
+  [1m[36mCard Load (0.3ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  ↳ app/controllers/cards_controller.rb:5:in `index'
+Completed 200 OK in 2ms (Views: 1.8ms | ActiveRecord: 0.3ms | Allocations: 1151)
+
+
+Started POST "/games" for ::1 at 2020-03-26 18:59:01 +0000
+Processing by GamesController#create as JSON
+  Parameters: {"player_id"=>4, "score"=>1, "game"=>{"player_id"=>4, "score"=>1}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/games_controller.rb:18:in `create'
+  [1m[36mPlayer Load (0.2ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/games_controller.rb:18:in `create'
+  [1m[36mGame Create (0.5ms)[0m  [1m[32mINSERT INTO "games" ("player_id", "score", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["player_id", 4], ["score", 1], ["created_at", "2020-03-26 18:59:01.672728"], ["updated_at", "2020-03-26 18:59:01.672728"]]
+  ↳ app/controllers/games_controller.rb:18:in `create'
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/games_controller.rb:18:in `create'
+Completed 200 OK in 18ms (Views: 0.1ms | ActiveRecord: 2.1ms | Allocations: 7789)
+
+
+Started GET "/games" for ::1 at 2020-03-26 18:59:03 +0000
+Processing by GamesController#index as */*
+  [1m[36mGame Load (0.3ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+  ↳ app/models/game.rb:7:in `sort_by'
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/services/game_serializer.rb:10:in `to_serialized_json'
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/services/game_serializer.rb:10:in `to_serialized_json'
+  [1m[36mPlayer Load (0.2ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/services/game_serializer.rb:10:in `to_serialized_json'
+  [1m[36mCACHE Player Load (0.0ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/services/game_serializer.rb:10:in `to_serialized_json'
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/services/game_serializer.rb:10:in `to_serialized_json'
+Completed 200 OK in 11ms (Views: 0.1ms | ActiveRecord: 0.8ms | Allocations: 5515)
+
+
+Started POST "/players" for ::1 at 2020-03-26 19:01:04 +0000
+Processing by PlayersController#create as JSON
+  Parameters: {"name"=>"name1", "player"=>{"name"=>"name1"}}
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."name" = ? LIMIT ?[0m  [["name", "name1"], ["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:13:in `create'
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.1ms | Allocations: 977)
+
+
+Started GET "/cards" for ::1 at 2020-03-26 19:01:04 +0000
+Processing by CardsController#index as */*
+  [1m[36mCard Load (0.2ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  ↳ app/controllers/cards_controller.rb:5:in `index'
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.2ms | Allocations: 1134)
+
+
+Started GET "/cards" for ::1 at 2020-03-26 19:01:20 +0000
+Processing by CardsController#index as */*
+  [1m[36mCard Load (0.1ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  ↳ app/controllers/cards_controller.rb:5:in `index'
+Completed 200 OK in 2ms (Views: 1.8ms | ActiveRecord: 0.1ms | Allocations: 1134)
+
+
+Started POST "/players" for ::1 at 2020-03-26 19:02:16 +0000
+Processing by PlayersController#create as JSON
+  Parameters: {"name"=>"mustafa", "player"=>{"name"=>"mustafa"}}
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."name" = ? LIMIT ?[0m  [["name", "mustafa"], ["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:13:in `create'
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.1ms | Allocations: 997)
+
+
+Started GET "/cards" for ::1 at 2020-03-26 19:02:16 +0000
+Processing by CardsController#index as */*
+  [1m[36mCard Load (0.1ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  ↳ app/controllers/cards_controller.rb:5:in `index'
+Completed 200 OK in 1ms (Views: 1.2ms | ActiveRecord: 0.1ms | Allocations: 1134)
+
+
+Started GET "/cards" for ::1 at 2020-03-26 19:02:32 +0000
+Processing by CardsController#index as */*
+  [1m[36mCard Load (0.1ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  ↳ app/controllers/cards_controller.rb:5:in `index'
+Completed 200 OK in 1ms (Views: 1.0ms | ActiveRecord: 0.1ms | Allocations: 1134)
+
+
+Started POST "/players" for ::1 at 2020-03-26 19:07:25 +0000
+Processing by PlayersController#create as JSON
+  Parameters: {"name"=>"Moustafa Mohamed", "player"=>{"name"=>"Moustafa Mohamed"}}
+  [1m[36mPlayer Load (0.5ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."name" = ? LIMIT ?[0m  [["name", "Moustafa Mohamed"], ["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:13:in `create'
+Completed 200 OK in 3ms (Views: 0.3ms | ActiveRecord: 0.5ms | Allocations: 979)
+
+
+Started GET "/cards" for ::1 at 2020-03-26 19:07:25 +0000
+Processing by CardsController#index as */*
+  [1m[36mCard Load (0.1ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  ↳ app/controllers/cards_controller.rb:5:in `index'
+Completed 200 OK in 2ms (Views: 1.9ms | ActiveRecord: 0.1ms | Allocations: 1134)
+
+
+Started POST "/players" for ::1 at 2020-03-26 19:08:51 +0000
+Processing by PlayersController#create as JSON
+  Parameters: {"name"=>"mustafa", "player"=>{"name"=>"mustafa"}}
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."name" = ? LIMIT ?[0m  [["name", "mustafa"], ["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:13:in `create'
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.1ms | Allocations: 977)
+
+
+Started GET "/cards" for ::1 at 2020-03-26 19:08:51 +0000
+Processing by CardsController#index as */*
+  [1m[36mCard Load (0.2ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  ↳ app/controllers/cards_controller.rb:5:in `index'
+Completed 200 OK in 2ms (Views: 2.1ms | ActiveRecord: 0.2ms | Allocations: 1134)
+
+
+Started GET "/cards" for ::1 at 2020-03-26 19:08:58 +0000
+Processing by CardsController#index as */*
+  [1m[36mCard Load (0.1ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  ↳ app/controllers/cards_controller.rb:5:in `index'
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.1ms | Allocations: 1134)
+
+
+Started POST "/games" for ::1 at 2020-03-26 19:09:07 +0000
+Processing by GamesController#create as JSON
+  Parameters: {"player_id"=>8, "score"=>2, "game"=>{"player_id"=>8, "score"=>2}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/games_controller.rb:18:in `create'
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/games_controller.rb:18:in `create'
+  [1m[36mGame Create (1.1ms)[0m  [1m[32mINSERT INTO "games" ("player_id", "score", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["player_id", 8], ["score", 2], ["created_at", "2020-03-26 19:09:07.186526"], ["updated_at", "2020-03-26 19:09:07.186526"]]
+  ↳ app/controllers/games_controller.rb:18:in `create'
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/games_controller.rb:18:in `create'
+Completed 200 OK in 6ms (Views: 0.1ms | ActiveRecord: 1.8ms | Allocations: 3340)
+
+
+Started GET "/games" for ::1 at 2020-03-26 19:09:08 +0000
+Processing by GamesController#index as */*
+  [1m[36mGame Load (0.3ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+  ↳ app/models/game.rb:7:in `sort_by'
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/services/game_serializer.rb:10:in `to_serialized_json'
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/services/game_serializer.rb:10:in `to_serialized_json'
+  [1m[36mCACHE Player Load (0.0ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/services/game_serializer.rb:10:in `to_serialized_json'
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/services/game_serializer.rb:10:in `to_serialized_json'
+  [1m[36mCACHE Player Load (0.0ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/services/game_serializer.rb:10:in `to_serialized_json'
+Completed 200 OK in 8ms (Views: 0.1ms | ActiveRecord: 0.6ms | Allocations: 5418)
+
+
+Started GET "/" for ::1 at 2020-03-26 19:12:11 +0000
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/musta88/.rvm/gems/ruby-2.6.1/gems/railties-6.0.2.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/musta88/.rvm/gems/ruby-2.6.1/gems/railties-6.0.2.2/lib/rails/templates/rails/welcome/index.html.erb (Duration: 6.1ms | Allocations: 315)
+Completed 200 OK in 12ms (Views: 8.7ms | ActiveRecord: 0.0ms | Allocations: 1593)
+
+
+Started GET "/players" for ::1 at 2020-03-26 19:12:16 +0000
+Processing by PlayersController#index as HTML
+  [1m[36mPlayer Load (0.2ms)[0m  [1m[34mSELECT "players".* FROM "players"[0m
+  ↳ app/controllers/players_controller.rb:5:in `index'
+Completed 200 OK in 6ms (Views: 5.4ms | ActiveRecord: 0.2ms | Allocations: 2058)
+
+
+Started POST "/players" for ::1 at 2020-03-26 19:20:33 +0000
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by PlayersController#create as JSON
+  Parameters: {"name"=>"Armela ", "player"=>{"name"=>"Armela "}}
+  [1m[36mPlayer Load (0.7ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."name" = ? LIMIT ?[0m  [["name", "Armela "], ["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:13:in `create'
+Completed 200 OK in 3ms (Views: 0.3ms | ActiveRecord: 0.7ms | Allocations: 993)
+
+
+Started GET "/cards" for ::1 at 2020-03-26 19:20:33 +0000
+Processing by CardsController#index as */*
+  [1m[36mCard Load (0.5ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  ↳ app/controllers/cards_controller.rb:5:in `index'
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.5ms | Allocations: 1151)
+
+
+Started GET "/cards" for ::1 at 2020-03-26 19:20:46 +0000
+Processing by CardsController#index as */*
+  [1m[36mCard Load (0.1ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  ↳ app/controllers/cards_controller.rb:5:in `index'
+Completed 200 OK in 2ms (Views: 1.8ms | ActiveRecord: 0.1ms | Allocations: 1134)
+
+
+Started POST "/games" for ::1 at 2020-03-26 19:20:55 +0000
+Processing by GamesController#create as JSON
+  Parameters: {"player_id"=>6, "score"=>1, "game"=>{"player_id"=>6, "score"=>1}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/games_controller.rb:18:in `create'
+  [1m[36mPlayer Load (0.2ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/games_controller.rb:18:in `create'
+  [1m[36mGame Create (1.6ms)[0m  [1m[32mINSERT INTO "games" ("player_id", "score", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["player_id", 6], ["score", 1], ["created_at", "2020-03-26 19:20:55.991829"], ["updated_at", "2020-03-26 19:20:55.991829"]]
+  ↳ app/controllers/games_controller.rb:18:in `create'
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/games_controller.rb:18:in `create'
+Completed 200 OK in 7ms (Views: 0.1ms | ActiveRecord: 2.5ms | Allocations: 3353)
+
+
+Started GET "/games" for ::1 at 2020-03-26 19:20:57 +0000
+Processing by GamesController#index as */*
+  [1m[36mGame Load (0.3ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+  ↳ app/models/game.rb:7:in `sort_by'
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/services/game_serializer.rb:10:in `to_serialized_json'
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/services/game_serializer.rb:10:in `to_serialized_json'
+  [1m[36mCACHE Player Load (0.0ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/services/game_serializer.rb:10:in `to_serialized_json'
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/services/game_serializer.rb:10:in `to_serialized_json'
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/services/game_serializer.rb:10:in `to_serialized_json'
+Completed 200 OK in 8ms (Views: 0.1ms | ActiveRecord: 0.7ms | Allocations: 5498)
+
+
+Started POST "/players" for ::1 at 2020-03-26 19:22:18 +0000
+Processing by PlayersController#create as JSON
+  Parameters: {"name"=>"Armela ", "player"=>{"name"=>"Armela "}}
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."name" = ? LIMIT ?[0m  [["name", "Armela "], ["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:13:in `create'
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.1ms | Allocations: 977)
+
+
+Started GET "/cards" for ::1 at 2020-03-26 19:22:18 +0000
+Processing by CardsController#index as */*
+  [1m[36mCard Load (0.1ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  ↳ app/controllers/cards_controller.rb:5:in `index'
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.1ms | Allocations: 1134)
+
+
+Started POST "/players" for ::1 at 2020-03-26 19:24:02 +0000
+Processing by PlayersController#create as JSON
+  Parameters: {"name"=>"Moustafa Mohamed", "player"=>{"name"=>"Moustafa Mohamed"}}
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."name" = ? LIMIT ?[0m  [["name", "Moustafa Mohamed"], ["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:13:in `create'
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.1ms | Allocations: 977)
+
+
+Started GET "/cards" for ::1 at 2020-03-26 19:24:02 +0000
+Processing by CardsController#index as */*
+  [1m[36mCard Load (0.1ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  ↳ app/controllers/cards_controller.rb:5:in `index'
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.1ms | Allocations: 1134)
+
+
+Started GET "/cards" for ::1 at 2020-03-26 19:24:16 +0000
+Processing by CardsController#index as */*
+  [1m[36mCard Load (0.2ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  ↳ app/controllers/cards_controller.rb:5:in `index'
+Completed 200 OK in 2ms (Views: 1.9ms | ActiveRecord: 0.2ms | Allocations: 1134)
+
+
+Started GET "/games" for ::1 at 2020-03-26 19:28:55 +0000
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by GamesController#index as HTML
+  [1m[36mGame Load (0.2ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+  ↳ app/models/game.rb:7:in `sort_by'
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/services/game_serializer.rb:10:in `to_serialized_json'
+  [1m[36mPlayer Load (0.2ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/services/game_serializer.rb:10:in `to_serialized_json'
+  [1m[36mCACHE Player Load (0.0ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/services/game_serializer.rb:10:in `to_serialized_json'
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/services/game_serializer.rb:10:in `to_serialized_json'
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/services/game_serializer.rb:10:in `to_serialized_json'
+Completed 200 OK in 21ms (Views: 0.1ms | ActiveRecord: 1.4ms | Allocations: 14156)
+
+
+Started GET "/games" for ::1 at 2020-03-26 19:29:20 +0000
+Processing by GamesController#index as HTML
+  [1m[36mGame Load (0.2ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+  ↳ app/models/game.rb:7:in `sort_by'
+  [1m[36mPlayer Load (0.2ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/services/game_serializer.rb:10:in `to_serialized_json'
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/services/game_serializer.rb:10:in `to_serialized_json'
+  [1m[36mCACHE Player Load (0.0ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/services/game_serializer.rb:10:in `to_serialized_json'
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/services/game_serializer.rb:10:in `to_serialized_json'
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/services/game_serializer.rb:10:in `to_serialized_json'
+Completed 200 OK in 21ms (Views: 0.1ms | ActiveRecord: 0.7ms | Allocations: 5487)
+
+
+Started GET "/games" for ::1 at 2020-03-26 19:30:11 +0000
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by GamesController#index as HTML
+  [1m[36mGame Load (0.4ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+  ↳ app/models/game.rb:7:in `sort_by'
+  [1m[36mPlayer Load (0.2ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/services/game_serializer.rb:10:in `to_serialized_json'
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/services/game_serializer.rb:10:in `to_serialized_json'
+  [1m[36mCACHE Player Load (0.0ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/services/game_serializer.rb:10:in `to_serialized_json'
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/services/game_serializer.rb:10:in `to_serialized_json'
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/services/game_serializer.rb:10:in `to_serialized_json'
+Completed 200 OK in 38ms (Views: 0.2ms | ActiveRecord: 2.0ms | Allocations: 16538)
+
+
+Started GET "/games" for ::1 at 2020-03-26 19:30:21 +0000
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by GamesController#index as HTML
+  [1m[36mGame Load (0.5ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+  ↳ app/models/game.rb:7:in `sort_by'
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/services/game_serializer.rb:10:in `to_serialized_json'
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/services/game_serializer.rb:10:in `to_serialized_json'
+  [1m[36mCACHE Player Load (0.0ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/services/game_serializer.rb:10:in `to_serialized_json'
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/services/game_serializer.rb:10:in `to_serialized_json'
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/services/game_serializer.rb:10:in `to_serialized_json'
+Completed 200 OK in 21ms (Views: 0.1ms | ActiveRecord: 1.8ms | Allocations: 14164)
+
+
+Started GET "/players" for ::1 at 2020-03-26 19:30:36 +0000
+Processing by PlayersController#index as HTML
+  [1m[36mPlayer Load (0.2ms)[0m  [1m[34mSELECT "players".* FROM "players"[0m
+  ↳ app/controllers/players_controller.rb:5:in `index'
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.2ms | Allocations: 2003)
+
+
+Started POST "/players" for ::1 at 2020-03-26 20:08:03 +0000
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by PlayersController#create as JSON
+  Parameters: {"name"=>"Moustafa Mohamed", "player"=>{"name"=>"Moustafa Mohamed"}}
+  [1m[36mPlayer Load (0.5ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."name" = ? LIMIT ?[0m  [["name", "Moustafa Mohamed"], ["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:13:in `create'
+Completed 200 OK in 3ms (Views: 0.3ms | ActiveRecord: 0.5ms | Allocations: 1208)
+
+
+Started GET "/cards" for ::1 at 2020-03-26 20:08:04 +0000
+Processing by CardsController#index as */*
+  [1m[36mCard Load (0.5ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  ↳ app/controllers/cards_controller.rb:5:in `index'
+Completed 200 OK in 8ms (Views: 4.5ms | ActiveRecord: 1.0ms | Allocations: 6750)
+
+
+Started GET "/cards" for ::1 at 2020-03-26 20:08:16 +0000
+Processing by CardsController#index as */*
+  [1m[36mCard Load (0.1ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  ↳ app/controllers/cards_controller.rb:5:in `index'
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.1ms | Allocations: 1151)
+
+
+Started POST "/games" for ::1 at 2020-03-26 20:08:32 +0000
+Processing by GamesController#create as JSON
+  Parameters: {"player_id"=>4, "score"=>2, "game"=>{"player_id"=>4, "score"=>2}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/games_controller.rb:18:in `create'
+  [1m[36mPlayer Load (0.3ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/games_controller.rb:18:in `create'
+  [1m[36mGame Create (2.8ms)[0m  [1m[32mINSERT INTO "games" ("player_id", "score", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["player_id", 4], ["score", 2], ["created_at", "2020-03-26 20:08:32.092893"], ["updated_at", "2020-03-26 20:08:32.092893"]]
+  ↳ app/controllers/games_controller.rb:18:in `create'
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/games_controller.rb:18:in `create'
+Completed 200 OK in 10ms (Views: 0.1ms | ActiveRecord: 3.9ms | Allocations: 3566)
+
+
+Started GET "/games" for ::1 at 2020-03-26 20:08:41 +0000
+Processing by GamesController#index as */*
+  [1m[36mGame Load (0.3ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+  ↳ app/models/game.rb:7:in `sort_by'
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/services/game_serializer.rb:10:in `to_serialized_json'
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/services/game_serializer.rb:10:in `to_serialized_json'
+  [1m[36mCACHE Player Load (0.0ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/services/game_serializer.rb:10:in `to_serialized_json'
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/services/game_serializer.rb:10:in `to_serialized_json'
+  [1m[36mCACHE Player Load (0.0ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/services/game_serializer.rb:10:in `to_serialized_json'
+Completed 200 OK in 8ms (Views: 0.1ms | ActiveRecord: 0.6ms | Allocations: 5472)
+
+
+Started POST "/players" for ::1 at 2020-03-26 20:12:40 +0000
+Processing by PlayersController#create as JSON
+  Parameters: {"name"=>"Moustafa Mohamed", "player"=>{"name"=>"Moustafa Mohamed"}}
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."name" = ? LIMIT ?[0m  [["name", "Moustafa Mohamed"], ["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:13:in `create'
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.1ms | Allocations: 980)
+
+
+Started GET "/cards" for ::1 at 2020-03-26 20:12:40 +0000
+Processing by CardsController#index as */*
+  [1m[36mCard Load (0.1ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  ↳ app/controllers/cards_controller.rb:5:in `index'
+Completed 200 OK in 2ms (Views: 1.2ms | ActiveRecord: 0.1ms | Allocations: 1134)
+
+
+Started GET "/cards" for ::1 at 2020-03-26 20:12:54 +0000
+Processing by CardsController#index as */*
+  [1m[36mCard Load (0.1ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  ↳ app/controllers/cards_controller.rb:5:in `index'
+Completed 200 OK in 2ms (Views: 1.8ms | ActiveRecord: 0.1ms | Allocations: 1134)
+
+
+Started POST "/players" for ::1 at 2020-03-26 20:25:35 +0000
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by PlayersController#create as JSON
+  Parameters: {"name"=>"Moustafa Mohamed", "player"=>{"name"=>"Moustafa Mohamed"}}
+  [1m[36mPlayer Load (0.3ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."name" = ? LIMIT ?[0m  [["name", "Moustafa Mohamed"], ["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:13:in `create'
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.3ms | Allocations: 998)
+
+
+Started GET "/cards" for ::1 at 2020-03-26 20:25:35 +0000
+Processing by CardsController#index as */*
+  [1m[36mCard Load (0.3ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  ↳ app/controllers/cards_controller.rb:5:in `index'
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.3ms | Allocations: 1151)
+
+
