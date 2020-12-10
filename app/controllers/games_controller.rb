@@ -1,8 +1,5 @@
 class GamesController < ApplicationController
 
-  # before_action :require_player
-
-  # leadrb
   def index 
     games = Game.sort_by_score.take(5);
 
